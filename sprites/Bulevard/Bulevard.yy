@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"Bulevard",
   "bboxMode":0,
-  "bbox_bottom":191,
+  "bbox_bottom":1079,
   "bbox_left":0,
   "bbox_right":1919,
   "bbox_top":0,
@@ -14,9 +14,9 @@
   "frames":[
     {"$GMSpriteFrame":"","%Name":"1ed61269-7c3b-4319-ac54-11c837ad4227","name":"1ed61269-7c3b-4319-ac54-11c837ad4227","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":0,
-  "gridY":0,
-  "height":1000,
+  "gridX":32,
+  "gridY":32,
+  "height":1080,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"7b07ec27-58b1-4abe-b963-cb18e01ae9f6","blendMode":0,"displayName":"default","isLocked":false,"name":"7b07ec27-58b1-4abe-b963-cb18e01ae9f6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
