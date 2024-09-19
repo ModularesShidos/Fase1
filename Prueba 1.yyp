@@ -30,7 +30,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.2.162",
+    "IDEVersion":"2024.8.0.169",
   },
   "name":"Prueba 1",
   "resources":[
@@ -51,6 +51,7 @@
     {"id":{"name":"Ladrillos_guia3","path":"sprites/Ladrillos_guia3/Ladrillos_guia3.yy",},},
     {"id":{"name":"Ladrillos_guia4","path":"sprites/Ladrillos_guia4/Ladrillos_guia4.yy",},},
     {"id":{"name":"Ladrillos","path":"sprites/Ladrillos/Ladrillos.yy",},},
+    {"id":{"name":"Revolucion","path":"sprites/Revolucion/Revolucion.yy",},},
     {"id":{"name":"spr_pared","path":"sprites/spr_pared/spr_pared.yy",},},
     {"id":{"name":"spr_power","path":"sprites/spr_power/spr_power.yy",},},
     {"id":{"name":"Sprite10","path":"sprites/Sprite10/Sprite10.yy",},},
