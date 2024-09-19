@@ -30,7 +30,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.0.169",
+    "IDEVersion":"2024.6.2.162",
   },
   "name":"Prueba 1",
   "resources":[
@@ -44,7 +44,6 @@
     {"id":{"name":"Entrada_BLVRD","path":"rooms/Entrada_BLVRD/Entrada_BLVRD.yy",},},
     {"id":{"name":"Entrada_Revolucion","path":"rooms/Entrada_Revolucion/Entrada_Revolucion.yy",},},
     {"id":{"name":"Juanpa","path":"rooms/Juanpa/Juanpa.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"Bulevard","path":"sprites/Bulevard/Bulevard.yy",},},
     {"id":{"name":"Camino","path":"sprites/Camino/Camino.yy",},},
     {"id":{"name":"Ladrillos_guia","path":"sprites/Ladrillos_guia/Ladrillos_guia.yy",},},
@@ -67,9 +66,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Entrada_BLVRD","path":"rooms/Entrada_BLVRD/Entrada_BLVRD.yy",},},
     {"roomId":{"name":"Entrada_Revolucion","path":"rooms/Entrada_Revolucion/Entrada_Revolucion.yy",},},
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Entrada_BLVRD","path":"rooms/Entrada_BLVRD/Entrada_BLVRD.yy",},},
     {"roomId":{"name":"Juanpa","path":"rooms/Juanpa/Juanpa.yy",},},
   ],
   "templateType":"game",
