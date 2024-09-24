@@ -44,6 +44,8 @@
     {"id":{"name":"Entrada_BLVRD","path":"rooms/Entrada_BLVRD/Entrada_BLVRD.yy",},},
     {"id":{"name":"Entrada_Revolucion","path":"rooms/Entrada_Revolucion/Entrada_Revolucion.yy",},},
     {"id":{"name":"Juanpa","path":"rooms/Juanpa/Juanpa.yy",},},
+    {"id":{"name":"Arbol_chico","path":"sprites/Arbol_chico/Arbol_chico.yy",},},
+    {"id":{"name":"Arbol_grande","path":"sprites/Arbol_grande/Arbol_grande.yy",},},
     {"id":{"name":"Bulevard","path":"sprites/Bulevard/Bulevard.yy",},},
     {"id":{"name":"Camino","path":"sprites/Camino/Camino.yy",},},
     {"id":{"name":"Ladrillos_guia","path":"sprites/Ladrillos_guia/Ladrillos_guia.yy",},},
