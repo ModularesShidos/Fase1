@@ -22,6 +22,7 @@
     {"$GMImageLayer":"","%Name":"78cf39d6-079f-4558-bbdb-08ac5cee5c73","blendMode":0,"displayName":"default","isLocked":false,"name":"78cf39d6-079f-4558-bbdb-08ac5cee5c73","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"9bfe88e5-e5bf-43f9-ba4d-fad5e0e051d7","blendMode":0,"displayName":"Layer 3","isLocked":false,"name":"9bfe88e5-e5bf-43f9-ba4d-fad5e0e051d7","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"df12dc75-1495-4e49-9180-a74a6f4e837b","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"df12dc75-1495-4e49-9180-a74a6f4e837b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"35f9bbbb-6319-4bc4-8658-5c75957183ec","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"35f9bbbb-6319-4bc4-8658-5c75957183ec","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"Revolucion",
   "nineSlice":{
