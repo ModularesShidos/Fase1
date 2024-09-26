@@ -30,11 +30,13 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.2.162",
+    "IDEVersion":"2024.8.0.169",
   },
   "name":"Prueba 1",
   "resources":[
     {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
+    {"id":{"name":"Colision_32","path":"objects/Colision_32/Colision_32.yy",},},
+    {"id":{"name":"Colision_64","path":"objects/Colision_64/Colision_64.yy",},},
     {"id":{"name":"MonaDeAlambre","path":"objects/MonaDeAlambre/MonaDeAlambre.yy",},},
     {"id":{"name":"Object6","path":"objects/Object6/Object6.yy",},},
     {"id":{"name":"objeto_control","path":"objects/objeto_control/objeto_control.yy",},},
@@ -44,8 +46,12 @@
     {"id":{"name":"Entrada_BLVRD","path":"rooms/Entrada_BLVRD/Entrada_BLVRD.yy",},},
     {"id":{"name":"Entrada_Revolucion","path":"rooms/Entrada_Revolucion/Entrada_Revolucion.yy",},},
     {"id":{"name":"Juanpa","path":"rooms/Juanpa/Juanpa.yy",},},
+    {"id":{"name":"Arbol_chico","path":"sprites/Arbol_chico/Arbol_chico.yy",},},
+    {"id":{"name":"Arbol_grande","path":"sprites/Arbol_grande/Arbol_grande.yy",},},
     {"id":{"name":"Bulevard","path":"sprites/Bulevard/Bulevard.yy",},},
     {"id":{"name":"Camino","path":"sprites/Camino/Camino.yy",},},
+    {"id":{"name":"DF_32","path":"sprites/DF_32/DF_32.yy",},},
+    {"id":{"name":"DF_64","path":"sprites/DF_64/DF_64.yy",},},
     {"id":{"name":"Ladrillos_guia","path":"sprites/Ladrillos_guia/Ladrillos_guia.yy",},},
     {"id":{"name":"Ladrillos_guia2","path":"sprites/Ladrillos_guia2/Ladrillos_guia2.yy",},},
     {"id":{"name":"Ladrillos_guia3","path":"sprites/Ladrillos_guia3/Ladrillos_guia3.yy",},},
@@ -66,9 +72,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"Juanpa","path":"rooms/Juanpa/Juanpa.yy",},},
     {"roomId":{"name":"Entrada_Revolucion","path":"rooms/Entrada_Revolucion/Entrada_Revolucion.yy",},},
     {"roomId":{"name":"Entrada_BLVRD","path":"rooms/Entrada_BLVRD/Entrada_BLVRD.yy",},},
-    {"roomId":{"name":"Juanpa","path":"rooms/Juanpa/Juanpa.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

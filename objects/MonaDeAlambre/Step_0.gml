@@ -4,32 +4,29 @@ if(speed != 0){
 	distance -= v;
 	if(distance <= 0){ 
 		speed = 0; 
+		distance = 32
 	}
 }
-if(speed == 0){ 
+if(speed == 0 ){ 
 	if keyboard_check(vk_right) && place_free(x+1,y)
 	{ 
 		direction = 0; 
 		hspeed = v;
-		distance = 64;
 	}
 if keyboard_check(vk_left) && place_free(x-1,y)
 	{ 
 		direction = 180;
 		hspeed = -v;
-		distance = 64;
 	} 
-if keyboard_check(vk_up) && place_free(x,y+1)
+if keyboard_check(vk_up) && place_free(x,y-1)
 	{ 
 		direction = 90;
 		vspeed = -v;
-		distance = 64;
 	}
-if keyboard_check(vk_down) && place_free(x,y-1)
+if keyboard_check(vk_down) && place_free(x,y+1)
 	{ 
 		direction = 270;
 		vspeed = v;
-		distance = 64;
 	}
 }
 //verifica direccion y velocidad para cambiar sprite

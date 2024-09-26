@@ -1,10 +1,10 @@
 {
   "$GMSprite":"",
-  "%Name":"Bulevard",
+  "%Name":"Arbol_chico",
   "bboxMode":0,
-  "bbox_bottom":1079,
-  "bbox_left":0,
-  "bbox_right":1919,
+  "bbox_bottom":59,
+  "bbox_left":10,
+  "bbox_right":59,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"581e8d46-3f9b-4d4e-bac3-76e64a827467","name":"581e8d46-3f9b-4d4e-bac3-76e64a827467","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"3d5dd45d-fa79-4302-9b43-abedd4110157","name":"3d5dd45d-fa79-4302-9b43-abedd4110157","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":32,
-  "gridY":32,
-  "height":1080,
+  "gridX":0,
+  "gridY":0,
+  "height":64,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"cff32155-f238-4a57-8e16-3c863f9ddd2b","blendMode":0,"displayName":"default","isLocked":false,"name":"cff32155-f238-4a57-8e16-3c863f9ddd2b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"48d4fdfc-e9ea-4701-b673-9600e3ebbe72","blendMode":0,"displayName":"default","isLocked":false,"name":"48d4fdfc-e9ea-4701-b673-9600e3ebbe72","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"Bulevard",
+  "name":"Arbol_chico",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"Bulevard",
+    "%Name":"Arbol_chico",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"Bulevard",
+    "name":"Arbol_chico",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"581e8d46-3f9b-4d4e-bac3-76e64a827467","path":"sprites/Bulevard/Bulevard.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"529e6101-7215-4f35-8993-1c7bdabaa16d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3d5dd45d-fa79-4302-9b43-abedd4110157","path":"sprites/Arbol_chico/Arbol_chico.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"e5768d74-e4e6-4fcb-ae6e-9603917441e7","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":1920,
+  "width":64,
 }
