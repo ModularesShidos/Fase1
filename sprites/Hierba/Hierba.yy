@@ -1,10 +1,10 @@
 {
   "$GMSprite":"",
-  "%Name":"Arbol_chico",
+  "%Name":"Hierba",
   "bboxMode":0,
-  "bbox_bottom":60,
-  "bbox_left":10,
-  "bbox_right":59,
+  "bbox_bottom":127,
+  "bbox_left":64,
+  "bbox_right":575,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"3d5dd45d-fa79-4302-9b43-abedd4110157","name":"3d5dd45d-fa79-4302-9b43-abedd4110157","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"1bf96ece-eb03-4dac-b5cd-7fe639e85a82","name":"1bf96ece-eb03-4dac-b5cd-7fe639e85a82","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":0,
-  "gridY":0,
-  "height":64,
+  "gridX":64,
+  "gridY":64,
+  "height":128,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"48d4fdfc-e9ea-4701-b673-9600e3ebbe72","blendMode":0,"displayName":"default","isLocked":false,"name":"48d4fdfc-e9ea-4701-b673-9600e3ebbe72","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"43f3af10-262e-4c81-982e-7cfc93d569e6","blendMode":0,"displayName":"default","isLocked":false,"name":"43f3af10-262e-4c81-982e-7cfc93d569e6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"Arbol_chico",
+  "name":"Hierba",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"Arbol_chico",
+    "%Name":"Hierba",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"Arbol_chico",
+    "name":"Hierba",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3d5dd45d-fa79-4302-9b43-abedd4110157","path":"sprites/Arbol_chico/Arbol_chico.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e5768d74-e4e6-4fcb-ae6e-9603917441e7","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1bf96ece-eb03-4dac-b5cd-7fe639e85a82","path":"sprites/Hierba/Hierba.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"e0222652-9fe7-4de9-a511-8e0c38aac947","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":64,
+  "width":576,
 }
