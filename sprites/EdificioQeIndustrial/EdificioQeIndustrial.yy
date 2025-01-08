@@ -1,27 +1,27 @@
 {
   "$GMSprite":"",
-  "%Name":"Banca",
+  "%Name":"EdificioQeIndustrial",
   "bboxMode":0,
-  "bbox_bottom":61,
+  "bbox_bottom":679,
   "bbox_left":0,
-  "bbox_right":63,
-  "bbox_top":32,
+  "bbox_right":1439,
+  "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"2e716364-52e3-4808-a006-d1a48741430a","name":"2e716364-52e3-4808-a006-d1a48741430a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"c4c5b40e-c4e0-4567-9771-1ca6b20b5a1e","name":"c4c5b40e-c4e0-4567-9771-1ca6b20b5a1e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":0,
-  "gridY":0,
-  "height":64,
+  "gridX":64,
+  "gridY":64,
+  "height":680,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"70f8f2a2-08f1-4976-aca7-9b41f0454060","blendMode":0,"displayName":"default","isLocked":false,"name":"70f8f2a2-08f1-4976-aca7-9b41f0454060","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"b87e1c1d-cc51-410f-b9c7-950586e16639","blendMode":0,"displayName":"default","isLocked":false,"name":"b87e1c1d-cc51-410f-b9c7-950586e16639","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"Banca",
+  "name":"EdificioQeIndustrial",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"Banca",
+    "%Name":"EdificioQeIndustrial",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"Banca",
+    "name":"EdificioQeIndustrial",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2e716364-52e3-4808-a006-d1a48741430a","path":"sprites/Banca/Banca.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"0794dedc-044f-497b-a45d-e11e21b3e925","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c4c5b40e-c4e0-4567-9771-1ca6b20b5a1e","path":"sprites/EdificioQeIndustrial/EdificioQeIndustrial.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"767cf47d-e40c-4f3d-982c-824a779fb91c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":64,
+  "width":1440,
 }
