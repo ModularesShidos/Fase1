@@ -27,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"torniquete",
-    "path":"sprites/torniquete/torniquete.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
