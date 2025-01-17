@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Prueba 1",
-    "path":"Prueba 1.yyp",
+    "name":"Personajes",
+    "path":"folders/Sprites/Personajes.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
