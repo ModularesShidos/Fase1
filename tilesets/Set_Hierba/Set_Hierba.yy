@@ -20,8 +20,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"Hierba",
-    "path":"sprites/Hierba/Hierba.yy",
+    "name":"Hierba_1",
+    "path":"sprites/Hierba_1/Hierba_1.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
