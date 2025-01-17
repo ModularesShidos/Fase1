@@ -20,8 +20,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"Ladrillos",
-    "path":"sprites/Ladrillos/Ladrillos.yy",
+    "name":"Ladrillos_1",
+    "path":"sprites/Ladrillos_1/Ladrillos_1.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{

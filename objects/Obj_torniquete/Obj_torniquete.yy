@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_torniquete",
+  "%Name":"obj_torniquete",
   "eventList":[],
   "managed":true,
-  "name":"Obj_torniquete",
+  "name":"obj_torniquete",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
