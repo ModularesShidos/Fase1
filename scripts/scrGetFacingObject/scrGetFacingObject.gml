@@ -16,7 +16,7 @@ function scrGetFacingObject(){
 			break;
 	
 		case 180:
-			ty -= 32;
+			tx -= 32;
 			break;
 	}
 	

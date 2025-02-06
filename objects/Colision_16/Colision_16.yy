@@ -1,21 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"objDoor",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"Colision_16",
+  "eventList":[],
   "managed":true,
-  "name":"objDoor",
+  "name":"Colision_16",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
     "path":"folders/Objetos.yy",
   },
-  "parentObjectId":{
-    "name":"ObjInteractive",
-    "path":"objects/ObjInteractive/ObjInteractive.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -34,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"INT_ROOM",
-    "path":"sprites/INT_ROOM/INT_ROOM.yy",
+    "name":"DF_16",
+    "path":"sprites/DF_16/DF_16.yy",
   },
   "spriteMaskId":null,
   "visible":false,
