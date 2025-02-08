@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"ObjFlor",
+  "%Name":"Obj_Flor",
   "eventList":[],
   "managed":true,
-  "name":"ObjFlor",
+  "name":"Obj_Flor",
   "overriddenProperties":[],
   "parent":{
     "name":"Interactuables",

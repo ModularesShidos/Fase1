@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_Contacto_Profes",
+  "%Name":"Obj_Felcha",
   "eventList":[],
   "managed":true,
-  "name":"Obj_Contacto_Profes",
+  "name":"Obj_Felcha",
   "overriddenProperties":[],
   "parent":{
     "name":"Interactuables",
@@ -28,10 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Contacto_Profe",
-    "path":"sprites/Contacto_Profe/Contacto_Profe.yy",
+    "name":"Flecha",
+    "path":"sprites/Flecha/Flecha.yy",
   },
-  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
