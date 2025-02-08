@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_Contacto_Profes",
+  "%Name":"Obj_Libro",
   "eventList":[],
   "managed":true,
-  "name":"Obj_Contacto_Profes",
+  "name":"Obj_Libro",
   "overriddenProperties":[],
   "parent":{
     "name":"Interactuables",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Contacto_Profe",
-    "path":"sprites/Contacto_Profe/Contacto_Profe.yy",
+    "name":"Libro",
+    "path":"sprites/Libro/Libro.yy",
   },
   "spriteMaskId":null,
   "visible":true,

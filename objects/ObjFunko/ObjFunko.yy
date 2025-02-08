@@ -6,8 +6,8 @@
   "name":"ObjFunko",
   "overriddenProperties":[],
   "parent":{
-    "name":"Interactuables",
-    "path":"folders/Objetos/Interactuables.yy",
+    "name":"Objetos",
+    "path":"folders/Objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
