@@ -1,2 +1,2 @@
 /// @description Choque pared
-distance = 0
+distance = 0;

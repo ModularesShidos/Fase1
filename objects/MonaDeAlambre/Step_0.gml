@@ -59,3 +59,13 @@ switch(direction)
 		sprite_index = Sprite9;
 		break;
 	}
+
+if(keyboard_check_pressed(ord("E"))){
+	var interactive = scrGetFacingObject();
+	
+	if(interactive) {
+		with (interactive){
+			event_user(0);
+		}
+	}
+}
