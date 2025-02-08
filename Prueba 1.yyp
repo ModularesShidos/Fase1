@@ -38,7 +38,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.2.162",
+    "IDEVersion":"2024.8.0.169",
   },
   "name":"Prueba 1",
   "resources":[
@@ -88,8 +88,8 @@
     {"id":{"name":"Sala_pasillo_rojo","path":"rooms/Sala_pasillo_rojo/Sala_pasillo_rojo.yy",},},
     {"id":{"name":"Sala_pasillo_w","path":"rooms/Sala_pasillo_w/Sala_pasillo_w.yy",},},
     {"id":{"name":"Sala_quimicos","path":"rooms/Sala_quimicos/Sala_quimicos.yy",},},
-    {"id":{"name":"Acordeon","path":"sprites/Acordeon/Acordeon.yy",},},
     {"id":{"name":"scrGetFacingObject","path":"scripts/scrGetFacingObject/scrGetFacingObject.yy",},},
+    {"id":{"name":"Acordeon","path":"sprites/Acordeon/Acordeon.yy",},},
     {"id":{"name":"anonimus","path":"sprites/anonimus/anonimus.yy",},},
     {"id":{"name":"Arbol_Abedul","path":"sprites/Arbol_Abedul/Arbol_Abedul.yy",},},
     {"id":{"name":"Arbol_Abeto","path":"sprites/Arbol_Abeto/Arbol_Abeto.yy",},},

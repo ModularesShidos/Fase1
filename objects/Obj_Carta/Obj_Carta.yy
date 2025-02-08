@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Carta",
+    "path":"sprites/Carta/Carta.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

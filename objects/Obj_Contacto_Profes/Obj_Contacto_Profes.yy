@@ -31,7 +31,6 @@
     "name":"Contacto_Profe",
     "path":"sprites/Contacto_Profe/Contacto_Profe.yy",
   },
-  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

@@ -12,7 +12,10 @@
     "name":"Objetos",
     "path":"folders/Objetos.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"ObjInteractive",
+    "path":"objects/ObjInteractive/ObjInteractive.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

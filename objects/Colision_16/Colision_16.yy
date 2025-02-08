@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":true,
-  "spriteId":null,
+  "spriteId":{
+    "name":"DF_16",
+    "path":"sprites/DF_16/DF_16.yy",
+  },
   "spriteMaskId":null,
   "visible":false,
 }
