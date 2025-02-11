@@ -1,2 +1,2 @@
 target_room = Sala_inter_J;
-target_player_position = [64, 832, 270];
+target_player_position = [0, 800, "R"];
