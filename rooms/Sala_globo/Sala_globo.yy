@@ -6,7 +6,6 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_7FF71C06","path":"rooms/Sala_globo/Sala_globo.yy",},
     {"name":"inst_7C216818","path":"rooms/Sala_globo/Sala_globo.yy",},
     {"name":"inst_406A1940","path":"rooms/Sala_globo/Sala_globo.yy",},
     {"name":"inst_781327A9","path":"rooms/Sala_globo/Sala_globo.yy",},
@@ -65,11 +64,12 @@
     {"name":"inst_1B15D658","path":"rooms/Sala_globo/Sala_globo.yy",},
     {"name":"inst_2D76FE75","path":"rooms/Sala_globo/Sala_globo.yy",},
     {"name":"inst_21C64F8","path":"rooms/Sala_globo/Sala_globo.yy",},
+    {"name":"inst_4247510F","path":"rooms/Sala_globo/Sala_globo.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v1","%Name":"inst_7FF71C06","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7FF71C06","objectId":{"name":"MonaDeAlambre","path":"objects/MonaDeAlambre/MonaDeAlambre.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":704.0,},
+        {"$GMRInstance":"v1","%Name":"inst_4247510F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4247510F","objectId":{"name":"Obj_Player_M","path":"objects/Obj_Player_M/Obj_Player_M.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":0.0,"y":608.0,},
         {"$GMRInstance":"v1","%Name":"inst_7C216818","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7C216818","objectId":{"name":"objDoor","path":"objects/objDoor/objDoor.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":10.5,"scaleY":1.0,"x":608.0,"y":832.0,},
         {"$GMRInstance":"v1","%Name":"inst_21C64F8","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_21C64F8","objectId":{"name":"objDoor","path":"objects/objDoor/objDoor.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":4.0,"x":-64.0,"y":512.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
@@ -167,7 +167,7 @@
   },
   "sequenceId":null,
   "views":[
-    {"hborder":800,"hport":832,"hspeed":-1,"hview":370,"inherit":false,"objectId":{"name":"MonaDeAlambre","path":"objects/MonaDeAlambre/MonaDeAlambre.yy",},"vborder":370,"visible":true,"vspeed":-1,"wport":1280,"wview":800,"xport":0,"xview":0,"yport":0,"yview":0,},
+    {"hborder":800,"hport":832,"hspeed":-1,"hview":370,"inherit":false,"objectId":{"name":"Obj_Player_M","path":"objects/Obj_Player_M/Obj_Player_M.yy",},"vborder":370,"visible":true,"vspeed":-1,"wport":1280,"wview":800,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},

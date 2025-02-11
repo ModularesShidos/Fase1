@@ -1,2 +1,2 @@
-target_room = Entrada_BLVRD;
-target_player_position = [992, 160, 270];
+target_room = Boulevard;
+target_player_position = [960, 64, "D"];
