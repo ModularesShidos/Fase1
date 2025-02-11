@@ -6,8 +6,8 @@
   "name":"ObjInteractive",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"ControlSistema",
+    "path":"folders/Objetos/ControlSistema.yy",
   },
   "parentObjectId":null,
   "persistent":false,
