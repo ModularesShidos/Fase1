@@ -2,10 +2,10 @@
   "$GMSprite":"",
   "%Name":"EdificioR",
   "bboxMode":0,
-  "bbox_bottom":1079,
+  "bbox_bottom":801,
   "bbox_left":0,
   "bbox_right":1919,
-  "bbox_top":0,
+  "bbox_top":1,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -14,8 +14,8 @@
   "frames":[
     {"$GMSpriteFrame":"","%Name":"c010b81c-5457-4a5d-aa2d-47be5df0efd7","name":"c010b81c-5457-4a5d-aa2d-47be5df0efd7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":0,
-  "gridY":0,
+  "gridX":5,
+  "gridY":5,
   "height":1080,
   "HTile":false,
   "layers":[
