@@ -43,7 +43,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.0.169",
+    "IDEVersion":"2024.6.2.162",
   },
   "name":"Prueba 1",
   "resources":[
@@ -97,6 +97,7 @@
     {"id":{"name":"Sala_pasillo_rojo","path":"rooms/Sala_pasillo_rojo/Sala_pasillo_rojo.yy",},},
     {"id":{"name":"Sala_pasillo_w","path":"rooms/Sala_pasillo_w/Sala_pasillo_w.yy",},},
     {"id":{"name":"Sala_quimicos","path":"rooms/Sala_quimicos/Sala_quimicos.yy",},},
+    {"id":{"name":"Sala_T_U","path":"rooms/Sala_T_U/Sala_T_U.yy",},},
     {"id":{"name":"scrGetFacingObject","path":"scripts/scrGetFacingObject/scrGetFacingObject.yy",},},
     {"id":{"name":"Acordeon","path":"sprites/Acordeon/Acordeon.yy",},},
     {"id":{"name":"anonimus","path":"sprites/anonimus/anonimus.yy",},},
@@ -171,6 +172,7 @@
     {"id":{"name":"Spr_pino","path":"sprites/Spr_pino/Spr_pino.yy",},},
     {"id":{"name":"spr_power","path":"sprites/spr_power/spr_power.yy",},},
     {"id":{"name":"Spr_statua","path":"sprites/Spr_statua/Spr_statua.yy",},},
+    {"id":{"name":"Spr_T_U","path":"sprites/Spr_T_U/Spr_T_U.yy",},},
     {"id":{"name":"Spr_toma_de_aire","path":"sprites/Spr_toma_de_aire/Spr_toma_de_aire.yy",},},
     {"id":{"name":"Spr_torii","path":"sprites/Spr_torii/Spr_torii.yy",},},
     {"id":{"name":"Spr_x_inferior","path":"sprites/Spr_x_inferior/Spr_x_inferior.yy",},},
@@ -224,6 +226,7 @@
     {"roomId":{"name":"Sala_pasillo_revolucion","path":"rooms/Sala_pasillo_revolucion/Sala_pasillo_revolucion.yy",},},
     {"roomId":{"name":"Sala_auditorio_pasillo","path":"rooms/Sala_auditorio_pasillo/Sala_auditorio_pasillo.yy",},},
     {"roomId":{"name":"Sala_Murales","path":"rooms/Sala_Murales/Sala_Murales.yy",},},
+    {"roomId":{"name":"Sala_T_U","path":"rooms/Sala_T_U/Sala_T_U.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
