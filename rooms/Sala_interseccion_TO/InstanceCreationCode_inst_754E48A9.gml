@@ -1,0 +1,2 @@
+target_room = Sala_interseccion_VUT;
+target_player_position = [160, 272, "U"];
