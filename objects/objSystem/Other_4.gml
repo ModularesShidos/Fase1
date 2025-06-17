@@ -10,3 +10,4 @@ if(player_start_position != noone){
 	
 	player_start_position = noone;
 }
+
