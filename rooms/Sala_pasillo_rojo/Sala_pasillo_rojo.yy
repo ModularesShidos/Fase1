@@ -137,12 +137,14 @@
         {"$GMRInstance":"v1","%Name":"inst_ABE7486","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_ABE7486","objectId":{"name":"Colision_64","path":"objects/Colision_64/Colision_64.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-64.0,"y":96.0,},
         {"$GMRInstance":"v1","%Name":"inst_2476F582","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2476F582","objectId":{"name":"Colision_64","path":"objects/Colision_64/Colision_64.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-64.0,"y":32.0,},
       ],"layers":[],"name":"Colisiones","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRTileLayer":"","%Name":"piso","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"piso","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":17,"SerialiseWidth":4,"TileSerialiseData":[
-          6,1,12,2147483648,6,1,3,2147483648,6,1,10,2147483648,6,1,12,2147483648,2,1,12,2147483648,5,1,12,2147483648,
-          6,1,12,2147483648,6,1,12,2147483648,6,1,12,2147483648,2,1,12,2147483648,5,1,12,2147483648,6,1,12,2147483648,
-          6,1,12,2147483648,6,1,12,2147483648,6,1,12,2147483648,6,1,12,2147483648,15,14,16,2147483648,
-        ],},"tilesetId":{"name":"Set_ladrillos","path":"tilesets/Set_ladrillos/Set_ladrillos.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
-    {"$GMRBackgroundLayer":"","%Name":"Fondo","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Fondo","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"Spr_pasillo_rojo","path":"sprites/Spr_pasillo_rojo/Spr_pasillo_rojo.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
+    {"$GMRTileLayer":"","%Name":"piso","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"piso","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":17,"SerialiseWidth":30,"TileCompressedData":[
+          3,6,1,12,-27,-2147483648,3,6,1,3,-27,-2147483648,3,6,1,10,-27,-2147483648,3,6,1,12,-27,-2147483648,3,
+          2,1,12,-27,-2147483648,3,5,1,12,-27,-2147483648,3,6,1,12,-27,-2147483648,3,6,1,12,-27,-2147483648,3,
+          6,1,12,-27,-2147483648,3,2,1,12,-27,-2147483648,3,5,1,12,-27,-2147483648,3,6,1,12,-27,-2147483648,3,
+          6,1,12,-27,-2147483648,3,6,1,12,-27,-2147483648,3,6,1,12,-27,-2147483648,3,6,1,12,-27,-2147483648,3,
+          15,14,16,-27,-2147483648,
+        ],"TileDataFormat":1,},"tilesetId":{"name":"Set_ladrillos","path":"tilesets/Set_ladrillos/Set_ladrillos.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+    {"$GMRBackgroundLayer":"","%Name":"Fondo","animationFPS":30.0,"animationSpeedType":0,"colour":4278190080,"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Fondo","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "name":"Sala_pasillo_rojo",
   "parent":{
@@ -163,7 +165,7 @@
     "Height":1080,
     "inheritRoomSettings":false,
     "persistent":false,
-    "Width":193,
+    "Width":1920,
   },
   "sequenceId":null,
   "views":[
