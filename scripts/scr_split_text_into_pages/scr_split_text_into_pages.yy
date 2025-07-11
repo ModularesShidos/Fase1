@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_split_text_into_pages",
   "parent":{
-    "name":"Utils",
-    "path":"folders/Scripts/Utils.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

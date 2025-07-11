@@ -13,5 +13,3 @@ draw_set_font(global.textbox_font);
    el texto, la separacion entre linea y el limite
 */
 draw_text_ext(_x +14, _y +15, text_on_display, 20, 394);
-
-draw_text(10, 10, "DEBUG: GUI ACTIVA");

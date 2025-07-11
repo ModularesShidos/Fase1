@@ -28,7 +28,7 @@ function scr_split_text(_text, _delimiter) {
 		// Añadimos la palabra a la lista de palabras
 		_words[array_length(_words)] = _word;
 		// El i1 se comvierte en i2 y buscamos un nuevo i2
-		_i1 = _i2;
+		_i1 = _i2 + 1;
 		_i2 = string_pos_ext(_delimiter, _text, _i1);
 	}
 	

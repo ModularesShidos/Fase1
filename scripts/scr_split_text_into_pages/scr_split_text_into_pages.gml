@@ -24,12 +24,12 @@ function scr_split_text_into_pages(_text, _font, _separation, _width, _height) {
 	draw_set_font(_font);
 	
 	// Iteramos por cada una de las palabras
-	for (var _i=0;_i<length;_i++) {
+	for (var _i=0;_i<_length;_i++) {
 		var _word = _words[_i];
 		
 		// Si el tamaño vertical de la pagina actual (page) + la palabra (word) es mayor o igual que la altura
 		// que le pasamos como parametro a esta función (height)
-		if (string_height_ext(_page + " " + _word, _separation, _width) >= height) {
+		if (string_height_ext(_page + " " + _word, _separation, _width) >= _height) {
 			// Entonces cerramos la página actual
 			_pages[array_length(_pages)] = _page;
 			// E iniciamos una nueva pagina con solo la palabra de esta iteración
