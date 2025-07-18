@@ -1,3 +1,4 @@
+
 //Manda los valores de la nueva posicion al objeto SYSTEM para que ahi los establesca en el juego y aparezcas correcto en la siguiente ROOM
 ObjSystem.player_start_position = target_player_position;
 

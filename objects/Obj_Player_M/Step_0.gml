@@ -1,3 +1,12 @@
+// Bloquea movimiento e interacción si hay diálogo activo
+if (variable_global_exists("dialogo_activo") && global.dialogo_activo) {
+    speed = 0;
+    hspeed = 0;
+    vspeed = 0;
+    exit;
+}
+
+
 //Verifica cuando se deja de pulsar la tecla y para el movimiento del personaje
 if(speed != 0){ 
 	distance -= spd;
