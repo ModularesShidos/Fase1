@@ -14,10 +14,5 @@ if(player_start_position != noone){
 // Mostrar textbox solo una vez en la sala correcta
 // Checale porque todavia no me sale 
 if (room == Sala_pasillo_revolucion && !global.visto_intro_cucei) {
-    if (layer_exists("UI")) {
-        instance_create_layer(0, 0, "UI", obj_text_box);
-    } else {
-        instance_create_layer(0, 0, "Instances", obj_text_box); // capa alternativa si no existe "UI"
-    }
-    global.visto_intro_cucei = true;
+    instance_create_layer(0, 0, "UI", obj_text_box);
 }

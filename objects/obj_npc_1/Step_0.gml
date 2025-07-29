@@ -1,21 +1,21 @@
-// Solo puede hablar si ya acabaste la clase y no has hablado con él
-if (global.visto_dialogo_clase && !global.hablo_con_npc_programador) {
-    // Solo si el jugador está cerca (ajusta distancia si gustas)
-    if (distance_to_object(obj_player) < 40 && keyboard_check_pressed(ord("E"))) {
-        
-        // ✅ Activar la bandera de que ya habló
-        global.hablo_con_npc_programador = true;
-
-        // ✅ Crear el textbox de diálogo
-        instance_create_layer(x, y - 32, "GUI", obj_textbox_nube);
-
-        // ✅ Activar bandera para pausar juego o movimiento
-        global.dialogo_activo = true;
-    }
+// Revisa si ya puede activarse
+if (!active && global.visto_dialogo_clase) {
+    visible = true;
+    active = true;
 }
 
+// Si todavía no está activo, no sigue
+if (!active) exit;
 
-// Si ya habló, lo hacemos desaparecer
-if (global.hablo_con_npc_programador) {
-    instance_destroy();
+// Verifica que el jugador esté cerca y presione "E"
+if (!ya_hablo && distance_to_object(Obj_Player_M) < 40 && keyboard_check_pressed(ord("E")) && !global.dialogo_activo) {
+    
+    ya_hablo = true;
+    global.dialogo_activo = true;
+
+    // Crear el textbox general
+    var caja_texto = instance_create_layer(x, y - 32, "Instances", obj_textbox_general);
+
+    // Asignar el texto (puedes usar una array si quieres varias páginas)
+    caja_texto.text = "¡Hola! Ya tomaste tu primera clase. Recuerda que el conocimiento es poder.";
 }
