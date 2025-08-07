@@ -14,8 +14,8 @@ if (!ya_hablo && distance_to_object(Obj_Player_M) < 40 && keyboard_check_pressed
     global.dialogo_activo = true;
 
     // Crear el textbox general
-    var caja_texto = instance_create_layer(x, y - 32, "Instances", obj_textbox_general);
+	var _caja_texto = instance_create_layer(x, y - 32, "Instances", obj_text_box_general);
 
     // Asignar el texto (puedes usar una array si quieres varias páginas)
-    caja_texto.text = "¡Hola! Ya tomaste tu primera clase. Recuerda que el conocimiento es poder.";
+    _caja_texto.text = "¡Hola! Ya tomaste tu primera clase. Recuerda que el conocimiento es poder.";
 }
