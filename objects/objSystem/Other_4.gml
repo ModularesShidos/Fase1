@@ -12,7 +12,7 @@ if(player_start_position != noone){
 }
 
 // Mostrar textbox solo una vez en la sala correcta
-// Checale porque todavia no me sale 
-if (room == Sala_pasillo_revolucion && !global.visto_intro_cucei) {
+
+if (room == Sala_pasillo_revolucion && !global.textbox_visto) {
     instance_create_layer(0, 0, "UI", obj_text_box);
 }

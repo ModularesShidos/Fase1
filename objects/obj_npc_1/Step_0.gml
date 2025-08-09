@@ -7,15 +7,30 @@ if (!active && global.visto_dialogo_clase) {
 // Si todavía no está activo, no sigue
 if (!active) exit;
 
+// Si el diálogo acaba de cerrarse, espera antes de permitir otro
+if (dialogo_cerrado) {
+    if (!keyboard_check(ord("E"))) { // Espera que el jugador suelte la tecla E
+        dialogo_cerrado = false;      // Ya puede volver a activar diálogo
+    } else {
+        exit; // Evita activar mientras siga presionada E
+    }
+}
+
 // Verifica que el jugador esté cerca y presione "E"
-if (!ya_hablo && distance_to_object(Obj_Player_M) < 40 && keyboard_check_pressed(ord("E")) && !global.dialogo_activo) {
+if (distance_to_object(Obj_Player_M) < 40 && keyboard_check_pressed(ord("E")) && !global.dialogo_activo) {
     
-    ya_hablo = true;
-    global.dialogo_activo = true;
+	global.dialogo_activo = true;
+	
+    // Decidimos qué diálogo se debe mostrar
+    if (!global.npc_1) {
+        global.dialogo_id = 1; // primer diálogo con este NPC
+        global.npc_1 = true;
+    } else {
+        global.dialogo_id = 2; // diálogo repetido
+    }
+	
 
-    // Crear el textbox general
-	var _caja_texto = instance_create_layer(x, y - 32, "Instances", obj_text_box_general);
 
-    // Asignar el texto (puedes usar una array si quieres varias páginas)
-    _caja_texto.text = "¡Hola! Ya tomaste tu primera clase. Recuerda que el conocimiento es poder.";
+    // Solo indica que hay que mostrar el textbox
+    instance_create_layer(x, y - 32, "Instances", obj_text_box_general);
 }

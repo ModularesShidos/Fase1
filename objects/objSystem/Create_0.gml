@@ -1,27 +1,33 @@
-// 📌 Posición inicial del jugador para cambios de room
+// Posición inicial del jugador para cambios de room
 player_start_position = noone;
 
-// BANDERAS DE CONTROL DE HISTORIA
-
-// Muestra la intro de CUCEI solo una vez
-global.visto_intro_cucei = false;
-
-// El jugador solo puede hablar una vez con el NPC programador
-global.hablo_con_npc_programador = false;
-
-// Bandera para que solo se muestre el primer diálogo de clase una vez
-if (!variable_global_exists("visto_dialogo_clase")) {
-    global.visto_dialogo_clase = false;
-}
+// *******BANDERAS DE CONTROL DE HISTORIA*******
 
 // Controla si hay un diálogo activo en pantalla
 if (!variable_global_exists("dialogo_activo")) {
     global.dialogo_activo = false;
 }
 
+// Para solo mostrar los textbox una vez
+global.textbox_visto = false;
+
+// Para que cuando hable con el NPC solo salga el mensaje principal 1 vez
+// las siguientes se usara un mensaje distinto
+global.npc_1 = false;
+
+// Para que solo se muestre el primer diálogo de clase una vez
+if (!variable_global_exists("visto_dialogo_clase")) {
+    global.visto_dialogo_clase = false;
+}
+
 // Marca si la clase fue completada (para mostrar al NPC luego)
 if (!variable_global_exists("clase_completada")) {
     global.clase_completada = false;
+}
+
+// Número de diálogo actual (0 = ninguno)
+if (!variable_global_exists("dialogo_id")) {
+    global.dialogo_id = 0;
 }
 
 // FUENTE PARA EL TEXTBOX
