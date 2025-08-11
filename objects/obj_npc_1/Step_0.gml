@@ -29,7 +29,20 @@ if (distance_to_object(Obj_Player_M) < 40 && keyboard_check_pressed(ord("E")) &&
         global.dialogo_id = 2; // diálogo repetido
     }
 	
-
+	    // 🔹 Primero verificamos si el jugador tiene la flor
+    if (getItem(ITEM_FLOR) != noone) {
+        global.dialogo_id = 3; // diálogo especial si ya tiene la flor
+        // Si quieres, aquí puedes eliminar la flor del inventario
+        removeItem(ITEM_FLOR);
+    }
+    // 🔹 Si no tiene la flor, seguimos la lógica normal
+    else if (!global.npc_1) {
+        global.dialogo_id = 1; // primer diálogo con este NPC
+        global.npc_1 = true;
+    } else {
+        global.dialogo_id = 2; // diálogo repetido
+    }
+	
 
     // Solo indica que hay que mostrar el textbox
     instance_create_layer(x, y - 32, "Instances", obj_text_box_general);

@@ -39,3 +39,9 @@ global.textbox_font = font_add_sprite_ext(
 
 // AJUSTE DE GUI
 display_set_gui_size(480, 490);
+
+// INVENTARIO
+
+initItem(); // aquí defines todos los global.items
+objSystem.inventory = ds_list_create(); // importante usar objSystem.inventory, no solo inventory
+

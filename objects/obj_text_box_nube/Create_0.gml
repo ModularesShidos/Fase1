@@ -8,7 +8,3 @@ text_on_display = "";
 text_finished = false;
 alarm[0] = 3;
 
-show_debug_message("🆕 INICIO DE DIÁLOGO:");
-show_debug_message("📜 Texto original: " + text);
-show_debug_message("📄 Páginas divididas: " + string(array_length(pages)));
-show_debug_message("🔢 Página inicial: " + string(page));

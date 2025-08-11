@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"removeItem",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"removeItem",
+  "parent":{
+    "name":"Inventario",
+    "path":"folders/Scripts/Inventario.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
