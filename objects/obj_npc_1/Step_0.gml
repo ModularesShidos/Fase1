@@ -21,26 +21,16 @@ if (distance_to_object(Obj_Player_M) < 40 && keyboard_check_pressed(ord("E")) &&
     
 	global.dialogo_activo = true;
 	
-    // Decidimos qué diálogo se debe mostrar
-    if (!global.npc_1) {
-        global.dialogo_id = 1; // primer diálogo con este NPC
-        global.npc_1 = true;
-    } else {
-        global.dialogo_id = 2; // diálogo repetido
-    }
-	
-	    // 🔹 Primero verificamos si el jugador tiene la flor
     if (getItem(ITEM_FLOR) != noone) {
-        global.dialogo_id = 3; // diálogo especial si ya tiene la flor
-        // Si quieres, aquí puedes eliminar la flor del inventario
+        global.dialogo_id = 3; 
         removeItem(ITEM_FLOR);
     }
-    // 🔹 Si no tiene la flor, seguimos la lógica normal
     else if (!global.npc_1) {
-        global.dialogo_id = 1; // primer diálogo con este NPC
+        global.dialogo_id = 1; 
         global.npc_1 = true;
-    } else {
-        global.dialogo_id = 2; // diálogo repetido
+    }
+    else {
+        global.dialogo_id = 2; 
     }
 	
 

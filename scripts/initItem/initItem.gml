@@ -4,7 +4,7 @@ function initItem(){
 
 //global.items[ITEM_ACORDEN] = createItem("Acordeon para examen", "Te ayudara en tu proximo examen", Acordeon, );
 
-//global.items[ITEM_CARTA] = createItem("Carta especial", "Sabe", Carta);
+global.items[ITEM_CARTA] = createItem("Carta especial", "Podrás ayudar a tu compañero en apuros", Carta, itemNoUse);
 
 //global.items[ITEM_FLECHA] = createItem("Flecha guia", "Iluminara tu camino", Flecha);
 

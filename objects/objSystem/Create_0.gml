@@ -38,10 +38,25 @@ global.textbox_font = font_add_sprite_ext(
 );
 
 // AJUSTE DE GUI
+
 display_set_gui_size(480, 490);
+
 
 // INVENTARIO
 
-initItem(); // aquí defines todos los global.items
-objSystem.inventory = ds_list_create(); // importante usar objSystem.inventory, no solo inventory
+// Macros e inicialización de inventario
+initMacros();
 
+// Lista de definiciones de ítems
+global.items = array_create(8); // tenemos 8 ítems definidos por macro
+
+// Lista del inventario (lista global)
+global.inventory = ds_list_create();
+
+// Inicializar ítems
+initItem();
+
+
+// BANDERAS PARA SEGUIMIENTO DE MISIONES
+
+global.mision_1 = false;

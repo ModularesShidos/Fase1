@@ -2,12 +2,16 @@ global.dialogo_activo = true;
 
 switch (global.dialogo_id) {
     case 1:
-        text = "¡Hola! Ya tomaste tu primera clase. Recuerda que el conocimiento es poder.";
+        text = "Hola, necesito tu ayuda, acabo de perder una carta muy importante para mi, crees que me puedas ayudar a buscarla por favor, puede que se encuentre cerca del edificio V.";
         break;
 
     case 2:
-        text = "¡Te veo motivado! Sigue asistiendo a tus clases.";
+        text = "Por favor, ayudame a echar un vistazo en el edificio V, estoy esperando a alguien en este momento.";
         break;
+		
+	case 3: 
+		text = "Te lo agradezco mucho!!. Esta carta fue muy importante para mi el semestre qu comence, quería regalarsela a una amiga para que estudiara pero creo que ella no vendra, te la puedes quedar para que estudies.";
+		break;
 
     default:
         text = "Sin diálogo definido.";

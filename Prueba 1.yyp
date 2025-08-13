@@ -72,7 +72,6 @@
     {"id":{"name":"obj_npc_1","path":"objects/obj_npc_1/obj_npc_1.yy",},},
     {"id":{"name":"Obj_Player_M","path":"objects/Obj_Player_M/Obj_Player_M.yy",},},
     {"id":{"name":"obj_text_box_general","path":"objects/obj_text_box_general/obj_text_box_general.yy",},},
-    {"id":{"name":"obj_text_box_manager","path":"objects/obj_text_box_manager/obj_text_box_manager.yy",},},
     {"id":{"name":"obj_text_box_nube","path":"objects/obj_text_box_nube/obj_text_box_nube.yy",},},
     {"id":{"name":"obj_text_box","path":"objects/obj_text_box/obj_text_box.yy",},},
     {"id":{"name":"obj_torniquete","path":"objects/obj_torniquete/obj_torniquete.yy",},},

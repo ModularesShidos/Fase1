@@ -3,8 +3,8 @@ function removeItem(itemId){
 	
 	if (item != noone) {
 	
-		var pos = ds_list_find_index(objSystem.inventory, item);
-		ds_list_delete(objSystem.inventory, pos);
+		var pos = ds_list_find_index(global.inventory, item);
+		ds_list_delete(global.inventory, pos);
 	
 	}
 	

@@ -33,7 +33,7 @@ function scr_split_text(_text, _delimiter) {
 	}
 	
 	// Si nos sobró una palabra al final lo añadimos al array de palabras
-	if (_i1 + 1 < string_length(_text)) {
+	if (_i1 <= string_length(_text)) {
 		var _last_word = string_replace(string_copy(_text, _i1 + 1, string_length(_text)), _delimiter, "");
 		_words[array_length(_words)] = _last_word;
 	}
