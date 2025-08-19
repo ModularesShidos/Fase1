@@ -15,4 +15,8 @@ if(player_start_position != noone){
 
 if (room == Sala_pasillo_revolucion && !global.textbox_visto) {
     instance_create_layer(0, 0, "UI", obj_text_box);
+} 
+
+if (room == Entrada_Revolucion && global.textbox_visto && global.mission_2 == true) {
+    instance_create_layer(0, 0, "UI", obj_text_box);
 }

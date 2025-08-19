@@ -13,37 +13,48 @@
  * @param height: Alto máximo del texto
  */
 function scr_split_text_into_pages(_text, _font, _separation, _width, _height) {
-	var _pages = []; // Todas las paginas disponibles
-	var _page = ""; // Pagina actual
-	
-	// Primero dividimos el texto en palabras, así que un texto como "hola mundo" se convierte en un array ["hola", "mundo"]
-	var _words = scr_split_text(_text, " ");
-	var _length = array_length(_words);
+    var _pages = [];
+    var _page = "";
 
-	// Colocamos la fuente con la que queremos medir el texto
-	draw_set_font(_font);
-	
-	// Iteramos por cada una de las palabras
-	for (var _i=0;_i<_length;_i++) {
-		var _word = _words[_i];
-		
-		// Si el tamaño vertical de la pagina actual (page) + la palabra (word) es mayor o igual que la altura
-		// que le pasamos como parametro a esta función (height)
-		if (string_height_ext(_page + " " + _word, _separation, _width) >= _height) {
-			// Entonces cerramos la página actual
-			_pages[array_length(_pages)] = _page;
-			// E iniciamos una nueva pagina con solo la palabra de esta iteración
-			_page = _word;
-		} else {
-			// Si el tamaño vertical es menor entonces añadimos la palabra a la pagina actual
-			if (_i > 0) { _page += " "; }
-			_page += _word;
-		}
-	}
-	
-	// Luego de iterar por todas las palabras igual nos sobra una pagina, así que la añadimos a el total de paginas
-	_pages[array_length(_pages)] = _page;
-	
-	// Retornamos todas las paginas
-	return _pages;
+    show_debug_message("=== scr_split_text_into_pages INICIO ===");
+    show_debug_message("Texto recibido: " + _text);
+
+    // 1. Limpiar palabras vacías desde el split
+    var _words = scr_split_text(_text, " ");
+    var _length = array_length(_words);
+    show_debug_message("Palabras detectadas: " + string(_length));
+
+    draw_set_font(_font);
+
+    for (var _i = 0; _i < _length; _i++) {
+        var _word = _words[_i];
+
+        // Simulamos la altura si agregamos la palabra
+        var _altura = string_height_ext((_page == "" ? _word : _page + " " + _word), _separation, _width);
+        show_debug_message("Iteración " + string(_i) + " -> palabra: '" + _word + "' / Altura si se añade: " + string(_altura));
+
+        if (_altura > _height) { // ← Usa > para cortar justo cuando se exceda
+            show_debug_message("Página completada (" + string(array_length(_pages)) + "): " + _page);
+            _pages[array_length(_pages)] = _page;
+            _page = _word; // nueva página
+        } else {
+            if (_page != "") { _page += " "; }
+            _page += _word;
+        }
+    }
+
+    // Añadimos la última página
+    if (string_length(_page) > 0) {
+        _pages[array_length(_pages)] = _page;
+        show_debug_message("Página final añadida (" + string(array_length(_pages)-1) + "): " + _page);
+    }
+
+    // Resumen
+    show_debug_message("Total de páginas generadas: " + string(array_length(_pages)));
+    for (var j = 0; j < array_length(_pages); j++) {
+        show_debug_message("Página " + string(j) + ": " + _pages[j]);
+    }
+    show_debug_message("=== scr_split_text_into_pages FIN ===");
+
+    return _pages;
 }

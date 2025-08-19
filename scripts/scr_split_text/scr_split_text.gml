@@ -7,37 +7,43 @@
  * entonces nos retornará un array con dos palabras ["hola", "mundo"]
  * 
  * El delimitador puede ser cualquier caracter, no solamente espacios vacios, por ejemplo
- * si tenemos el texto "A:B:C:D:E:F:G y utilizamos el delimitador ":" la respuesta será
+ * si tenemos el texto "A:B:C:D:E:F:G" y utilizamos el delimitador ":" la respuesta será
  * ["A", "B", "C", "D", "E", "F", "G"]
  * 
  * @param text: El texto que queremos dividir
  * @param delimiter: Caracter que queremos utilizar como delimitador
  */
 function scr_split_text(_text, _delimiter) {
-	var _words = []; // Todas las palabras a retornar
-	
-	// Estas dos variables nos ayudarán a buscar las palabras utilizando indices de busqueda
-	var _i1 = 1;
-	var _i2 = string_pos_ext(_delimiter, _text, _i1);
-	
-	// Si i2 no es igual a 0 es porque encontramos un delimitador 
-	while (_i2 != 0) {
-		// Si es así entonces copiamos la palabra utilizando los indices i1 y i2 y borramos cualquier rastro
-		// del delimitador que haya quedado
-		var _word = string_replace(string_copy(_text, _i1, _i2 - _i1), _delimiter, "");
-		// Añadimos la palabra a la lista de palabras
-		_words[array_length(_words)] = _word;
-		// El i1 se comvierte en i2 y buscamos un nuevo i2
-		_i1 = _i2 + 1;
-		_i2 = string_pos_ext(_delimiter, _text, _i1);
-	}
-	
-	// Si nos sobró una palabra al final lo añadimos al array de palabras
-	if (_i1 <= string_length(_text)) {
-		var _last_word = string_replace(string_copy(_text, _i1 + 1, string_length(_text)), _delimiter, "");
-		_words[array_length(_words)] = _last_word;
-	}
-	
-	// Regresamos la lista de palabras
-	return _words;
+    var _words = [];
+
+    show_debug_message("=== scr_split_text INICIO ===");
+    show_debug_message("Texto recibido: " + _text);
+    show_debug_message("Delimitador usado: '" + _delimiter + "'");
+
+    var _i1 = 1;
+    var _i2 = string_pos_ext(_delimiter, _text, _i1);
+
+    while (_i2 != 0) {
+        var _word = string_replace(string_copy(_text, _i1, _i2 - _i1), _delimiter, "");
+        if (string_length(_word) > 0) { // ← Ignorar palabras vacías
+            _words[array_length(_words)] = _word;
+        }
+        _i1 = _i2 + 1;
+        _i2 = string_pos_ext(_delimiter, _text, _i1);
+    }
+
+    if (_i1 <= string_length(_text)) {
+        var _last_word = string_replace(string_copy(_text, _i1 + 1, string_length(_text)), _delimiter, "");
+        if (string_length(_last_word) > 0) {
+            _words[array_length(_words)] = _last_word;
+        }
+    }
+
+    show_debug_message("scr_split_text -> Palabras encontradas: " + string(array_length(_words)));
+    for (var i = 0; i < array_length(_words); i++) {
+        show_debug_message("Palabra " + string(i) + ": " + _words[i]);
+    }
+    show_debug_message("=== scr_split_text FIN ===");
+
+    return _words;
 }

@@ -60,3 +60,5 @@ initItem();
 // BANDERAS PARA SEGUIMIENTO DE MISIONES
 
 global.mision_1 = false;
+
+global.mission_2 = false;

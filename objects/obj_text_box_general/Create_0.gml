@@ -1,4 +1,5 @@
 global.dialogo_activo = true;
+global.activar_mision_1 = false;
 
 switch (global.dialogo_id) {
     case 1:
@@ -11,6 +12,7 @@ switch (global.dialogo_id) {
 		
 	case 3: 
 		text = "Te lo agradezco mucho!!. Esta carta fue muy importante para mi el semestre qu comence, quería regalarsela a una amiga para que estudiara pero creo que ella no vendra, te la puedes quedar para que estudies.";
+		global.activar_mision_1 = true;
 		break;
 
     default:
