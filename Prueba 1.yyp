@@ -1,5 +1,5 @@
 {
-  "$GMProject":"v1v1",
+  "$GMProject":"",
   "%Name":"Prueba 1",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
@@ -43,8 +43,6 @@
     {"$GMFolder":"","%Name":"TextBox","folderPath":"folders/Sprites/TextBox.yy","name":"TextBox","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Tiles","folderPath":"folders/Sprites/Tiles.yy","name":"Tiles","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "ForcedPrefabProjectReferences":[],
-  "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],

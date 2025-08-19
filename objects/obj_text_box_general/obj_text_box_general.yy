@@ -33,10 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_text_box_general",
-    "path":"sprites/spr_text_box_general/spr_text_box_general.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
