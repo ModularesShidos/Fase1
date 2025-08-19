@@ -25,5 +25,7 @@ function scrGetFacingObject(){
 		break;
 	}
 	
-	return instance_place(tx, ty, ObjInteractive);
+	var result = instance_place(tx, ty, ObjInteractive);
+    show_debug_message("Detectando objeto interactivo en (" + string(tx) + "," + string(ty) + ") = " + string(result));
+    return result;
 }

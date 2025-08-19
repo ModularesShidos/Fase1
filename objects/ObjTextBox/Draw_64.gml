@@ -1,1 +1,0 @@
-draw_sprite(TextBox_Cel, 0, 30, 280);
