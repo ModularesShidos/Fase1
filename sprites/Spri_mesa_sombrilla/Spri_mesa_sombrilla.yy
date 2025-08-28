@@ -33,7 +33,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"Spri_mesa_sombrilla",
     "autoRecord":true,
     "backdropHeight":768,

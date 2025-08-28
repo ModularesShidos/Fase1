@@ -1,5 +1,5 @@
 // Comienza oculta si no ha hablado con el NPC o no se cumplió condición
-if (!global.visto_dialogo_clase) {
+if (!global.visto_dialogo_clase1) {
     visible = false;
     active = false;
 } else {

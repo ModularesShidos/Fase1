@@ -12,6 +12,8 @@
  * @param width: Ancho máximo del texto
  * @param height: Alto máximo del texto
  */
+ 
+ 
 function scr_split_text_into_pages(_text, _font, _separation, _width, _height) {
     var _pages = [];
     var _page = "";

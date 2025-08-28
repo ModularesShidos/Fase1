@@ -36,7 +36,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"Student_6",
     "autoRecord":true,
     "backdropHeight":768,

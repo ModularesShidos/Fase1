@@ -38,5 +38,5 @@
     "path":"sprites/int_class_door/int_class_door.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }
