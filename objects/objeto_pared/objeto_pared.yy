@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
   "%Name":"objeto_pared",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"objeto_pared",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Interactuables",
+    "path":"folders/Objetos/Interactuables.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":true,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Pared_contra_profe",
+    "path":"sprites/Pared_contra_profe/Pared_contra_profe.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

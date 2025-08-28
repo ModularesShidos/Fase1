@@ -11,14 +11,30 @@ if (!variable_global_exists("dialogo_activo")) {
 // Para solo mostrar los textbox una vez
 global.textbox_visto = false;
 
+
+// CLASES
+
+// Para que solo se muestre el primer diálogo de clase una vez
+if (!variable_global_exists("visto_dialogo_clase1")) {
+    global.visto_dialogo_clase1 = false;
+}
+
+// Para que solo se muestre el primer diálogo de clase una vez
+if (!variable_global_exists("visto_dialogo_clase2")) {
+    global.visto_dialogo_clase2 = false;
+
+
+if (!variable_global_exists("visto_dialogo_clase3")) {
+    global.visto_dialogo_clase3 = false;
+}}
+
+
 // Para que cuando hable con el NPC solo salga el mensaje principal 1 vez
 // las siguientes se usara un mensaje distinto
 global.npc_1 = false;
 
-// Para que solo se muestre el primer diálogo de clase una vez
-if (!variable_global_exists("visto_dialogo_clase")) {
-    global.visto_dialogo_clase = false;
-}
+global.npc_2 = false;
+
 
 // Marca si la clase fue completada (para mostrar al NPC luego)
 if (!variable_global_exists("clase_completada")) {
@@ -31,11 +47,15 @@ if (!variable_global_exists("dialogo_id")) {
 }
 
 // FUENTE PARA EL TEXTBOX
-global.textbox_font = font_add_sprite_ext(
-    spr_textbox_font,
-    "ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnñopqrstuvwxyzáéíóú0123456789¡!¿?()\"'.,-/ü|",
-    true, 0
-);
+if (!variable_global_exists("textbox_font") || !font_exists(global.textbox_font)) {
+    global.textbox_font = font_add_sprite_ext(
+        spr_textbox_font,
+        "ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚabcdefghijklmnñopqrstuvwxyzáéíóú0123456789¡!¿?()\"'.,-/ü|",
+        true, 0
+    );
+}
+
+
 
 // AJUSTE DE GUI
 
@@ -62,3 +82,18 @@ initItem();
 global.mision_1 = false;
 
 global.mission_2 = false;
+
+global.mission_3 = false;
+
+global.mission_4 = false;
+
+global.mission_5 = false;
+
+
+// AUXILIARES PARA OBJ_TEXT_BOX_ NUBE
+
+global.terminar_clase2 = false;
+//global.visto_dialogo_clase2 = false;
+
+global.mission_clear_2 = false;
+global.mission_clear_3 = false;

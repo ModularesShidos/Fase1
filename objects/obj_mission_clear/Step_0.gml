@@ -13,3 +13,10 @@ if (duration <= 0) {
     room_goto(Entrada_Revolucion);
 	
 }
+
+if (duration <= 0 && !global.mission_2) {
+    instance_destroy();
+    global.mission_3 = true;
+    room_goto(Entrada_Revolucion);
+	
+}

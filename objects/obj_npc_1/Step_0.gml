@@ -1,5 +1,10 @@
+if (global.mission_2) {
+    instance_destroy();
+    exit;
+}
+
 // Revisa si ya puede activarse
-if (!active && global.visto_dialogo_clase) {
+if (!active && global.visto_dialogo_clase1) {
     visible = true;
     active = true;
 }
@@ -21,9 +26,9 @@ if (distance_to_object(Obj_Player_M) < 40 && keyboard_check_pressed(ord("E")) &&
     
 	global.dialogo_activo = true;
 	
-    if (getItem(ITEM_FLOR) != noone) {
+    if (getItem(ITEM_CARTA) != noone) {
         global.dialogo_id = 3; 
-        removeItem(ITEM_FLOR);
+        removeItem(ITEM_CARTA);
     }
     else if (!global.npc_1) {
         global.dialogo_id = 1; 

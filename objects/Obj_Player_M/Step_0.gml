@@ -13,6 +13,13 @@ if (place_meeting(x + hspeed, y, obj_npc_1)) {
 if (place_meeting(x, y + vspeed, obj_npc_1)) {
     vspeed = 0;
 }
+// Bloquea movimiento si está a punto de chocar con un NPC sólido
+if (place_meeting(x + hspeed, y, obj_npc_2)) {
+    hspeed = 0;
+}
+if (place_meeting(x, y + vspeed, obj_npc_2)) {
+    vspeed = 0;
+}
 
 
 //Verifica cuando se deja de pulsar la tecla y para el movimiento del personaje
