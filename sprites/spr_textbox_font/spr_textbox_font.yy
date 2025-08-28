@@ -138,7 +138,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"v1",
+    "$GMSequence":"",
     "%Name":"spr_textbox_font",
     "autoRecord":true,
     "backdropHeight":768,

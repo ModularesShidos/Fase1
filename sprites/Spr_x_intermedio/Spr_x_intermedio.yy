@@ -32,7 +32,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"v1",
+    "$GMSequence":"",
     "%Name":"Spr_x_intermedio",
     "autoRecord":true,
     "backdropHeight":768,
@@ -63,8 +63,6 @@
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
-    "seqHeight":224.0,
-    "seqWidth":1824.0,
     "showBackdrop":true,
     "showBackdropImage":false,
     "timeUnits":1,
