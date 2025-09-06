@@ -1,11 +1,6 @@
 global.dialogo_activo = true;
 esperar_input = false;
 
-show_debug_message("=== CREATE obj_text_box_nube ===");
-show_debug_message("Bandera mision_1 = " + string(global.mision_1));
-show_debug_message("Bandera mission_2 = " + string(global.mission_2));
-show_debug_message("Bandera visto_dialogo_clase2 = " + string(global.visto_dialogo_clase2));
-show_debug_message("Bandera mission_clear_2 = " + string(global.mission_clear_2));
 
 if (!global.mision_1) {
 	text = "Wow que buena clase, hasta se me quedo grabado que un diagrama de flujo es como un dibujo con flechas que muestra los pasos para realizar un programa. Tambien me enseñaron que un IDE es un programa donde escribres y pruebas código y que para instalarlo solo necesitas descargarlo de su página e instalarlo. Y un Hola Mundo es el programa más simple que imprime esas palabras en consola para principiantes.";
