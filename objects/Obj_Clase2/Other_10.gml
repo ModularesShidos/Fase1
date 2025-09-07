@@ -1,5 +1,7 @@
 // Solo si no se ha visto antes
-if (!global.visto_dialogo_clase2) {
+if (!global.clase2_vista) {
+	global.clase2_vista = true;
     instance_create_layer(0, 0, "UI", obj_fade_black);
 }
+
 

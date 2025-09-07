@@ -1,38 +1,47 @@
 global.dialogo_activo = true;
 esperar_input = false;
 
-show_debug_message("=== CREATE obj_text_box_nube ===");
-show_debug_message("Bandera mision_1 = " + string(global.mision_1));
-show_debug_message("Bandera mission_2 = " + string(global.mission_2));
-show_debug_message("Bandera visto_dialogo_clase2 = " + string(global.visto_dialogo_clase2));
-show_debug_message("Bandera mission_clear_2 = " + string(global.mission_clear_2));
+global.dialogo_activo = true;
+esperar_input = false;
 
-if (!global.mision_1) {
-	text = "Wow que buena clase, hasta se me quedo grabado que un diagrama de flujo es como un dibujo con flechas que muestra los pasos para realizar un programa. Tambien me enseñaron que un IDE es un programa donde escribres y pruebas código y que para instalarlo solo necesitas descargarlo de su página e instalarlo. Y un Hola Mundo es el programa más simple que imprime esas palabras en consola para principiantes.";
-	show_debug_message("Texto asignado: CLASE 1");
-} 
-else if (global.mission_2 && !global.visto_dialogo_clase2) {
-	text = "Hoy vimos lo básico de programación: los inputs son lo que el usuario mete al programa, los outputs lo que el programa muestra. Las variables son como cajitas donde guardamos datos, y hay distintos tipos de datos según lo que quieras guardar: números enteros, decimales, texto, verdadero/falso… básicamente eso.";
-	//Se pone aqui para que se "Destruya" y no se mande a llamar varias veces desde el fade black
-	global.visto_dialogo_clase2 = true;
-	show_debug_message("Texto asignado: CLASE 2");
-}
-else if (global.visto_dialogo_clase2 && !global.mission_clear_2){
-	text = "Como que olia medio raro";
-	global.terminar_clase2 = true;
-	global.mission_clear_2 = true;
-	global.mision_terminada = 2;
-	global.mission_2 = false;
-	global.visto_dialogo_clase3 = true;
-}
-else if (global.visto_dialogo_clase3 && !global.mission_clear_3){
-	text = "aaaaaaaaaaaaaaaaaaaa";
-	global.terminar_clase3 = true;
-	global.mission_clear_3 = true;
-	global.mision_terminada = 3;
-	global.mission_3 = false;
+
+switch (global.class_state) {
+
+	case 0: 
+		text = "Wow que buena clase, hasta se me quedo grabado que un diagrama de flujo es como un dibujo con flechas que muestra los pasos para realizar un programa. Tambien me enseñaron que un IDE es un programa donde escribres y pruebas código y que para instalarlo solo necesitas descargarlo de su página e instalarlo. Y un Hola Mundo es el programa más simple que imprime esas palabras en consola para principiantes.";
+		global.class_state = 1;
+	break;
+	
+	case 1: 
+		if (global.is_class){	
+			text = "Hoy vimos lo básico de programación: los inputs son lo que el usuario mete al programa, los outputs lo que el programa muestra. Las variables son como cajitas donde guardamos datos, y hay distintos tipos de datos según lo que quieras guardar: números enteros, decimales, texto, verdadero/falso… básicamente eso.";
+		} else {
+			text = "Como que olia medio raro";
+			global.mission_clear_aux = true;
+			global.class_state = 2;
+		}
+	break;
+	
+	case 2: 
+		text = "Hoy vimos tablas de verdad que sirven para ver todas las combinaciones de verdadero y falso, los operadores lógicos como AND, OR y NOT que conectan proposiciones, y los diagramas de Venn que son círculos para representar cómo se relacionan los conjuntos.";
+		global.mission_clear_aux = false;
+	break;
+	
+	case 3: 
+		text = "aaaaaaaaaaaaaaaaaaaa";
+	break;
+	
+	case 4: 
+		text = "aaaaaaaaaaaaaaaaaaaa";
+	break;
+	
+	default:
+		text = "a";
+	break;
 }
 
+// 🔎 Nuevo log para saber exactamente qué texto quedó
+show_debug_message(">>> [Textbox] class_state=" + string(global.class_state) + " | Texto asignado=" + string(text));
 
 
 if (variable_instance_exists(id, "text")) {

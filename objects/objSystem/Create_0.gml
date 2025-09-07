@@ -1,40 +1,6 @@
 // Posición inicial del jugador para cambios de room
 player_start_position = noone;
 
-// *******BANDERAS DE CONTROL DE HISTORIA*******
-
-// Controla si hay un diálogo activo en pantalla
-if (!variable_global_exists("dialogo_activo")) {
-    global.dialogo_activo = false;
-}
-
-// Para solo mostrar los textbox una vez
-global.textbox_visto = false;
-
-
-// CLASES
-
-// Para que solo se muestre el primer diálogo de clase una vez
-if (!variable_global_exists("visto_dialogo_clase1")) {
-    global.visto_dialogo_clase1 = false;
-}
-
-// Para que solo se muestre el primer diálogo de clase una vez
-if (!variable_global_exists("visto_dialogo_clase2")) {
-    global.visto_dialogo_clase2 = false;
-
-
-if (!variable_global_exists("visto_dialogo_clase3")) {
-    global.visto_dialogo_clase3 = false;
-}}
-
-
-// Para que cuando hable con el NPC solo salga el mensaje principal 1 vez
-// las siguientes se usara un mensaje distinto
-global.npc_1 = false;
-
-global.npc_2 = false;
-
 
 // Marca si la clase fue completada (para mostrar al NPC luego)
 if (!variable_global_exists("clase_completada")) {
@@ -77,23 +43,55 @@ global.inventory = ds_list_create();
 initItem();
 
 
-// BANDERAS PARA SEGUIMIENTO DE MISIONES
+// *******BANDERAS DE CONTROL DE HISTORIA*******
 
-global.mision_1 = false;
+// Controla si hay un diálogo activo en pantalla
+if (!variable_global_exists("dialogo_activo")) {
+    global.dialogo_activo = false;
+}
 
-global.mission_2 = false;
-
-global.mission_3 = false;
-
-global.mission_4 = false;
-
-global.mission_5 = false;
+// Para solo mostrar los textbox una vez
+global.textbox_visto = false;
 
 
-// AUXILIARES PARA OBJ_TEXT_BOX_ NUBE
+// Para que cuando hable con el NPC solo salga el mensaje principal 1 vez
+// las siguientes se usara un mensaje distinto
+global.npc_1 = false;
+global.npc_2 = false;
+global.npc_3 = false;
 
-global.terminar_clase2 = false;
-//global.visto_dialogo_clase2 = false;
 
-global.mission_clear_2 = false;
-global.mission_clear_3 = false;
+// Estas para que solo se pueda ver la clase 1 vez 
+global.clase1_vista = false;
+global.clase2_vista = false;
+global.clase3_vista = false;
+global.clase4_vista = false;
+global.clase5_vista = false;
+
+// Dialogo
+
+global.dialogo_cerrado = true;
+
+// Auxiliar mission_clear, para cuando es el final de la clase 2 cuando sale el obj_text_box_nube
+global.mission_clear_aux = false;
+
+// Dialogo cerrado para los npc
+global.dialogo_cerrado = true;
+
+// Mision terminada 
+global.mision_terminada = 0;
+
+// Para cuando se quiera activar el dialogo de olia feo 
+global.is_class = true;
+
+
+// CONTROL DE MISIONES
+
+// en obj_system (Create)
+if (!variable_global_exists("game_state")) {
+    global.game_state = 0; 
+}
+
+if (!variable_global_exists("class_state")) {
+    global.class_state = 0; 
+}

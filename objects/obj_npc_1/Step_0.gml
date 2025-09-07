@@ -1,10 +1,11 @@
-if (global.mission_2) {
+// Aqui poner el if para que solo se cree si es la mision1
+if (global.game_state != 0) {
     instance_destroy();
     exit;
 }
 
 // Revisa si ya puede activarse
-if (!active && global.visto_dialogo_clase1) {
+if (!active && global.clase1_vista) {
     visible = true;
     active = true;
 }
@@ -32,12 +33,11 @@ if (distance_to_object(Obj_Player_M) < 40 && keyboard_check_pressed(ord("E")) &&
     }
     else if (!global.npc_1) {
         global.dialogo_id = 1; 
-        global.npc_1 = true;
+        global.npc_1 = true; 
     }
     else {
         global.dialogo_id = 2; 
     }
-	
 
     // Solo indica que hay que mostrar el textbox
     instance_create_layer(x, y - 32, "Instances", obj_text_box_general);

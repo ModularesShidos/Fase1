@@ -1,7 +1,6 @@
 global.dialogo_activo = true;
-global.activar_mision_1 = false;
-global.activar_mision_3 = false;
 
+show_debug_message(">>> global.dialogo_id = " + string(global.dialogo_id));
 switch (global.dialogo_id) {
     case 1:
         text = "Hola, necesito tu ayuda, acabo de perder una carta muy importante para mi, crees que me puedas ayudar a buscarla por favor, puede que se encuentre cerca del edificio V.";
@@ -13,8 +12,7 @@ switch (global.dialogo_id) {
 		
 	case 3: 
 		text = "Te lo agradezco mucho!!. Esta carta fue muy importante para mi el semestre qu comence, quería regalarsela a una amiga para que estudiara pero creo que ella no vendra, te la puedes quedar para que estudies.";
-		global.activar_mision_1 = true;
-		global.mision_terminada = 1;
+		global.game_state = 1;
 		break;
 		
 	case 4: 
@@ -27,17 +25,17 @@ switch (global.dialogo_id) {
 		
 	case 6: 
 		text = "Hola compañero, veo que no tienes muchos amigos que te puedan decir esto pero te recomiendo mucho que si tienes hambre despues de clases vayas al globo, es una cafeteria circular muy famosa de aqui de CUCEI, me gusto mucho y hay muchas opciones de comida que te podrían gustar, solo asegurate de ir a una buena hora porque luego esta muy lleno. Se encuentra cerca de la entrada de Boulevard despues de los edificios alfa y beta. Suerte encontrandolo!!!";
+		global.dialogo_id = 7;
 		break;
 		
 	case 7: 
-		text = "Date prisa!!!";
+		text = "Date prisa, pronto comenzara mi próxima clase!!!";
 		break;
 		
 	case 8: 
-	//Maestro agradece por recuperar la contraseña
+		//Maestro agradece por recuperar la contraseña
 		text = "Gracias, mira este es mi contacto por si tienes problemas";
-		global.activar_mision_3 = true;
-		global.mision_terminada = 3;
+		global.game_state = 4;
 		break;
 
     default:
