@@ -1,7 +1,7 @@
 dialogo_cerrado = false;
 
 // Comienza oculto si no ha visto la clase
-if (!global.visto_dialogo_clase3) {
+if (!global.clase3_vista) {
     visible = false;
     active = false;
 } else {

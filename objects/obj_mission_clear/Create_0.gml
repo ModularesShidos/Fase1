@@ -2,7 +2,6 @@
 duration = 180;
 
 // Opacidad inicial (para el fade-in)
-show_debug_message("MISION TERMINADA: " + string(global.mision_terminada)); 
 alpha = 0;
 switch (global.mision_terminada) {
     case 1:

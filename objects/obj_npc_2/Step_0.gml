@@ -1,11 +1,11 @@
 // Si la misión 2 no está activa, este NPC no existe todavía
-if (!global.mission_2) {
+if (global.game_state != 1) {
     instance_destroy();
     exit;
 }
 
 // Solo se activa si está la misión 2
-if (!active && global.visto_dialogo_clase2) {
+if (!active && global.clase2_vista) {
     visible = true;
     active = true;
 }

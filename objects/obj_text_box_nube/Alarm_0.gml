@@ -1,6 +1,3 @@
-show_debug_message("⏱️ ALARM0: texto actual = " + text_on_display); 
-show_debug_message("⏰ ALARM0 ACTIVADA");
-show_debug_message("⌛ Estado antes: text_on_display = \"" + text_on_display + "\", text_finished = " + string(text_finished));
 
 if (array_length(pages) > 0) {
 	if (text_on_display != pages[page]) {

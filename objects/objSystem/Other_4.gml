@@ -13,15 +13,19 @@ if(player_start_position != noone){
 
 // Mostrar textbox solo una vez en la sala correcta
 
-if (room == Sala_pasillo_revolucion && !global.textbox_visto) {
+if (room == Sala_pasillo_revolucion) {
     instance_create_layer(0, 0, "UI", obj_text_box);
 } 
 
-if (room == Sala_pasillo_revolucion && global.textbox_visto && global.mission_2 == true) {
+if (room == Sala_pasillo_revolucion && global.game_state == 1) {
     instance_create_layer(0, 0, "UI", obj_text_box);
 }
 
-if (room == Sala_pasillo_revolucion && global.textbox_visto && global.mission_3 == true) {
+if (room == Sala_pasillo_revolucion && global.game_state == 2) {
+    instance_create_layer(0, 0, "UI", obj_text_box);
+}
+
+if (room == Sala_pasillo_revolucion && global.game_state == 3) {
     instance_create_layer(0, 0, "UI", obj_text_box);
 }
 

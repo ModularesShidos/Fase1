@@ -21,6 +21,13 @@ if (place_meeting(x, y + vspeed, obj_npc_2)) {
     vspeed = 0;
 }
 
+if (place_meeting(x + hspeed, y, obj_npc_3)) {
+    hspeed = 0;
+}
+if (place_meeting(x, y + vspeed, obj_npc_3)) {
+    vspeed = 0;
+}
+
 
 //Verifica cuando se deja de pulsar la tecla y para el movimiento del personaje
 if(speed != 0){ 

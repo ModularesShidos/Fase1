@@ -1,6 +1,6 @@
 function initItem(){
 
-//global.items[ITEM_CONTACTO_PROFE] = createItem("Contacto del profe", "Te ayudara en un momento complicado", ContactoProfe, item_Contacto_Profe);
+//global.items[ITEM_CONTACTO_PROFE] = createItem("Contacto del profe", "Te ayudara en un momento complicado", ContactoProfe, useItem);
 
 //global.items[ITEM_ACORDEN] = createItem("Acordeon para examen", "Te ayudara en tu proximo examen", Acordeon, );
 
@@ -10,7 +10,7 @@ global.items[ITEM_CARTA] = createItem("Carta especial", "Podrás ayudar a tu com
 
 global.items[ITEM_FLOR] = createItem("Flor para otra flor", "Te ayudara mucho en tu vida social", Flor, itemNoUse);
 
-//global.items[ITEM_FUNKO] = createItem("Funko", "Funko Pikachu para ser cool y darse a notar", Funko);
+global.items[ITEM_FUNKO] = createItem("Funko", "Funko Pikachu para ser cool y darse a notar", Funko, itemNoUse);
 
 //global.items[ITEM_LIBRO] = createItem("Libro", "Libro para estudiar JavaGod", Libro);
 

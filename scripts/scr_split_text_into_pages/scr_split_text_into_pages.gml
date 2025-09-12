@@ -18,13 +18,9 @@ function scr_split_text_into_pages(_text, _font, _separation, _width, _height) {
     var _pages = [];
     var _page = "";
 
-    show_debug_message("=== scr_split_text_into_pages INICIO ===");
-    show_debug_message("Texto recibido: " + _text);
-
     // 1. Limpiar palabras vacías desde el split
     var _words = scr_split_text(_text, " ");
     var _length = array_length(_words);
-    show_debug_message("Palabras detectadas: " + string(_length));
 
     draw_set_font(_font);
 
@@ -33,10 +29,8 @@ function scr_split_text_into_pages(_text, _font, _separation, _width, _height) {
 
         // Simulamos la altura si agregamos la palabra
         var _altura = string_height_ext((_page == "" ? _word : _page + " " + _word), _separation, _width);
-        show_debug_message("Iteración " + string(_i) + " -> palabra: '" + _word + "' / Altura si se añade: " + string(_altura));
 
         if (_altura > _height) { // ← Usa > para cortar justo cuando se exceda
-            show_debug_message("Página completada (" + string(array_length(_pages)) + "): " + _page);
             _pages[array_length(_pages)] = _page;
             _page = _word; // nueva página
         } else {
@@ -48,15 +42,11 @@ function scr_split_text_into_pages(_text, _font, _separation, _width, _height) {
     // Añadimos la última página
     if (string_length(_page) > 0) {
         _pages[array_length(_pages)] = _page;
-        show_debug_message("Página final añadida (" + string(array_length(_pages)-1) + "): " + _page);
     }
 
     // Resumen
-    show_debug_message("Total de páginas generadas: " + string(array_length(_pages)));
     for (var j = 0; j < array_length(_pages); j++) {
-        show_debug_message("Página " + string(j) + ": " + _pages[j]);
     }
-    show_debug_message("=== scr_split_text_into_pages FIN ===");
 
     return _pages;
 }

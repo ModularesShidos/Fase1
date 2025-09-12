@@ -1,7 +1,3 @@
-show_debug_message("=== KEY E ===");
-show_debug_message("page = " + string(page) + " / total = " + string(array_length(pages)));
-show_debug_message("Estado: text_finished=" + string(text_finished) + " / esperar_input=" + string(esperar_input));
-
 
 if (!text_finished) {
 
@@ -9,7 +5,6 @@ if (!text_finished) {
     text_on_display = pages[page];
     text_finished = true;
     esperar_input = true;
-	show_debug_message("Forzado a mostrar texto completo");
     
 } else if (text_finished && esperar_input) {
 
