@@ -15,4 +15,4 @@ if (duration <= 0) {
 
 if (duration <= 0 && !global.mission_2) {
 	instance_destroy();
-	
+}

@@ -21,3 +21,4 @@ if (variable_instance_exists(id, "npc_ref")) {
         dialogo_cerrado = true;
     }
 }
+
