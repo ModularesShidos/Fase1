@@ -25,14 +25,14 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Escenarios",
-    "path":"folders/Sprites/Escenarios.yy",
+    "name":"Fondos",
+    "path":"folders/Sprites/Fondos.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"Spr_welcome",
     "autoRecord":true,
     "backdropHeight":768,
