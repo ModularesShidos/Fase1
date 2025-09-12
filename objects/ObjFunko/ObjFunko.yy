@@ -1,15 +1,21 @@
 {
   "$GMObject":"",
   "%Name":"ObjFunko",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"ObjFunko",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Interactuables",
+    "path":"folders/Objetos/Interactuables.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"ObjInteractive",
+    "path":"objects/ObjInteractive/ObjInteractive.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

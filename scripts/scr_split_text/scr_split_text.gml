@@ -16,9 +16,6 @@
 function scr_split_text(_text, _delimiter) {
     var _words = [];
 
-    show_debug_message("=== scr_split_text INICIO ===");
-    show_debug_message("Texto recibido: " + _text);
-    show_debug_message("Delimitador usado: '" + _delimiter + "'");
 
     var _i1 = 1;
     var _i2 = string_pos_ext(_delimiter, _text, _i1);
@@ -39,11 +36,8 @@ function scr_split_text(_text, _delimiter) {
         }
     }
 
-    show_debug_message("scr_split_text -> Palabras encontradas: " + string(array_length(_words)));
     for (var i = 0; i < array_length(_words); i++) {
-        show_debug_message("Palabra " + string(i) + ": " + _words[i]);
     }
-    show_debug_message("=== scr_split_text FIN ===");
 
     return _words;
 }

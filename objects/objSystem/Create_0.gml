@@ -59,6 +59,8 @@ global.textbox_visto = false;
 global.npc_1 = false;
 global.npc_2 = false;
 global.npc_3 = false;
+global.npc_4 = false;
+global.npc_5 = false;
 
 
 // Estas para que solo se pueda ver la clase 1 vez 
@@ -84,6 +86,13 @@ global.mision_terminada = 0;
 // Para cuando se quiera activar el dialogo de olia feo 
 global.is_class = true;
 
+// Esta es para seleccionar en la mision 3 el texto de la nube al encontrar la contrasena
+global.is_contra = false;
+// Ahora este sera para que al activar la pared el npc pueda escojer el dialogo 9 del textbox general
+global.pared_vista = false;
+
+// Contador de fuentes
+global.fuentes_cont = 0;
 
 // CONTROL DE MISIONES
 

@@ -1,8 +1,10 @@
 // Si la misión 3 no está activa, este NPC no existe todavía
+/*
 if (global.game_state != 2) {
     instance_destroy();
     exit;
-}
+} Lo quito por ahora, luego ver como soluciono
+esto es porque no se destruia el textboxnube*/
 
 // Solo se activa si está la misión 3
 if (!active && global.clase2_vista) {
@@ -26,15 +28,21 @@ if (dialogo_cerrado) {
 if (distance_to_object(Obj_Player_M) < 40 && keyboard_check_pressed(ord("E")) && !global.dialogo_activo) {
     
     global.dialogo_activo = true;
-    
-    // Primera vez que hablas con este NPC
-    if (!global.npc_2) {
-        global.dialogo_id = 6; 
-        global.npc_2 = true; // Marca que ya habló una vez
-    } else {
-        // Las siguientes veces
-        global.dialogo_id = 7; 
-    }
+	
+	if (!global.pared_vista) {
+		
+	    // Primera vez que hablas con este NPC
+	    if (!global.npc_3) {
+	        global.dialogo_id = 7; 
+	        global.npc_3 = true; // Marca que ya habló una vez
+	    } else {
+	        // Las siguientes veces
+	        global.dialogo_id = 8; 
+	    }
+		
+	} else { 
+		global.dialogo_id = 9;
+	}
 
     // Muestra el textbox
     var caja = instance_create_layer(x, y - 32, "Instances", obj_text_box_general);

@@ -25,3 +25,7 @@ if (room == Sala_pasillo_revolucion && global.game_state == 2) {
     instance_create_layer(0, 0, "UI", obj_text_box);
 }
 
+if (room == Sala_pasillo_revolucion && global.game_state == 3) {
+    instance_create_layer(0, 0, "UI", obj_text_box);
+}
+

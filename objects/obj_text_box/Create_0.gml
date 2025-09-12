@@ -12,13 +12,25 @@ switch (global.game_state) {
 	case 2: 
 		text = "Felicidades terminaste tus clases de programación básica. Ahora podras comenzar con tus clases de métodos matemáticos. Esas clases son el edificio Q salon numero 8, apresurate!!!";
 		break;
+		
+	case 3: 
+		text = "Felicidades ahora si veras lo que es la programacion. Date prisa y ve al edificio X al salon numero 2 para tu proxima clase!!!";
+		break;
+		
+	case 4: 
+		text = "Necesitaras suerte hoy, veras por fin la importancia de las estructuras de datos simples en el edificio X salon numero 8, apresurate!!!";
+		break;
+		
+	case 5: 
+		text = "EXAMEEEEEEEEEEEEEN!!!";
+		break;
 
     default:
-        text = "Sin diálogo definido.";
+        text = "Sin diálogo definideo.";
         break;
 }
 
-text = string_replace_all(text, chr(9), " "); // quita \t
+text = string_replace_all(text, chr(9), " "); // quita \t 
 while (string_pos("  ", text) != 0) { // colapsa espacios dobles
     text = string_replace_all(text, "  ", " ");
 }
