@@ -1,6 +1,6 @@
 function initItem(){
 
-//global.items[ITEM_CONTACTO_PROFE] = createItem("Contacto del profe", "Te ayudara en un momento complicado", ContactoProfe, useItem);
+global.items[ITEM_CONTACTO_PROFE] = createItem("Contacto del profe", "Te ayudara en un momento complicado", ContactoProfe, itemNoUse);
 
 //global.items[ITEM_ACORDEN] = createItem("Acordeon para examen", "Te ayudara en tu proximo examen", Acordeon, );
 

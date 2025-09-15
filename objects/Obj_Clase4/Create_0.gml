@@ -1,7 +1,3 @@
-// Create Event
-interactuado = false;
-
-/*
 if (global.class_state == 3) {
     visible = true;
     active = true;
@@ -9,5 +5,3 @@ if (global.class_state == 3) {
     visible = false;
     active = false;
 }
-checar que si vaya a funcionar esto 
-*/

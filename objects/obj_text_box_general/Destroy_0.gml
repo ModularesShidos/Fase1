@@ -5,16 +5,19 @@ with (obj_npc_1) {
     dialogo_cerrado = true;
 }
 
-if (global.dialogo_id = 3) {
+if (global.dialogo_id == 3) {
     instance_create_layer(0, 0, "UI", obj_mission_clear);
 }
-if (global.dialogo_id = 9) {
+if (global.dialogo_id == 9) {
     instance_create_layer(0, 0, "UI", obj_mission_clear);
 }
-if (global.dialogo_id = 12) {
+if (global.dialogo_id == 12) {
     instance_create_layer(0, 0, "UI", obj_mission_clear);
 }
 
+if (global.dialogo_id == 15) {
+	room_goto(Sala_batalla);
+}
 
 if (variable_instance_exists(id, "npc_ref")) {
     with (npc_ref) {

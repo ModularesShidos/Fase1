@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"useContactoProfe",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"useContactoProfe",
+  "parent":{
+    "name":"Inventario",
+    "path":"folders/Scripts/Inventario.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

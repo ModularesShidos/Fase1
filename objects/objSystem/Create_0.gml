@@ -104,3 +104,15 @@ if (!variable_global_exists("game_state")) {
 if (!variable_global_exists("class_state")) {
     global.class_state = 0; 
 }
+
+// Para objeto carta 
+global.carta_recogida = false;
+
+// Para objeto Funko
+global.funko_recogido = false;
+
+// Para solucionar bug del dialogo de la pared 
+global.pared_dialogo_mostrado = false;
+
+// Para la batalla final
+global.contacto_profe_usado = false;

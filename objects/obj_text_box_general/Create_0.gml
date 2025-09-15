@@ -1,6 +1,5 @@
 global.dialogo_activo = true;
 
-show_debug_message("DIALOGOOOOOOOOOOOOOOOOOOOO = " + string(global.dialogo_id));
 switch (global.dialogo_id) {
     case 1:
         text = "Hola, necesito tu ayuda, acabo de perder una carta muy importante para mi, crees que me puedas ayudar a buscarla por favor, puede que se encuentre cerca del edificio V.";
@@ -57,13 +56,16 @@ switch (global.dialogo_id) {
 		break;
 		
 	case 13: 
-		text = "Historia de las 3 fuentes";
+		text = "Un antiguo director universitario, cansado de que los estudiantes copiaran en los exámenes, lanzó un conjuro sobre tres fuentes. Desde entonces, quien logre beber de las tres, obtiene la llave del verdadero conocimiento y se convierte en EL ingeniero dragon. Pero nadie ha logrado superar las pruebas mágicas que protegen las fuentes: desde bibliotecas embrujadas hasta pasillos que cambian de forma. Bienvenido a CUCEI!!!";
 		break;
 		
 	case 14: 
 		text = "Qué?, quieres que te lo repita o que?, ve y busca las fuentes rapido!!!";
 		break;
-	// Aq
+	
+	case 15: 
+		text = "Buena día joven, hoy tendras tu examen final, con esto sabremos si tus clases te fueron de utilidad y no solo te la pasaste paseando por este centro universitario... Bien te deseo suerte, comencemos.";
+		break;
 
     default:
         text = "Sin diálogo definido.";

@@ -154,6 +154,7 @@
     {"id":{"name":"scr_split_text_into_pages","path":"scripts/scr_split_text_into_pages/scr_split_text_into_pages.yy",},},
     {"id":{"name":"scr_split_text","path":"scripts/scr_split_text/scr_split_text.yy",},},
     {"id":{"name":"scrGetFacingObject","path":"scripts/scrGetFacingObject/scrGetFacingObject.yy",},},
+    {"id":{"name":"useContactoProfe","path":"scripts/useContactoProfe/useContactoProfe.yy",},},
     {"id":{"name":"useItem","path":"scripts/useItem/useItem.yy",},},
     {"id":{"name":"Aceptado","path":"sprites/Aceptado/Aceptado.yy",},},
     {"id":{"name":"Acordeon","path":"sprites/Acordeon/Acordeon.yy",},},

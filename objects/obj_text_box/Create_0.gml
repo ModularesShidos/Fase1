@@ -22,7 +22,7 @@ switch (global.game_state) {
 		break;
 		
 	case 5: 
-		text = "EXAMEEEEEEEEEEEEEN!!!";
+		text = "Rápido tu profesor te espera para tu examen final, tendras que demostrar que pusiste ateniona  todas tus clases, suerte con eso. Busca a tu profesor en el edificio X.";
 		break;
 
     default:

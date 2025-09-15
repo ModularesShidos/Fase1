@@ -7,7 +7,6 @@ if (global.mission_clear_aux){
 
 if (global.is_contra == true) {
     global.is_contra = false; // Reseteamos para que no se repita
-	global.game_state = 3;
 }
 
 if (global.fuentes_cont == 3){

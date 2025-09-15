@@ -65,6 +65,13 @@ if (speed == 0){
 	}
 }
 
+if (keyboard_check_pressed(ord("G"))) {
+    var contacto = getItem(ITEM_CONTACTO_PROFE);
+    if (contacto != noone) {
+        useItem(ITEM_CONTACTO_PROFE); // Ejecuta la acción que definiste en initItem (useFlor)
+    }
+}
+
 //Pulsacion de la tecla E para comenzar la interaccion con el objeto que tenga enfrente si es que existe
 if(keyboard_check_pressed(ord("E"))){
 	var interactive = scrGetFacingObject();

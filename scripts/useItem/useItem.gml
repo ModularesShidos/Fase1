@@ -1,4 +1,4 @@
-function useItem(){
+function useItem(itemId){
 	
 	var invItem = getItem(itemId);
 	
