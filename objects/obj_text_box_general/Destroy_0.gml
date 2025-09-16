@@ -9,7 +9,7 @@ if (global.dialogo_id == 3) {
     instance_create_layer(0, 0, "UI", obj_mission_clear);
 }
 if (global.dialogo_id == 9) {
-    instance_create_layer(0, 0, "UI", obj_mission_clear);
+    instance_create_layer(0, 0, "UI", obj_contacto_profe_aux);
 }
 if (global.dialogo_id == 12) {
     instance_create_layer(0, 0, "UI", obj_mission_clear);

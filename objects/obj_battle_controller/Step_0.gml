@@ -1,28 +1,44 @@
 switch(state) {
-    case "question":
-        if (selected_answer != -1) {
-            var correct = questions[question_index][2];
+	case "question":
+	    if (item_cheat_active && cheat_timer > 0) {
+	        // Solo restamos el temporizador del cheat
+	        cheat_timer -= 1;
+	        if (cheat_timer <= 0) {
+	            // Cuando termina el tiempo, pasamos a feedback
+	            var correct = questions[question_index][2];
+	            feedback_text = "¡Correcto!";
+	            feedback_color = c_green;
+	            current_sprite_student = 3;
+	            current_sprite_teacher = 1;
 
-            if (selected_answer == correct) {
-                // Correcta
-                feedback_text = "¡Correcto!";
-                feedback_color = c_green;
-                current_sprite_student = 3;
-                current_sprite_teacher = 1;
-            } else {
-                // Incorrecta
-                feedback_text = "Incorrecto";
-                feedback_color = c_red;
-                player_hp -= 7;
+	            feedback_timer = feedback_duration;
+	            state = "feedback";
 
-                current_sprite_student = 2;
-                current_sprite_teacher = 2;
-            }
+	            // Desactivamos el cheat
+	            item_cheat_active = false;
+	        }
+	    }
+	    else if (!item_cheat_active && selected_answer != -1) {
+	        // Respuesta normal sin cheat
+	        var correct = questions[question_index][2];
+	        if (selected_answer == correct) {
+	            feedback_text = "¡Correcto!";
+	            feedback_color = c_green;
+	            current_sprite_student = 3;
+	            current_sprite_teacher = 1;
+	        } else {
+	            feedback_text = "Incorrecto";
+	            feedback_color = c_red;
+	            player_hp -= 7;
+	            current_sprite_student = 2;
+	            current_sprite_teacher = 2;
+	        }
+	        feedback_timer = feedback_duration;
+	        state = "feedback";
+	    }
+	break;
 
-            feedback_timer = feedback_duration; // activa temporizador
-            state = "feedback"; // cambia a estado temporal
-        }
-    break;
+
 
     case "feedback":
         // Contador de tiempo

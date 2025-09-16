@@ -2,6 +2,12 @@
 // 1 - Dibujar personajes a los lados
 // -----------------------------
 
+// Configuración de fuente y color global
+draw_set_font(Font1);    // fnt_big = fuente que crees en tu proyecto
+draw_set_color(c_black);   // Texto en negro
+//Checar bien esto porq	ue chat me dice que cree una nueva fuente 
+
+
 var student_x = room_width * 0.15; // Estudiante a la izquierda (15% de la pantalla)
 var teacher_x = room_width * 0.9; // Profesor a la derecha (90% de la pantalla)
 var sprite_scale = 0.7; // escala de los sprites
@@ -29,13 +35,13 @@ if (state == "question" || state == "feedback") {
     // Número de pregunta (arriba como título)
     // -----------------------------
     var question_num = "Pregunta " + string(question_index + 1) + " de " + string(max_questions);
-    draw_set_color(c_silver);
+    draw_set_color(c_black);
     draw_text(room_width/2, 30, question_num);
 
     // -----------------------------
     // Pregunta (debajo del título)
     // -----------------------------
-    draw_set_color(c_white);
+    draw_set_color(c_black);
     draw_text(room_width/2, 90, q[0]);
 
     // -----------------------------
@@ -47,13 +53,24 @@ if (state == "question" || state == "feedback") {
 
         for (var i = 0; i < option_count; i++) {
             var option_text = string(i+1) + ") " + q[1][i];
+			
+		// Si es la opción seleccionada por el jugador
+		if (i == selected_answer) draw_set_color(c_blue);
+		
+		// Si está activo el cheat (contacto profe)
+	    if (item_cheat_active && item_cheat_question == question_index) {
+	        draw_set_color(c_green); // La correcta siempre se pinta amarillo
+	    }
+	
+		draw_text(room_width/2, option_y_start + i*50, option_text);
+
 
             // Resaltar si está activado el "cheat"
             if (item_cheat_active && item_cheat_question == question_index) {
-                if (i == q[2]) draw_set_color(c_yellow);
-                else draw_set_color(c_white);
+                if (i == q[2]) draw_set_color(c_green);
+                else draw_set_color(c_black);
             } else {
-                draw_set_color(c_white);
+                draw_set_color(c_black);
             }
 
             draw_text(room_width/2, option_y_start + i*50, option_text);
@@ -96,13 +113,13 @@ if (player_hp >= 85) {
 draw_rectangle(bar_x, bar_y, bar_x + (bar_width * hp_percent), bar_y + bar_height, false);
 
 // Borde de la barra (blanco)
-draw_set_color(c_white);
+draw_set_color(c_black);
 draw_rectangle(bar_x, bar_y, bar_x + bar_width, bar_y + bar_height, true);
 
 // Texto "HP" arriba de la barra (blanco)
 draw_set_halign(fa_center);
 draw_set_valign(fa_bottom);
-draw_set_color(c_white);
+draw_set_color(c_black);
 draw_text(room_width/2, bar_y - 5, "HP");
 
 /*

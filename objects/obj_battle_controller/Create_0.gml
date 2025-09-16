@@ -1,3 +1,8 @@
+// Estas son para que se alcance a ver la respuesta correcta cuando se usa el contacto del profe 
+cheat_timer = 0;           // Temporizador para mostrar respuesta correcta
+cheat_duration = 60;       // 60 frames = ~1 segundo
+
+
 // Vida del jugador
 player_hp = 100;
 

@@ -114,5 +114,9 @@ global.funko_recogido = false;
 // Para solucionar bug del dialogo de la pared 
 global.pared_dialogo_mostrado = false;
 
+
+global.contacto_obtenido = true;
+
+
 // Para la batalla final
 global.contacto_profe_usado = false;
