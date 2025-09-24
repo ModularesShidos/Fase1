@@ -3,7 +3,7 @@
 var _x = 30;
 var _y = 280;
 
-draw_sprite(spr_text_box_cel, 0, _x, _y);
+draw_sprite(spr_text_box_general, 0, _x, _y);
 
 // Permite crear una fuente nueva (la que hicimos)
 draw_set_font(global.textbox_font);

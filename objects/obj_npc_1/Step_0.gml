@@ -1,8 +1,17 @@
-// Aqui poner el if para que solo se cree si es la mision1
+
+// Solo activa el temporizador si la condición se cumple
 if (global.game_state != 0) {
-    instance_destroy();
-    exit;
+    if (destruir_timer == -1) {
+        destruir_timer = 5 * 60; // 5 segundos
+    } else {
+        destruir_timer -= 1;
+        if (destruir_timer <= 0) {
+            instance_destroy();
+            exit;
+        }
+    }
 }
+
 
 // Revisa si ya puede activarse
 if (!active && global.clase1_vista) {
@@ -11,7 +20,7 @@ if (!active && global.clase1_vista) {
 }
 
 // Si todavía no está activo, no sigue
-if (!active) exit;
+if (!active) exit; 
 
 // Si el diálogo acaba de cerrarse, espera antes de permitir otro
 if (dialogo_cerrado) {

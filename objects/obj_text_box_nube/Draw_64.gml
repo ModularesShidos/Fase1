@@ -1,3 +1,4 @@
+// Dibujar gui
 var _x = 30;
 var _y = 280;
 

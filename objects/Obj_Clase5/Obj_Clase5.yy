@@ -41,5 +41,5 @@
     "name":"int_class_door",
     "path":"sprites/int_class_door/int_class_door.yy",
   },
-  "visible":true,
+  "visible":false,
 }

@@ -1,4 +1,4 @@
-
+// Pulsacion de tecla e
 if (!text_finished) {
 
     // Mostrar todo el texto de golpe

@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"SprPlayerWalkD_M",
-    "path":"sprites/SprPlayerWalkD_M/SprPlayerWalkD_M.yy",
+    "name":"Student_1",
+    "path":"sprites/Student_1/Student_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

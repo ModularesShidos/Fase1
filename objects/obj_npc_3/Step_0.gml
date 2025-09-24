@@ -1,9 +1,15 @@
-// Si la misión 3 no está activa, este NPC no existe todavía
-
+// Solo activa el temporizador si la condición se cumple
 if (global.game_state != 2) {
-    instance_destroy();
-    exit;
-} 
+    if (destruir_timer == -1) {
+        destruir_timer = 5 * 60; // 5 segundos
+    } else {
+        destruir_timer -= 1;
+        if (destruir_timer <= 0) {
+            instance_destroy();
+            exit;
+        }
+    }
+}
 
 // Solo se activa si está la misión 3
 if (!active && global.clase3_vista) {
