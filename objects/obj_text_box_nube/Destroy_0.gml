@@ -1,4 +1,4 @@
-
+// Destruir 
 global.dialogo_activo = false;
 
 if (global.mission_clear_aux){

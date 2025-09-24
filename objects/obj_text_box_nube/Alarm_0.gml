@@ -1,4 +1,4 @@
-
+// Alarma 0 
 if (array_length(pages) > 0) {
 	if (text_on_display != pages[page]) {
 	    // 📝 Todavía hay texto que escribir letra por letra

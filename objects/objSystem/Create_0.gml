@@ -120,3 +120,8 @@ global.contacto_obtenido = true;
 
 // Para la batalla final
 global.contacto_profe_usado = false;
+
+// AGREGAR ESTA NUEVA VARIABLE (inicializar como false)
+if (!variable_global_exists("textbox_cerrado_manualmente")) {
+    global.textbox_cerrado_manualmente = false;
+}

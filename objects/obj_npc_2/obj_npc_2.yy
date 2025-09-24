@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"anonimus",
-    "path":"sprites/anonimus/anonimus.yy",
+    "name":"Student_4",
+    "path":"sprites/Student_4/Student_4.yy",
   },
   "spriteMaskId":null,
   "visible":true,
