@@ -17,6 +17,7 @@
     {"$GMFolder":"","%Name":"Líneas temporales","folderPath":"folders/Líneas temporales.yy","name":"Líneas temporales","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Notas","folderPath":"folders/Notas.yy","name":"Notas","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objetos","folderPath":"folders/Objetos.yy","name":"Objetos","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Botones","folderPath":"folders/Objetos/Botones.yy","name":"Botones","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"ControlSistema","folderPath":"folders/Objetos/ControlSistema.yy","name":"ControlSistema","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Interactuables","folderPath":"folders/Objetos/Interactuables.yy","name":"Interactuables","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"UI","folderPath":"folders/Objetos/UI.yy","name":"UI","resourceType":"GMFolder","resourceVersion":"2.0",},
