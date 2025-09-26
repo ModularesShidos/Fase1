@@ -144,6 +144,7 @@
     {"id":{"name":"Sala_pasillo_shedraui","path":"rooms/Sala_pasillo_shedraui/Sala_pasillo_shedraui.yy",},},
     {"id":{"name":"Sala_pasillo_w","path":"rooms/Sala_pasillo_w/Sala_pasillo_w.yy",},},
     {"id":{"name":"Sala_quimicos","path":"rooms/Sala_quimicos/Sala_quimicos.yy",},},
+    {"id":{"name":"Sala_reprobado","path":"rooms/Sala_reprobado/Sala_reprobado.yy",},},
     {"id":{"name":"Sala_superior_x","path":"rooms/Sala_superior_x/Sala_superior_x.yy",},},
     {"id":{"name":"Sala_T_U","path":"rooms/Sala_T_U/Sala_T_U.yy",},},
     {"id":{"name":"Sala_voca","path":"rooms/Sala_voca/Sala_voca.yy",},},
@@ -325,6 +326,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"Sala_batalla","path":"rooms/Sala_batalla/Sala_batalla.yy",},},
     {"roomId":{"name":"Entrada_Revolucion","path":"rooms/Entrada_Revolucion/Entrada_Revolucion.yy",},},
     {"roomId":{"name":"Boulevard","path":"rooms/Boulevard/Boulevard.yy",},},
     {"roomId":{"name":"Sala_atras_u","path":"rooms/Sala_atras_u/Sala_atras_u.yy",},},
@@ -364,8 +366,8 @@
     {"roomId":{"name":"Juanpa","path":"rooms/Juanpa/Juanpa.yy",},},
     {"roomId":{"name":"Menu","path":"rooms/Menu/Menu.yy",},},
     {"roomId":{"name":"Sala_interseccion_V","path":"rooms/Sala_interseccion_V/Sala_interseccion_V.yy",},},
-    {"roomId":{"name":"Sala_batalla","path":"rooms/Sala_batalla/Sala_batalla.yy",},},
     {"roomId":{"name":"Sala_graduado","path":"rooms/Sala_graduado/Sala_graduado.yy",},},
+    {"roomId":{"name":"Sala_reprobado","path":"rooms/Sala_reprobado/Sala_reprobado.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

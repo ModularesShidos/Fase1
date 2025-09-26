@@ -1,8 +1,3 @@
-// Estas son para que se alcance a ver la respuesta correcta cuando se usa el contacto del profe 
-cheat_timer = 0;           // Temporizador para mostrar respuesta correcta
-cheat_duration = 60;       // 60 frames = ~1 segundo
-
-
 // Vida del jugador
 player_hp = 100;
 
@@ -24,50 +19,50 @@ item_cheat_question = -1 // indice de la pregunta donde se activo
 
 // Preguntas (texto, opciones[], índiceCorrecto)
 questions = [
-    ["¿Qué es un diagrama de flujo y para qué sirve?", 
-        ["Es un dibujo con flechas que muestra los pasos de un programa", "Un editor de texto", "Un lenguaje de programación", "Un compilador"], 0],
+    ["¿Que es un diagrama de flujo y para que sirve?", 
+        ["Un editor de texto", "Un lenguaje de programacion", "Es un dibujo con flechas que muestra los pasos de un programa", "Un compilador"], 2],
 
-    ["¿Qué es un IDE y cuál es su función principal?", 
-        ["Es un programa donde escribes y pruebas código", "Un sistema operativo", "Un editor de imágenes", "Un motor gráfico"], 0],
+    ["¿Que es un IDE y cual es su funcion principal?", 
+        ["Es un programa donde escribes y pruebas codigo", "Un sistema operativo", "Un editor de imagenes", "Un motor grafico"], 0],
 
-    ["¿Cuál es el programa más simple que todo principiante hace?", 
-        ["El Hola Mundo", "Una calculadora científica", "Un videojuego completo", "Un compilador"], 0],
+    ["¿Cual es el programa mas simple que todo principiante hace?", 
+        ["Una calculadora cientifica", "Un videojuego completo", "Un compilador", "El Hola Mundo"], 3],
 
-    ["¿Qué son los inputs en programación?", 
-        ["Son los datos que mete el usuario al programa", "Son los resultados del programa", "Un error en el código", "Un tipo de variable"], 0],
+    ["¿Que son los inputs en programacion?", 
+        ["Son los resultados del programa", "Son los datos que mete el usuario al programa", "Un error en el codigo", "Un tipo de variable"], 1],
 
-    ["¿Qué son los outputs en programación?", 
-        ["Son los resultados que el programa muestra", "Los datos que se meten al programa", "Un tipo de ciclo", "Un error de compilación"], 0],
+    ["¿Que son los outputs en programacion?", 
+        ["Los datos que se meten al programa", "Un tipo de ciclo", "Son los resultados que el programa muestra", "Un error de compilacion"], 2],
 
-    ["¿Qué es una variable?", 
-        ["Una cajita donde se guardan datos", "Un ciclo repetitivo", "Un sistema operativo", "Un compilador"], 0],
+    ["¿Que es una variable?", 
+        ["Un ciclo repetitivo", "Una cajita donde se guardan datos", "Un sistema operativo", "Un compilador"], 1],
 
     ["Menciona un tipo de dato que se puede guardar en una variable.", 
         ["Entero, decimal, texto o verdadero/falso", "Videojuegos", "Usuarios de internet", "Conexiones de red"], 0],
 
-    ["¿Para qué sirven las tablas de verdad?", 
-        ["Para ver todas las combinaciones de verdadero y falso", "Para compilar código", "Para crear diagramas de flujo", "Para dibujar interfaces"], 0],
+    ["¿Para que sirven las tablas de verdad?", 
+        ["Para compilar codigo", "Para ver todas las combinaciones de verdadero y falso", "Para crear diagramas de flujo", "Para dibujar interfaces"], 1],
 
-    ["Escribe dos operadores lógicos básicos.", 
-        ["AND (∧) y OR (∨)", "SUMA y RESTA", "IGUAL y DIFERENTE", "IF y ELSE"], 0],
+    ["Escribe dos operadores logicos basicos.", 
+        ["SUMA y RESTA", "IGUAL y DIFERENTE", "IF y ELSE", "AND (∧) y OR (∨)"], 3],
 
-    ["¿Qué representan los diagramas de Venn?", 
-        ["Conjuntos y sus relaciones (uniones, intersecciones)", "Flujos de datos", "Árboles binarios", "Clases de programación"], 0],
+    ["¿Que representan los diagramas de Venn?", 
+        ["Flujos de datos", "Arboles binarios", "Clases de programacion", "Conjuntos y sus relaciones (uniones, intersecciones)"], 3],
 
-    ["¿Qué es un condicional en programación?", 
-        ["Una decisión: si pasa algo, se ejecuta algo", "Un ciclo repetitivo", "Un tipo de variable", "Un sistema operativo"], 0],
+    ["¿Que es un condicional en programacion?", 
+        ["Un ciclo repetitivo", "Un tipo de variable", "Una decision: si pasa algo, se ejecuta algo", "Un sistema operativo"], 2],
 
     ["Menciona dos ciclos que se usan para repetir instrucciones.", 
         ["while y for", "if y else", "switch y case", "try y catch"], 0],
 
-    ["¿Qué es una función y para qué se usa?", 
-        ["Un bloque de código reutilizable", "Un archivo de texto", "Un sistema operativo", "Un compilador"], 0],
+    ["¿Que es una funcion y para que se usa?", 
+        ["Un archivo de texto", "Un sistema operativo", "Un compilador", "Un bloque de codigo reutilizable"], 3],
 
-    ["Explica brevemente qué es la recursividad.", 
-        ["Es cuando una función se llama a sí misma", "Un error en el código", "Un ciclo for", "Una variable global"], 0],
+    ["Explica brevemente que es la recursividad.", 
+        ["Un error en el codigo", "Es cuando una función se llama a si misma", "Un ciclo for", "Una variable global"], 1],
 
-    ["¿Cuál es la diferencia entre una pila y una cola?", 
-        ["Pila: último en entrar, primero en salir. Cola: primero en entrar, primero en salir", "Ambas son iguales", "Pila: se usa en redes, Cola: en gráficos", "No hay diferencia"], 0]
+    ["¿Cual es la diferencia entre una pila y una cola?", 
+        ["Ambas son iguales", "Pila: se usa en redes, Cola: en graficos", "Pila: ultimo en entrar, primero en salir. Cola: primero en entrar, primero en salir", "No hay diferencia"], 2]
 ];
 
 // Cantidad total de preguntas
@@ -77,7 +72,7 @@ max_questions = array_length(questions);
 
 // Sprites normales
 sprite_student_normal = 1;
-sprite_teacher_normal = 1;
+sprite_teacher_normal = 3;
 
 // Sprites de reacción
 sprite_student_happy = 3;
@@ -87,7 +82,7 @@ sprite_teacher_sad   = 2;
 
 // Sprites actuales
 current_sprite_student = 1;
-current_sprite_teacher = 1;
+current_sprite_teacher = 3;
 
 // Feedback de respuesta
 feedback_text = "";

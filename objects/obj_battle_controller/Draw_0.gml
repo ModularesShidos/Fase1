@@ -2,12 +2,6 @@
 // 1 - Dibujar personajes a los lados
 // -----------------------------
 
-// Configuración de fuente y color global
-draw_set_font(Font1);    // fnt_big = fuente que crees en tu proyecto
-draw_set_color(c_black);   // Texto en negro
-//Checar bien esto porq	ue chat me dice que cree una nueva fuente 
-
-
 var student_x = room_width * 0.15; // Estudiante a la izquierda (15% de la pantalla)
 var teacher_x = room_width * 0.9; // Profesor a la derecha (90% de la pantalla)
 var sprite_scale = 0.7; // escala de los sprites
@@ -21,7 +15,31 @@ draw_sprite_ext(Spr_Teacher, current_sprite_teacher, teacher_x, y_pos, sprite_sc
 
 
 // -----------------------------
-// 2 - Dibujar preguntas y opciones
+// 2 - Dibujar objetos
+// -----------------------------
+
+// Posición de referencia (arriba de la cabeza del alumno)
+var text_x = student_x - 70;
+var text_y = y_pos - (sprite_get_height(Spr_Big_Player) * sprite_scale / 2) - 100; 
+
+draw_set_halign(fa_center);
+draw_set_valign(fa_top);
+draw_set_color(c_black);
+
+// Mostrar "Llamar a un profe" si NO se ha usado
+if (!item_call_used) {
+    draw_text(text_x, text_y, "[X] Llamar a un profe");
+    text_y += 20; // bajar un poco para el siguiente texto
+}
+
+// Mostrar "Usar acordeón" si NO se ha usado
+if (!item_cheat_used) {
+    draw_text(text_x, text_y, "[Z] Usar acordeón");
+}
+
+
+// -----------------------------
+// 3 - Dibujar preguntas y opciones
 // -----------------------------
 
 if (state == "question" || state == "feedback") {
@@ -41,36 +59,25 @@ if (state == "question" || state == "feedback") {
     // -----------------------------
     // Pregunta (debajo del título)
     // -----------------------------
-    draw_set_color(c_black);
-    draw_text(room_width/2, 90, q[0]);
+    draw_set_color(c_red);
+    draw_text(room_width/2, 230, q[0]);
 
     // -----------------------------
     // Opciones o feedback en el centro
     // -----------------------------
     if (state == "question") {
         var option_count = array_length(q[1]);
-        var option_y_start = room_height/2 - (option_count * 30) / 2; // centrado vertical
+        var option_y_start = room_height/2 - (option_count * 60) / 2; // centrado vertical
 
         for (var i = 0; i < option_count; i++) {
             var option_text = string(i+1) + ") " + q[1][i];
-			
-		// Si es la opción seleccionada por el jugador
-		if (i == selected_answer) draw_set_color(c_blue);
-		
-		// Si está activo el cheat (contacto profe)
-	    if (item_cheat_active && item_cheat_question == question_index) {
-	        draw_set_color(c_green); // La correcta siempre se pinta amarillo
-	    }
-	
-		draw_text(room_width/2, option_y_start + i*50, option_text);
-
 
             // Resaltar si está activado el "cheat"
             if (item_cheat_active && item_cheat_question == question_index) {
                 if (i == q[2]) draw_set_color(c_green);
-                else draw_set_color(c_black);
+                else draw_set_color(c_blue);
             } else {
-                draw_set_color(c_black);
+                draw_set_color(c_blue);
             }
 
             draw_text(room_width/2, option_y_start + i*50, option_text);
@@ -84,7 +91,7 @@ if (state == "question" || state == "feedback") {
 
 
 // -----------------------------
-// 3 - Dibujar barra de HP en el bottom
+// 4 - Dibujar barra de HP en el bottom
 // -----------------------------
 
 var bar_width  = 300;   // ancho total de la barra
@@ -113,7 +120,7 @@ if (player_hp >= 85) {
 draw_rectangle(bar_x, bar_y, bar_x + (bar_width * hp_percent), bar_y + bar_height, false);
 
 // Borde de la barra (blanco)
-draw_set_color(c_black);
+draw_set_color(c_white);
 draw_rectangle(bar_x, bar_y, bar_x + bar_width, bar_y + bar_height, true);
 
 // Texto "HP" arriba de la barra (blanco)
@@ -126,21 +133,22 @@ draw_text(room_width/2, bar_y - 5, "HP");
 // Texto con cantidad de vida dentro de la barra (negro)
 draw_set_valign(fa_middle);
 draw_set_color(c_black);
-draw_text(room_width/2, bar_y + bar_height/2, string(player_hp));*/
+draw_text(room_width/2, bar_y + bar_height/2, string(player_hp));
+*/
 
 
 // -----------------------------
-// 4 - Dibujar pantalla final
+// 5 - Dibujar pantalla final
 // -----------------------------
 
 if (state == "end") {
-    draw_set_color(c_white);
+    draw_set_color(c_black);
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
 
     var result_text;
-    if (battle_result == "victoria") result_text = "¡Felicidades! Pasaste el examen :D";
-    else result_text = "Has reprobado :(";
+    if (battle_result == "victoria") result_text = "¡Felicidades! Pasaste el examen :D \n\n PRESIONA E";
+    else result_text = "Has reprobado :( \n\n PRESIONA E";
 
     draw_text(room_width/2, room_height/2, result_text);
 }
