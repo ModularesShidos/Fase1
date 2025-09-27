@@ -125,3 +125,8 @@ global.contacto_profe_usado = false;
 if (!variable_global_exists("textbox_cerrado_manualmente")) {
     global.textbox_cerrado_manualmente = false;
 }
+
+
+if (!variable_global_exists("partida_actual")) {
+    global.id_partida = 1; // 1, 2 o 3 - la partida que estás jugando ahora
+}
