@@ -155,6 +155,7 @@
     {"id":{"name":"createItem","path":"scripts/createItem/createItem.yy",},},
     {"id":{"name":"getItem","path":"scripts/getItem/getItem.yy",},},
     {"id":{"name":"guardar_partida_servidor","path":"scripts/guardar_partida_servidor/guardar_partida_servidor.yy",},},
+    {"id":{"name":"inicializar_variables_juego","path":"scripts/inicializar_variables_juego/inicializar_variables_juego.yy",},},
     {"id":{"name":"initItem","path":"scripts/initItem/initItem.yy",},},
     {"id":{"name":"initMacros","path":"scripts/initMacros/initMacros.yy",},},
     {"id":{"name":"itemNoUse","path":"scripts/itemNoUse/itemNoUse.yy",},},

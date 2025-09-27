@@ -1,6 +1,10 @@
 // 📡 Asynchronous HTTP Event
 var _async_load = async_load;
 
+// 🔥 AGREGA ESTA VERIFICACIÓN INICIAL
+show_debug_message("=== 🔔 EVENTO ASYNC DISPARADO ===");
+show_debug_message("Tipo de async_load: " + string(ds_map_size(_async_load)));
+
 // Verificar que es una respuesta HTTP
 if (ds_map_exists(_async_load, "id")) {
     var status   = ds_map_find_value(_async_load, "status");
@@ -8,6 +12,19 @@ if (ds_map_exists(_async_load, "id")) {
     var url      = ds_map_find_value(_async_load, "url");
 
     show_debug_message("🔔 Respuesta HTTP - Status: " + string(status) + " | URL: " + string(url));
+	    // Agrega más debug info
+    show_debug_message("🔔 Respuesta HTTP - Status: " + string(status));
+    show_debug_message("URL: " + string(url));
+    show_debug_message("Respuesta completa: " + string(_async_load));
+
+    // Para status 0, verifica el error
+    if (status == 0) {
+        show_debug_message("❌ Error de conexión - Posibles causas:");
+        show_debug_message("   - Servidor no accesible");
+        show_debug_message("   - Bloqueo de CORS");
+        show_debug_message("   - URL incorrecta");
+        show_debug_message("   - Puerto bloqueado");
+    }
 
     // 📥 RESPUESTA DE GUARDADO (POST)
     if (string_pos("/api/partida/guardar", url) > 0) {
@@ -113,6 +130,12 @@ if (ds_map_exists(_async_load, "id")) {
         }
         else {
             show_debug_message("❌ Error al cargar: " + string(status));
+        }
+    } else if (string_pos("/api/ping", url) > 0) {
+        if (status == 200) {
+            show_debug_message("✅ ¡PING EXITOSO! Respuesta del servidor: " + response);
+        } else {
+            show_debug_message("❌ PING FALLÓ con status: " + string(status));
         }
     }
 }

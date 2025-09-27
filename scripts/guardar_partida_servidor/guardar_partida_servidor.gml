@@ -5,7 +5,9 @@ function guardar_partida_servidor() {
 
     var datos = {
         // PROGRESO PRINCIPAL
-        progreso: {
+        id_partida: id_partida,
+		
+		progreso: {
             game_state: global.game_state,
             class_state: global.class_state,
             mision_terminada: global.mision_terminada,
@@ -45,15 +47,19 @@ function guardar_partida_servidor() {
             {id: 5, completada: global.clase5_vista ? 1 : 0}
         ]
     };
+	
+	show_debug_message("📤 Enviando con ID: " + string(id_partida));
 
     var json_datos = json_stringify(datos);
+	
+	show_debug_message("📦 JSON que se va a enviar: " + json_datos);
 
     var header_map = ds_map_create();
     ds_map_add(header_map, "Content-Type", "application/json");
 
     http_request(url, "POST", header_map, json_datos);
 
-    ds_map_destroy(header_map);
+    //ds_map_destroy(header_map);
 
     show_debug_message("📤 Enviando datos al servidor para la partida ID: " + string(id_partida));
 }

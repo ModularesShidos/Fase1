@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"inicializar_variables_juego",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"inicializar_variables_juego",
+  "parent":{
+    "name":"Guardado",
+    "path":"folders/Scripts/Guardado.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
