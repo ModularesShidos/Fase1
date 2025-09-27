@@ -1,0 +1,1 @@
+room_goto(Sala_Menu_control_3);

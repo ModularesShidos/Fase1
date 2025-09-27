@@ -30,10 +30,10 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
-    "name":"Sprite11",
-    "path":"sprites/Sprite11/Sprite11.yy",
+    "name":"Student_2",
+    "path":"sprites/Student_2/Student_2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

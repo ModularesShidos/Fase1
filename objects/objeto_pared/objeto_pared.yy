@@ -38,5 +38,5 @@
     "path":"sprites/Pared_contra_profe/Pared_contra_profe.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

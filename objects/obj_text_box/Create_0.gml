@@ -10,7 +10,7 @@ switch (global.game_state) {
 		break;
 		
 	case 2: 
-		text = "¡Felicidades! Has terminado tus clases de Programación Básica y estás listo para dar el siguiente paso: las clases de Métodos Matemáticos en el edificio Q, salón número 8. Apresúrate para llegar a tiempo y aprovechar cada minuto. Por cierto, sabias que CUCEI cuenta con 22 programas educativos de licenciatura, de los cuales 18 son evaluables. De ellos, 17 están acreditados por un organismo externo. De los 22 programas 20 son presenciales y dos vvirtuales.";
+		text = "¡Felicidades! Has terminado tus clases de Programación Básica y estás listo para dar el siguiente paso: las clases de Métodos Matemáticos en el edificio U, salón número 8. Apresúrate para llegar a tiempo y aprovechar cada minuto. Por cierto, sabias que CUCEI cuenta con 22 programas educativos de licenciatura, de los cuales 18 son evaluables. De ellos, 17 están acreditados por un organismo externo. De los 22 programas 20 son presenciales y dos vvirtuales.";
 		break;
 		
 	case 3: 
