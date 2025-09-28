@@ -1,0 +1,107 @@
+[33m9ee7f57[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mMastercheaf[m[33m, [m[1;31morigin/Mastercheaf[m[33m)[m Merge branch 'Mastercheaf' of https://github.com/ModularesShidos/Fase1 into Mastercheaf
+[33m88d2369[m 3 setsitos
+[33m1d61ea8[m Merge branch 'Mastercheaf' of https://github.com/ModularesShidos/Fase1 into RamaBeto
+[33m898a6c3[m Segundo menu hecho
+[33m57a90e7[m Merge branch 'Mastercheaf' of https://github.com/ModularesShidos/Fase1 into Mastercheaf
+[33m70cbcb9[m Ahhh
+[33m3dd22ff[m Merge con Beto
+[33m4af0b44[m Nuevos Sprites
+[33m4c3d908[m Batlla final final
+[33mac210e5[m[33m ([m[1;31morigin/RamaBeto[m[33m)[m Nuevos sprites de fondo
+[33maf6474e[m Merge branch 'Mastercheaf' of https://github.com/ModularesShidos/Fase1 into RamaBeto
+[33mc068680[m Nuevos sprites
+[33md3ad988[m Creo que solo falta poner los npcs
+[33m106e04e[m Detalles terminados, comienzo de la BD, se anadio nuevo script
+[33mf7e13a2[m Puliendo detalles, agreuge funcion useContactoProfe y le puse parametro a la funcion useitem
+[33mcb8b229[m Creacion de batalla de jefe
+[33m8c877b5[m Arreglando bugs
+[33m210df85[m Merge branch 'RamaBeto' into Mastercheaf
+[33m96ea7b2[m Erroresn solucionados
+[33m47beb12[m Merge branch 'nueva-version-sin-tanta-bandera' into Mastercheaf
+[33m1d8d91e[m[33m ([m[1;31morigin/nueva-version-sin-tanta-bandera[m[33m, [m[1;32mnueva-version-sin-tanta-bandera[m[33m)[m Solo faltan detalles que se eliminen como 3 objetos cuando ya se usaron
+[33m94d8d95[m Agregando nuevos escenarios y npc
+[33me8ccf2d[m Uso de banderas mejorado
+[33mc100216[m Version estable con 3 misiones
+[33md1833fb[m Nuevos cambios
+[33m8156adc[m Merge branch 'Mastercheaf' of https://github.com/ModularesShidos/Fase1 into Mastercheaf
+[33m9b9bd8e[m Nuevos scripts
+[33m819d781[m[33m ([m[1;31morigin/rama-emergencia-con-logica-a-la-mitad[m[33m, [m[1;32mrama-emergencia-con-logica-a-la-mitad[m[33m)[m por si algo
+[33madcdb16[m Nuevas actualizaciones
+[33mb95b8b9[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m Merge con rama Irving
+[33m2447a1e[m Merge branch 'Irving'
+[33mf445267[m Merge branch 'master' of https://github.com/ModularesShidos/Fase1
+[33mcbdb153[m[33m ([m[1;31morigin/Irving[m[33m, [m[1;32mIrving[m[33m)[m Ultimo avance segunda mision
+[33m53fa92c[m Merge branch 'master' of https://github.com/ModularesShidos/Fase1
+[33ma3b6cda[m Cambios e incorporacion de npc
+[33m7282701[m Primera mision terminada con inventario, solucionar paginacion de los textbox
+[33m5dcef2a[m Inventario de vide con fallos
+[33m680726f[m Lap
+[33md697a00[m Comienzo de inventario
+[33m8bff87c[m Falta terminar la primer mision
+[33mb3b5334[m Primer npc casi funcional
+[33m63f819e[m Avance con primer npc a medias
+[33m86940a7[m Primera clase terminada
+[33m4392aeb[m TextBox completo
+[33m47f8fcf[m Avance con error de textbox
+[33mb4a4a12[m 2 bugs resueltos y TileSet de baldosas
+[33m3945ba4[m Merge branch 'master' of https://github.com/ModularesShidos/Fase1
+[33m8449959[m Principio de funcionalidades
+[33mff9c564[m Conexiones de cucei, colisiones, vistas y ROOMS terminadas
+[33mae6b731[m Aver que peo
+[33m0ae38a2[m Nuevas Rooms
+[33m0b9d7a2[m Nuevas salas otra vez
+[33mf6628d4[m Merge branch 'master' of https://github.com/ModularesShidos/Fase1
+[33m45bdec2[m Nuevos nuevos rooms
+[33m6a003c0[m Cambio a Player, correccion del HitBox y comentarios en codigo
+[33me5ba9a8[m Merge branch 'master' of https://github.com/ModularesShidos/Fase1
+[33m95edbc3[m Personaje y Rooms
+[33mc9eaae1[m Kgadero x2
+[33m3cba465[m Merge branch 'master' of https://github.com/ModularesShidos/Fase1
+[33mfe4f47b[m Fix kgadero de Irving
+[33m9e222c4[m Objetos ahora si compeltos
+[33m6a7516c[m Merge branch 'master' of https://github.com/ModularesShidos/Fase1
+[33m18a3e7a[m Objetos del juego
+[33mbfc15e4[m Merge branch 'master' of https://github.com/ModularesShidos/Fase1
+[33m329dfe1[m Cambio de Room solucionado, conexion desde boulevard hasta jardin junto al Beta y Globo
+[33m0aa7f3b[m Merge branch 'master' of https://github.com/ModularesShidos/Fase1
+[33m197ee61[m edicion de salas
+[33m4bf404f[m Merge branch 'master' of https://github.com/ModularesShidos/Fase1
+[33m07e6b3f[m Intento de conexion con las rooms, creacion del objeto system e interactive y aplicacion de varias colisiones
+[33me87daed[m Edificio_X_Completado
+[33mfa8d462[m Logo negro cambiado
+[33md4fad70[m Merge branch 'master' of https://github.com/ModularesShidos/Fase1
+[33m4105de9[m Mas arboles agregados
+[33m698d39f[m Merge branch 'master' of https://github.com/ModularesShidos/Fase1
+[33m7a2ab20[m Nuevos fondos y decoraciones
+[33m6570fe3[m Tileset de Hierba y azulejo
+[33mea96485[m Creacion de Grupos
+[33mc82d4a3[m Merge branch 'Beto'
+[33m251fcec[m[33m ([m[1;31morigin/Beto[m[33m)[m Nuevos rooms
+[33mfbee913[m Edificios y solucion al error
+[33mb004d80[m Merge branch 'master' of https://github.com/ModularesShidos/Fase1
+[33m9808db5[m Edificios Q, R y T
+[33mf5613be[m Merge branch 'master' of https://github.com/ModularesShidos/Fase1
+[33m43a4b59[m shale me equivoque
+[33mbb077fa[m Hola
+[33m9dcbb7f[m Banca
+[33m845d197[m Murales casi terminado
+[33m2e7c3db[m Murales
+[33m9aa4989[m Murales
+[33m6bb912a[m Boulevard terminado
+[33mc1f7f34[m Tileset Hierba
+[33mcc05fff[m Menu de Inicio
+[33m5ce5fc2[m Merge branch 'master' of https://github.com/ModularesShidos/Fase1
+[33maa2005b[m Cmabios en entrada revolucion
+[33mb86d83b[m Colisiones de personaje
+[33m76d2958[m Boulevard terminado
+[33m2cdc9c4[m agreagado de cambios
+[33m2f0d03d[m Cambio en Background ROOM BLVRD
+[33mc87bef8[m Imagenes
+[33m9eb341e[m Merge branch 'master' of https://github.com/ModularesShidos/Fase1
+[33mde069a5[m Cambios en vistas
+[33maaa0a8b[m Tileset ladrillo
+[33m5c11c88[m Cambio de vista
+[33m28f987f[m Añadi todo alv
+[33m993ed54[m Carita feliz en el sprite pared
+[33m9531177[m Cambio en el esprite pito
+[33m310cde0[m First commit

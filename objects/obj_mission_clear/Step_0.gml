@@ -3,6 +3,13 @@ if (alpha < 1) {
 	alpha += 0.03; // más bajo = más lento el fade 
 }
 
+// 🔥 REALIZAR AUTOGUARDADO SOLO UNA VEZ (cuando alpha es suficiente)
+if (alpha >= 0.5 && !guardado_realizado) {
+    guardado_realizado = true;
+    show_debug_message("💾 Realizando autoguardado...");
+    guardar_partida_servidor(); // ← LLAMAR A TU FUNCIÓN DE GUARDADO
+}
+
 // Reducir duración 
 duration -= 1;
 
@@ -10,6 +17,7 @@ duration -= 1;
 if (duration <= 0) {
 	instance_destroy();
 	global.mission_2 = true;
+	guardar_partida_servidor();
 	room_goto(Entrada_Revolucion);
 }
 

@@ -3,6 +3,10 @@ duration = 180;
 
 // Opacidad inicial (para el fade-in)
 alpha = 0;
+
+// 🔥 AGREGAR ESTA VARIABLE PARA CONTROLAR EL GUARDADO
+guardado_realizado = false;
+
 switch (global.mision_terminada) {
     case 1:
         text = "¡Felicidades!\nCompletaste tu primera misión en CUCEI.";
