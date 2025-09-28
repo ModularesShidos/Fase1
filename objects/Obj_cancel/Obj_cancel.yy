@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_btn_cancel",
+    "path":"sprites/Spr_btn_cancel/Spr_btn_cancel.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

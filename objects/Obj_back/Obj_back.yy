@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_btn_back",
+    "path":"sprites/Spr_btn_back/Spr_btn_back.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

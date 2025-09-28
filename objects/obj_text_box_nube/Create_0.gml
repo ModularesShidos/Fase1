@@ -42,15 +42,15 @@ switch (global.class_state) {
 
 		switch (global.fuentes_cont) {
 	        case 1:
-	            text = "¡Genial! He encontrado la primera fuente. Se ve increíble, y quién sabe qué secretos guardará. Mejor seguir atento, aún quedan dos más.";
+	            text = "¡Genial! He encontrado la primera fuente. Se ve increíble, y quién sabe qué secretos guardará. Mejor seguir atento, aún quedan dos mmás.";
 	        break;
 
 	        case 2:
-	            text = "Perfecto, segunda fuente localizada. Cada vez se pone más emocionante, esto no es un simple paseo por CUCEI… siento que me estoy acercando a algo grande.";
+	            text = "Perfecto, segunda fuente localizada. Cada vez se pone más emocionante, esto no es un simple paseo por CUCEI… siento que me estoy acercando a algo ggrande.";
 	        break;
 
 	        case 3:
-	            text = "¡Lo logré! La tercera fuente está frente a mí. Pensé que esta investigación sería más aburrida, pero esto ha resultado ser todo un reto. Ahora solo falta ver qué sucede con todo este conocimiento en mi próximo examen…";
+	            text = "¡Lo logré! La tercera fuente está frente a mí. Pensé que esta investigación sería más aburrida, pero esto ha resultado ser todo un reto. Ahora solo falta ver qué sucede con todo este conocimiento en mi próximo eexamen…";
 				global.game_state = 5;
 	        break;
 

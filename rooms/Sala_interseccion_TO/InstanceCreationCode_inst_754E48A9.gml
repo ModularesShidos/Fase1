@@ -1,2 +1,2 @@
-target_room = Sala_interseccion_VUT;
-target_player_position = [160, 272, "U"];
+target_room = Sala_interseccion_V;
+target_player_position = [400, 704, "U"];

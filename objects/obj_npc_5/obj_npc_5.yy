@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"Student_3",
-    "path":"sprites/Student_3/Student_3.yy",
+    "name":"Student_11",
+    "path":"sprites/Student_11/Student_11.yy",
   },
   "spriteMaskId":null,
   "visible":true,

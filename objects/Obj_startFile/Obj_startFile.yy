@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_btn_start",
+    "path":"sprites/Spr_btn_start/Spr_btn_start.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

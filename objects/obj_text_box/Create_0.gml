@@ -6,7 +6,7 @@ switch (global.game_state) {
 	   break;
 
     case 1:
-        text = "¡Apresúrate! Tienes una clase de Programación en tan solo 5 minutos en el edificio X, salón número 12. No pierdas tiempo, los pasillos del CUCEI pueden ser un verdadero laberinto al inicio, pero con cada recorrido irás conociendo mejor el campus. Mientras tanto, recuerda que puedes presionar la tecla G para revisar tu misión actual y la tecla E para avanzar en estas notificaciones. ¡Sigue el rumbo y no llegues ttarde!";
+        text = "¡Apresúrate! Tienes una clase de Programación en tan solo 5 minutos en el edificio X, salón número 12. No pierdas tiempo, los pasillos del CUCEI pueden ser un verdadero laberinto al inicio, pero con cada recorrido irás conociendo mejor el campus. Mientras tanto, recuerda que puedes presionar la tecla Q para revisar tu misión actual y la tecla E para avanzar en estas notificaciones. ¡Sigue el rumbo y no llegues ttarde!";
 		break;
 		
 	case 2: 
