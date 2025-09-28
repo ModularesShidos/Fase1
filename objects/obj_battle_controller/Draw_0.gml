@@ -1,7 +1,7 @@
 // -----------------------------
 // 1 - Dibujar personajes a los lados
 // -----------------------------
-
+draw_set_font(Font1);
 var student_x = room_width * 0.15; // Estudiante a la izquierda (15% de la pantalla)
 var teacher_x = room_width * 0.9; // Profesor a la derecha (90% de la pantalla)
 var sprite_scale = 0.7; // escala de los sprites
@@ -29,7 +29,7 @@ draw_set_color(c_black);
 // Mostrar "Llamar a un profe" si NO se ha usado
 if (!item_call_used) {
     draw_text(text_x, text_y, "[X] Llamar a un profe");
-    text_y += 20; // bajar un poco para el siguiente texto
+    text_y += 60; // bajar un poco para el siguiente texto
 }
 
 // Mostrar "Usar acordeón" si NO se ha usado
