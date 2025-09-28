@@ -1,20 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"Obj_cancel",
+  "%Name":"Obj_start_revo",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":9,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Obj_cancel",
+  "name":"Obj_start_revo",
   "overriddenProperties":[],
   "parent":{
-    "name":"Botones",
-    "path":"folders/Objetos/Botones.yy",
+    "name":"Objetos",
+    "path":"folders/Objetos.yy",
   },
-  "parentObjectId":{
-    "name":"Obj_boton",
-    "path":"objects/Obj_boton/Obj_boton.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"Spr_btn_cancel",
-    "path":"sprites/Spr_btn_cancel/Spr_btn_cancel.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

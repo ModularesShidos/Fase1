@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"Spr_btn_erase",
+    "path":"sprites/Spr_btn_erase/Spr_btn_erase.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
