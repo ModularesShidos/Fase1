@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"verificar_partidas_existentes",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"verificar_partidas_existentes",
+  "parent":{
+    "name":"Guardado",
+    "path":"folders/Scripts/Guardado.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

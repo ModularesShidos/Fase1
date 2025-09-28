@@ -17,7 +17,7 @@ function inicializar_variables_juego() {
     global.dialogo_cerrado = true;
     global.mission_clear_aux = false;
     global.mision_terminada = 0;
-    global.is_class = false;
+    global.is_class = true;
     global.is_contra = false;
     global.pared_vista = false;
     global.fuentes_cont = 0;
@@ -40,3 +40,5 @@ function inicializar_variables_juego() {
     show_debug_message("✔️ Variables de juego reseteadas para una nueva partida.");
 	show_debug_message("✔️ Variables reseteadas. ID partida: " + string(global.id_partida));
 }
+
+//textbox_cerrado_manualmente

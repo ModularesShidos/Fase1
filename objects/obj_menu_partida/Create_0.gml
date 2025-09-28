@@ -1,6 +1,6 @@
-// Inicializar variables de control
-global.id_partida = 1; // Siempre trabajaremos con ID 1 por ahora
-global.partida_existente = false; // Para el menú
+// obj_menu_partidas - Evento Crear
+global.id_partida = 1;          // Siempre usaremos el slot 1
+global.partida_existe = false;  // 🔥 Nueva bandera única
+verificar_partida_existente();
 
-// Logs
-show_debug_message("🟢 Menú iniciado. ID partida: " + string(global.id_partida));
+show_debug_message("🟢 Menú iniciado. Solo 1 partida posible (ID 1)");
