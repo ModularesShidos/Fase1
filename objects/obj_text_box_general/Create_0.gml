@@ -11,7 +11,6 @@ switch (global.dialogo_id) {
 		
 	case 3: 
 		text = "Te lo agradezco muchísimo!! Esa carta fue muy especial para mí cuando comencé el semestre. Mi idea original era regalársela a una amiga para que tuviera ánimos de estudiar, pero me temo que al final ella no vendrá. Así que, si quieres, puedes quedártela tú. Te servirá como recordatorio de que nunca hay que rendirse en esta aventura uuniversitaria.";
-		global.game_state = 1;
 		break;
 		
 	case 4: 
@@ -38,7 +37,6 @@ switch (global.dialogo_id) {
 	case 9:
 		//Maestro agradece por recuperar la contraseña
 		text = "¡JA! ¡Sabía que podías con esto! Eres más confiable que un pendrive en forma de llavero. La maestra ya puede respirar tranquila gracias a ti. Como muestra de mi gratitud, te daré mi contacto. Úsalo solo en momentos complicados, cuando sientas que una pregunta del examen te quiere mandar directo a extraordinario. ¡Será como tener un comodín de profe a tu llado!";
-		global.game_state = 3;
 		break;
 		
 	case 10: 
@@ -51,7 +49,6 @@ switch (global.dialogo_id) {
 		
 	case 12: 
 		text = "¡Muchísimas gracias, amigo! Espero que hayas tenido la suerte de ver ese auto de Pikachu en el estacionamiento. Es una verdadera joya, lleno de detalles que lo hacen único. ¿A poco no está increíble?";
-		global.game_state = 4;
 		global.class_state = 4;
 		break;
 		

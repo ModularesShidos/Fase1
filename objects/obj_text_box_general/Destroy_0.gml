@@ -6,12 +6,15 @@ with (obj_npc_1) {
 }
 
 if (global.dialogo_id == 3) {
+	global.game_state = 1;
     instance_create_layer(0, 0, "UI", obj_mission_clear);
 }
 if (global.dialogo_id == 9) {
+	global.game_state = 3;
     instance_create_layer(0, 0, "UI", obj_contacto_profe_aux);
 }
 if (global.dialogo_id == 12) {
+	global.game_state = 4;
     instance_create_layer(0, 0, "UI", obj_mission_clear);
 }
 
