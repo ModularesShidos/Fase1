@@ -7,7 +7,7 @@ if (alpha < 1) {
 if (alpha >= 0.5 && !guardado_realizado) {
     guardado_realizado = true;
     show_debug_message("💾 Realizando autoguardado...");
-    guardar_partida_servidor(); // ← LLAMAR A TU FUNCIÓN DE GUARDADO
+    actualizar_partida_servidor(); // ← LLAMAR A TU FUNCIÓN DE GUARDADO
 }
 
 // Reducir duración 
@@ -17,7 +17,7 @@ duration -= 1;
 if (duration <= 0) {
 	instance_destroy();
 	global.mission_2 = true;
-	guardar_partida_servidor();
+	actualizar_partida_servidor();
 	room_goto(Entrada_Revolucion);
 }
 

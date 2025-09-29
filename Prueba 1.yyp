@@ -123,7 +123,6 @@
     {"id":{"name":"Entrada_Revolucion","path":"rooms/Entrada_Revolucion/Entrada_Revolucion.yy",},},
     {"id":{"name":"Juanpa","path":"rooms/Juanpa/Juanpa.yy",},},
     {"id":{"name":"laboratorios_derecha","path":"rooms/laboratorios_derecha/laboratorios_derecha.yy",},},
-    {"id":{"name":"menu_inicio","path":"rooms/menu_inicio/menu_inicio.yy",},},
     {"id":{"name":"Sala_aceptado","path":"rooms/Sala_aceptado/Sala_aceptado.yy",},},
     {"id":{"name":"Sala_alphabeta","path":"rooms/Sala_alphabeta/Sala_alphabeta.yy",},},
     {"id":{"name":"Sala_atras_u","path":"rooms/Sala_atras_u/Sala_atras_u.yy",},},

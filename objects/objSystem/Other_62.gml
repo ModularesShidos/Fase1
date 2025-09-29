@@ -7,6 +7,30 @@ if (ds_map_exists(_async_load, "id")) {
     var url     = ds_map_find_value(_async_load, "url");
 
     show_debug_message("🔔 Async Event - URL: " + string(url) + " | Status: " + string(status));
+	
+	 // 🔹 Verificar existencia de partida
+    if (string_pos("/api/partida/existe/", url) > 0) {
+        if (string_length(response) > 0) {
+            var datos = json_parse(response);
+            global.partida_existe = datos.existe;
+            global.esperando_verificacion = false;
+
+            show_debug_message("✅ Verificación completada - partida_existe: " + string(global.partida_existe));
+
+            // 🔹 Si no existe, ir a crear/guardar partida automáticamente
+            if (!global.partida_existe) {
+                show_debug_message("⚠️ No existe partida, se creará nueva");
+                // Aquí llamas tu función de guardar partida
+				inicializar_variables_juego();
+                guardar_partida_servidor(); // <--- tu script de POST /api/partida/guardar
+            } else {
+                // Si existe, puedes cargarla
+                cargar_partida_servidor(); // <--- tu script de GET /api/partida/cargar/:id
+            }
+        } else {
+            show_debug_message("❌ Respuesta vacía al verificar existencia de partida");
+        }
+    }
 
     // =====================================================
     // 1. RESPUESTA DE CARGA DE PARTIDA
@@ -16,18 +40,11 @@ if (ds_map_exists(_async_load, "id")) {
             try {
                 var datos = json_parse(response);
 
-                if (datos.existe == false) {
-                    show_debug_message("❌ No hay partida en slot 1");
-                    global.partida_existe = false; // 🔥 Bandera única
-                    return;
-                }
-
-                // ✅ Sí existe partida
-                global.partida_existe = true;
-
                 // 🔄 Restaurar progreso
                 var p = datos.progreso;
                 global.game_state          = p.game_state;
+				global.dialogo_activo      = p.dialogo_activo;
+				global.dialogo_cerrado     = p.dialogo_cerrado;
                 global.class_state         = p.class_state;
                 global.mision_terminada    = p.mision_terminada;
                 global.fuentes_cont        = p.fuentes_cont;
@@ -36,7 +53,9 @@ if (ds_map_exists(_async_load, "id")) {
                 global.is_class            = (p.is_class == 1);
                 global.is_contra           = (p.is_contra == 1);
                 global.mission_clear_aux   = (p.mission_clear_aux == 1);
+				global.pared_dialogo_mostrado = (p.pared_dialogo_mostrado == 1);
 				global.textbox_cerrado_manualmente = (p.textbox_cerrado_manualmente == 1);
+				
 
 
                 // 🔄 Restaurar NPCs
@@ -86,6 +105,9 @@ if (ds_map_exists(_async_load, "id")) {
                 }
 
                 show_debug_message("✅ Partida cargada exitosamente (slot 1)");
+				global.esperando_verificacion = false; 
+				show_debug_message("✅ Verificación completada - partida_existe: " + string(global.partida_existe));
+				room_goto(Entrada_Revolucion);
 
             } catch (e) {
                 show_debug_message("❌ Error cargando partida: " + string(e));
