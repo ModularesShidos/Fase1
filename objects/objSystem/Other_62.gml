@@ -9,7 +9,7 @@ if (ds_map_exists(_async_load, "id")) {
     show_debug_message("🔔 Async Event - URL: " + string(url) + " | Status: " + string(status));
 	
 	 // 🔹 Verificar existencia de partida
-    if (string_pos("/api/partida/existe/", url) > 0) {
+    if ((status == 200 || status == 0) && string_pos("/api/partida/existe/", url) > 0) {
         if (string_length(response) > 0) {
             var datos = json_parse(response);
             global.partida_existe = datos.existe;
@@ -128,11 +128,11 @@ if (ds_map_exists(_async_load, "id")) {
                 global.partida_existe = true; // ✅ ahora sí existe
 
                 show_debug_message("✅ Partida guardada (ID " + string(global.id_partida) + ")");
-                room_goto(Entrada_Revolucion);
+                room_goto(Sala_aceptado);
 
             } catch (e) {
                 show_debug_message("⚠️ Guardado completado, pero error parseando respuesta");
-                room_goto(Entrada_Revolucion);
+                room_goto(Sala_aceptado);
             }
         } else {
             show_debug_message("✅ Guardado completado (respuesta mínima)");
@@ -164,4 +164,18 @@ if (ds_map_exists(_async_load, "id")) {
     else {
         show_debug_message("❓ Respuesta no manejada: " + string(url));
     }
+	
+	// =====================================================
+	// 4. ELIMINAR
+	// =====================================================
+	if (ds_map_exists(_async_load, "method") && string_pos("/api/partida/", url) > 0 && string_pos("DELETE", _async_load[? "method"]) > 0) {
+	    if (status == 200 || status == 0) {
+	        show_debug_message("✅ Partida eliminada correctamente: " + string(url));
+			 global.partida_eliminada = true; // bandera
+	    } else {
+	        show_debug_message("❌ Error eliminando partida: " + string(status));
+			global.partida_eliminada = false;
+	    }
+	}
+
 }

@@ -373,6 +373,34 @@ app.get('/api/partidas', (req, res) => {
         res.json(respuesta);
     });
 });
+
+// 🔥 DELETE PARTIDA
+app.delete('/api/partida/:idPartida', (req, res) => {
+    const id_partida = parseInt(req.params.idPartida);
+
+    if (!id_partida || id_partida < 1 || id_partida > 3) {
+        return res.status(400).json({ error: "ID de partida inválido" });
+    }
+
+    db.serialize(() => {
+        // 🔹 Borrar todo de las 4 tablas
+        db.run('DELETE FROM Progreso WHERE id_partida = ?', [id_partida]);
+        db.run('DELETE FROM NPCs WHERE id_partida = ?', [id_partida]);
+        db.run('DELETE FROM Inventario WHERE id_partida = ?', [id_partida]);
+        db.run('DELETE FROM Clases WHERE id_partida = ?', [id_partida], function(err) {
+            if (err) {
+                console.error("❌ Error eliminando partida:", err);
+                return res.status(500).json({ error: err.message });
+            }
+            
+            console.log(`🗑️ Partida ${id_partida} eliminada de todas las tablas`);
+            res.json({
+                success: true,
+                message: `Partida ${id_partida} eliminada correctamente`
+            });
+        });
+    });
+});
 // 🔥 INICIAR SERVIDOR EN TODAS LAS INTERFACES
 app.listen(3000, '0.0.0.0', () => {
     console.log('🚀 Servidor listo para GameMaker');

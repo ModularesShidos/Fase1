@@ -171,6 +171,7 @@
     {"id":{"name":"addItem","path":"scripts/addItem/addItem.yy",},},
     {"id":{"name":"cargar_partida_servidor","path":"scripts/cargar_partida_servidor/cargar_partida_servidor.yy",},},
     {"id":{"name":"createItem","path":"scripts/createItem/createItem.yy",},},
+    {"id":{"name":"eliminar_partida_servidor","path":"scripts/eliminar_partida_servidor/eliminar_partida_servidor.yy",},},
     {"id":{"name":"getItem","path":"scripts/getItem/getItem.yy",},},
     {"id":{"name":"guardar_partida_servidor","path":"scripts/guardar_partida_servidor/guardar_partida_servidor.yy",},},
     {"id":{"name":"inicializar_variables_juego","path":"scripts/inicializar_variables_juego/inicializar_variables_juego.yy",},},

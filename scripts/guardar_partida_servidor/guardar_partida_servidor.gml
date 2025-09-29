@@ -67,7 +67,5 @@ function guardar_partida_servidor() {
     //ds_map_destroy(header_map);
 
     show_debug_message("📤 Enviando datos al servidor para la partida ID: " + string(id_partida));
-	
-	room_goto(Sala_aceptado);
 
 }

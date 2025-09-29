@@ -14,4 +14,14 @@ if (keyboard_check_pressed(ord("Q")) && !global.dialogo_activo) {
 	} else {
 		global.textbox_cerrado_manualmente = true;
 	}	
+	
+	if (global.partida_eliminada != undefined) {
+	    if (global.partida_eliminada) {
+	        show_message("✅ Partida eliminada correctamente");
+	    } else {
+	        show_message("❌ Error eliminando partida");
+	    }
+	    global.partida_eliminada = undefined; // resetear
+	}
+
 }

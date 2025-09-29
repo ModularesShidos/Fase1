@@ -12,7 +12,7 @@ if (global.game_state != 3) {
 }
 
 // Solo se activa si está la misión 3
-if (!active && global.clase3_vista) {
+if (!active && global.clase4_vista) {
     visible = true;
     active = true;
 }
