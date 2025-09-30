@@ -1,2 +1,2 @@
 /// @description Choque Puerta
-distance = 0
+distance = 0;

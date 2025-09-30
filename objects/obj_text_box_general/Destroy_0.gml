@@ -19,6 +19,7 @@ if (global.dialogo_id == 12) {
 }
 
 if (global.dialogo_id == 15) {
+	audio_stop_sound(Snd_Cucei);
 	room_goto(Sala_batalla);
 }
 

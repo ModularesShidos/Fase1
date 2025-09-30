@@ -160,10 +160,15 @@
     {"name":"inst_63E60ED","path":"rooms/Sala_pasillo_P/Sala_pasillo_P.yy",},
     {"name":"inst_64A21A33","path":"rooms/Sala_pasillo_P/Sala_pasillo_P.yy",},
     {"name":"inst_7E966987","path":"rooms/Sala_pasillo_P/Sala_pasillo_P.yy",},
+    {"name":"inst_42CB4989","path":"rooms/Sala_pasillo_P/Sala_pasillo_P.yy",},
+    {"name":"inst_5E81930E","path":"rooms/Sala_pasillo_P/Sala_pasillo_P.yy",},
   ],
   "isDnd":false,
   "layers":[
-    {"$GMRInstanceLayer":"","%Name":"UI","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"UI","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRInstanceLayer":"","%Name":"UI","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v2","%Name":"inst_42CB4989","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_42CB4989","objectId":{"name":"obj_npc_4","path":"objects/obj_npc_4/obj_npc_4.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":576.0,"y":288.0,},
+        {"$GMRInstance":"v2","%Name":"inst_5E81930E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5E81930E","objectId":{"name":"obj_npc_2","path":"objects/obj_npc_2/obj_npc_2.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":512.0,"y":288.0,},
+      ],"layers":[],"name":"UI","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Plantas","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_1E740BF6","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_1E740BF6","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"Spr_pino","path":"sprites/Spr_pino/Spr_pino.yy",},"x":64.0,"y":224.0,},
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_2EC22F1E","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_2EC22F1E","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"Spr_pino","path":"sprites/Spr_pino/Spr_pino.yy",},"x":224.0,"y":224.0,},

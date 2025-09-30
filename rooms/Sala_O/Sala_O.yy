@@ -138,10 +138,13 @@
     {"name":"inst_38301871","path":"rooms/Sala_O/Sala_O.yy",},
     {"name":"inst_3F697799","path":"rooms/Sala_O/Sala_O.yy",},
     {"name":"inst_27E19783","path":"rooms/Sala_O/Sala_O.yy",},
+    {"name":"inst_617ACA6E","path":"rooms/Sala_O/Sala_O.yy",},
   ],
   "isDnd":false,
   "layers":[
-    {"$GMRInstanceLayer":"","%Name":"UI","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"UI","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRInstanceLayer":"","%Name":"UI","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v2","%Name":"inst_617ACA6E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_617ACA6E","objectId":{"name":"npc_2","path":"objects/npc_2/npc_2.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.5238094,"scaleY":1.9142855,"x":352.0,"y":256.0,},
+      ],"layers":[],"name":"UI","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"tori2","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_2A30FB6C","animationSpeed":0.0,"colour":4294967295,"frozen":false,"headPosition":2.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_2A30FB6C","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":2.2,"scaleY":2.2307692,"spriteId":{"name":"Spr_torii","path":"sprites/Spr_torii/Spr_torii.yy",},"x":640.0,"y":-64.0,},
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_7D403DF1","animationSpeed":0.0,"colour":4294967295,"frozen":false,"headPosition":2.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_7D403DF1","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":2.2,"scaleY":2.2307692,"spriteId":{"name":"Spr_torii","path":"sprites/Spr_torii/Spr_torii.yy",},"x":640.0,"y":32.0,},

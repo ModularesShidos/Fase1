@@ -84,10 +84,13 @@
     {"name":"inst_72DBB1F2","path":"rooms/Sala_P_pasillorojo/Sala_P_pasillorojo.yy",},
     {"name":"inst_5443B5E8","path":"rooms/Sala_P_pasillorojo/Sala_P_pasillorojo.yy",},
     {"name":"inst_2ED2EA70","path":"rooms/Sala_P_pasillorojo/Sala_P_pasillorojo.yy",},
+    {"name":"inst_315C85D0","path":"rooms/Sala_P_pasillorojo/Sala_P_pasillorojo.yy",},
   ],
   "isDnd":false,
   "layers":[
-    {"$GMRInstanceLayer":"","%Name":"UI","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"UI","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRInstanceLayer":"","%Name":"UI","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v2","%Name":"inst_315C85D0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_315C85D0","objectId":{"name":"npc_1","path":"objects/npc_1/npc_1.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.99999994,"scaleY":0.99999994,"x":224.0,"y":224.0,},
+      ],"layers":[],"name":"UI","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Plantas","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_64341CA","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_64341CA","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"Arbol_Roble","path":"sprites/Arbol_Roble/Arbol_Roble.yy",},"x":96.0,"y":192.0,},
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_2BAC378F","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_2BAC378F","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"Arbol_Roble","path":"sprites/Arbol_Roble/Arbol_Roble.yy",},"x":96.0,"y":320.0,},

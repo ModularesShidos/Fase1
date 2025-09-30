@@ -1,1 +1,1 @@
-distance = 0
+distance = 0;

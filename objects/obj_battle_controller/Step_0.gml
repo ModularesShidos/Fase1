@@ -53,6 +53,6 @@ switch(state) {
     break;
 
     case "end":
-        // No se hace nada, solo Draw
+        audio_stop_sound(Snd_PeleaProfe);
     break;
 }
