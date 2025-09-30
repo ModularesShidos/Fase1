@@ -9,6 +9,7 @@ switch(state) {
                 feedback_color = c_green;
                 current_sprite_student = 3;
                 current_sprite_teacher = 1;
+				audio_play_sound(Snd_CorrectoPelea, 1, false);
             } else {
                 // Incorrecta
                 feedback_text = "Incorrecto";
@@ -17,6 +18,7 @@ switch(state) {
 
                 current_sprite_student = 2;
                 current_sprite_teacher = 2;
+				audio_play_sound(Snd_IncorrectoPelea, 1, false);
             }
 
             feedback_timer = feedback_duration; // activa temporizador

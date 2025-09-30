@@ -1,1 +1,2 @@
-room_goto(Sala_Menu_inicio)
+event_inherited();
+room_goto(Sala_Menu_inicio);

@@ -1,3 +1,5 @@
+audio_play_sound(Snd_PeleaProfe, 1, true);
+
 // Vida del jugador
 player_hp = 100;
 

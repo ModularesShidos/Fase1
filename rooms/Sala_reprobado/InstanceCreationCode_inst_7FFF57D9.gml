@@ -1,0 +1,1 @@
+audio_play_sound(Snd_GameOver1, 1, true);
