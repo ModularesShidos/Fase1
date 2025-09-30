@@ -8,6 +8,25 @@ if (ds_map_exists(_async_load, "id")) {
 
     show_debug_message("🔔 Async Event - URL: " + string(url) + " | Status: " + string(status));
 	
+	// =====================================================
+	// 4. ELIMINAR
+	// =====================================================
+	if (ds_map_exists(_async_load, "method") && string_pos("/api/partida/", url) > 0 && string_pos("DELETE", _async_load[? "method"]) > 0) {
+	    if (status == 200 || status == 0) {
+	        show_debug_message("✅ Partida eliminada correctamente: " + string(url));
+			 global.partida_eliminada = true; // bandera
+	    } else {
+	        show_debug_message("❌ Error eliminando partida: " + string(status));
+			global.partida_eliminada = false;
+	    }
+	}
+	
+	else if (string_pos("/api/partida/actualizar/", url) > 0 && (status == 200 || status == 0)) {
+		
+		show_debug_message("🔄 Partida actualizada correctamente en el servidor");
+	
+	}
+	
 	 // 🔹 Verificar existencia de partida
     if ((status == 200 || status == 0) && string_pos("/api/partida/existe/", url) > 0) {
         if (string_length(response) > 0) {
@@ -140,22 +159,7 @@ if (ds_map_exists(_async_load, "id")) {
         }
     }
 
-    // =====================================================
-    // 3. RESPUESTA DE PING
-    // =====================================================
-    else if (string_pos("/api/ping", url) > 0) {
-        if (status == 200 || status == 0) {
-            show_debug_message("✅ Servidor activo");
-        } else {
-            show_debug_message("❌ Error de ping: " + string(status));
-        }
-    }
-	
-	else if (string_pos("/api/partida/actualizar/", url) > 0 && (status == 200 || status == 0)) {
-		
-		show_debug_message("🔄 Partida actualizada correctamente en el servidor");
-	
-	}
+
 
 
     // =====================================================
@@ -163,19 +167,8 @@ if (ds_map_exists(_async_load, "id")) {
     // =====================================================
     else {
         show_debug_message("❓ Respuesta no manejada: " + string(url));
+		show_debug_message("📡 Status recibido: " + string(status));
     }
-	
-	// =====================================================
-	// 4. ELIMINAR
-	// =====================================================
-	if (ds_map_exists(_async_load, "method") && string_pos("/api/partida/", url) > 0 && string_pos("DELETE", _async_load[? "method"]) > 0) {
-	    if (status == 200 || status == 0) {
-	        show_debug_message("✅ Partida eliminada correctamente: " + string(url));
-			 global.partida_eliminada = true; // bandera
-	    } else {
-	        show_debug_message("❌ Error eliminando partida: " + string(status));
-			global.partida_eliminada = false;
-	    }
-	}
+
 
 }

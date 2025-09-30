@@ -16,7 +16,7 @@ switch (global.game_state) {
         text = "Hoy tienes clase del edificio X, salón número 8. Apresúrate para no llegar tarde y aprovechar cada minuto. Sabías que en CUCEI, desde los primeros años de la carrera de Ingeniería Informática, el estudio de estructuras de datos ha sido fundamental para formar estudiantes capaces de organizar información de manera eficiente y resolver problemas complejos en programación. ¡Suerte y sigue aavanzando!";
         break;
     case 5: 
-        text = "¡Rápido! Tu profesor te espera para tu examen final, y tendrás que demostrar que prestaste atención a todas tus clases. Busca dirigirte cuanto antes al edificio X para no llegar tarde.";
+        text = "¡Rápido! Tu profesor te espera para tu examen final, y tendrás que demostrar que prestaste atención a todas tus clases. Busca dirigirte cuanto antes al edificio X aula  17 para no llegar tarde.";
         break;
     default:
         text = "Sin diálogo definido.";
