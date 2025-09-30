@@ -259,6 +259,7 @@
     {"id":{"name":"Spr_fuente","path":"sprites/Spr_fuente/Spr_fuente.yy",},},
     {"id":{"name":"Spr_gameover","path":"sprites/Spr_gameover/Spr_gameover.yy",},},
     {"id":{"name":"Spr_graduado","path":"sprites/Spr_graduado/Spr_graduado.yy",},},
+    {"id":{"name":"Spr_icono","path":"sprites/Spr_icono/Spr_icono.yy",},},
     {"id":{"name":"Spr_interseccion_p_mat","path":"sprites/Spr_interseccion_p_mat/Spr_interseccion_p_mat.yy",},},
     {"id":{"name":"Spr_interseccion_TO","path":"sprites/Spr_interseccion_TO/Spr_interseccion_TO.yy",},},
     {"id":{"name":"Spr_interseccion_V","path":"sprites/Spr_interseccion_V/Spr_interseccion_V.yy",},},
