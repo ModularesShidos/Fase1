@@ -7,6 +7,15 @@ const app = express();
 // 🔥 CONFIGURACIÓN SUPER SIMPLE PARA GAMEMAKER
 app.use(cors({ origin: '*' })); // Solo esto, nada más
 app.use(express.json());
+app.use((req, res, next) => {
+    console.log("🌐 Petición recibida:", {
+        method: req.method,
+        url: req.url,
+        headers: req.headers,
+        body: req.body
+    });
+    next();
+});
 
 const db = new sqlite3.Database('./saves.db', (err) => {
     if (err) console.error("Error abriendo BD:", err);
@@ -18,6 +27,8 @@ db.serialize(() => {
         id_partida INTEGER PRIMARY KEY,
         fecha_guardado DATETIME DEFAULT CURRENT_TIMESTAMP,
         game_state INTEGER DEFAULT 0,
+        dialogo_activo INTEGER DEFAULT 0,
+        dialogo_cerrado INTEGER DEFAULT 0,
         class_state INTEGER DEFAULT 0,
         mision_terminada INTEGER DEFAULT 0,
         fuentes_cont INTEGER DEFAULT 0,
@@ -25,7 +36,9 @@ db.serialize(() => {
         textbox_visto INTEGER DEFAULT 0,
         is_class INTEGER DEFAULT 0,
         is_contra INTEGER DEFAULT 0,
+        pared_vista INTERGER DEFAULT 0,
         mission_clear_aux INTEGER DEFAULT 0,
+        pared_dialogo_mostrado INTEGER DEFAULT 0,
         textbox_cerrado_manualmente INTEGER DEFAULT 0 
     )`);
 
@@ -86,7 +99,7 @@ function guardarDatosPartida(id_partida, npcs = [], inventario = [], clases = []
                 }
             };
             
-            // 🔥 ENVIAR RESPUESTA CON ENCABEZADOS EXPLÍCITOS
+            // ENVIAR RESPUESTA CON ENCABEZADOS 
             res.writeHead(200, {
                 'Content-Type': 'application/json; charset=utf-8',
                 'Access-Control-Allow-Origin': '*',
@@ -97,6 +110,59 @@ function guardarDatosPartida(id_partida, npcs = [], inventario = [], clases = []
         });
     });
 }
+
+// Helper: actualizar tablas con UPDATE
+function actualizarDatosPartida(id_partida, npcs = [], inventario = [], clases = [], res) {
+    db.serialize(() => {
+        // Actualizar NPCs
+        npcs.forEach(npc => {
+            db.run(
+                `UPDATE NPCs SET ya_hablo = ? WHERE id_partida = ? AND npc_id = ?`,
+                [npc.ya_hablo, id_partida, npc.id]
+            );
+        });
+
+        // Actualizar Inventario
+        inventario.forEach(item => {
+            db.run(
+                `UPDATE Inventario SET cantidad = ? WHERE id_partida = ? AND item_id = ?`,
+                [item.cantidad, id_partida, item.id]
+            );
+        });
+
+        // Actualizar Clases
+        clases.forEach(clase => {
+            db.run(
+                `UPDATE Clases SET completada = ? WHERE id_partida = ? AND clase_id = ?`,
+                [clase.completada, id_partida, clase.id]
+            );
+        });
+
+        res.json({ success: true, message: "Partida actualizada correctamente", id_partida });
+    });
+}
+
+
+// GET VERIFICAR EXISTENCIA DE PARTIDA
+app.get('/api/partida/existe/:idPartida', (req, res) => {
+    const id_partida = parseInt(req.params.idPartida);
+
+    if (id_partida < 1 || id_partida > 3) {
+        return res.status(400).json({ error: "Slot inválido" });
+    }
+
+    db.get('SELECT 1 FROM Progreso WHERE id_partida = ?', [id_partida], (err, row) => {
+        if (err) {
+            console.error("❌ Error verificando existencia:", err);
+            return res.status(500).json({ error: err.message });
+        }
+
+        res.json({
+            id_partida: id_partida,
+            existe: !!row // true si existe, false si no
+        });
+    });
+});
 
 // 🔥 POST GUARDAR - VERSIÓN SIMPLIFICADA
 app.post('/api/partida/guardar', (req, res) => {
@@ -124,11 +190,13 @@ app.post('/api/partida/guardar', (req, res) => {
             // 🔥 ACTUALIZAR PARTIDA EXISTENTE
             console.log("🔄 Actualizando partida existente en slot:", slotId);
             db.run(
-                `UPDATE Progreso SET game_state=?, class_state=?, mision_terminada=?, fuentes_cont=?, dialogo_id=?, textbox_visto=?, is_class=?, is_contra=?, mission_clear_aux=?, textbox_cerrado_manualmente = ?, fecha_guardado=CURRENT_TIMESTAMP WHERE id_partida = ?`,
+                `UPDATE Progreso SET game_state=?, dialogo_activo=?, dialogo_cerrado=?, class_state=?, mision_terminada=?, fuentes_cont=?, dialogo_id=?, textbox_visto=?, is_class=?, pared_vista = ?, is_contra=?, mission_clear_aux=?, pared_dialogo_mostrado=?, textbox_cerrado_manualmente = ?, fecha_guardado=CURRENT_TIMESTAMP WHERE id_partida = ?`,
                 [
-                    progreso.game_state || 0, progreso.class_state || 0, progreso.mision_terminada || 0,
+                    progreso.game_state || 0, progreso.dialogo_activo || 0, progreso.dialogo_cerrado || 0,
+                    progreso.class_state || 0, progreso.mision_terminada || 0,
                     progreso.fuentes_cont || 0, progreso.dialogo_id || 0, progreso.textbox_visto || 0,
-                    progreso.is_class || 0, progreso.is_contra || 0, progreso.mission_clear_aux || 0, 
+                    progreso.is_class || 0,  progreso.pared_vista || 0, progreso.is_contra || 0,
+                    progreso.mission_clear_aux || 0, progreso.pared_dialogo_mostrado || 0,
                     progreso.textbox_cerrado_manualmente || 0, slotId
                 ],
                 function(err) {
@@ -144,13 +212,15 @@ app.post('/api/partida/guardar', (req, res) => {
             // 🔥 CREAR NUEVA PARTIDA CON ID FIJO
             console.log("🆕 Creando nueva partida en slot:", slotId);
             db.run(
-                `INSERT INTO Progreso (id_partida, game_state, class_state, mision_terminada, fuentes_cont, dialogo_id, textbox_visto, is_class, is_contra, mission_clear_aux, textbox_cerrado_manualmente)
-                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+                `INSERT INTO Progreso (id_partida, game_state, dialogo_activo, dialogo_cerrado, class_state, mision_terminada, fuentes_cont, dialogo_id, textbox_visto, is_class, pared_vista, is_contra, mission_clear_aux, pared_dialogo_mostrado, textbox_cerrado_manualmente)
+                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
                 [
                     slotId, // 🔥 ID FIJO (no autoincremental)
-                    progreso.game_state || 0, progreso.class_state || 0, progreso.mision_terminada || 0,
+                    progreso.game_state || 0, progreso.dialogo_activo || 0, progreso.dialogo_cerrado || 0,
+                    progreso.class_state || 0, progreso.mision_terminada || 0,
                     progreso.fuentes_cont || 0, progreso.dialogo_id || 0, progreso.textbox_visto || 0,
-                    progreso.is_class || 0, progreso.is_contra || 0, progreso.mission_clear_aux || 0,
+                    progreso.is_class || 0, progreso.pared_vista || 0, progreso.is_contra || 0, 
+                    progreso.mission_clear_aux || 0, progreso.pared_dialogo_mostrado || 0,
                     progreso.textbox_cerrado_manualmente || 0
                 ],
                 function(err) {
@@ -166,7 +236,7 @@ app.post('/api/partida/guardar', (req, res) => {
     });
 });
 
-// 🔥 PUT ACTUALIZAR PARTIDA
+// 🔥 PUT ACTUALIZAR PARTIDA - VERSIÓN CORREGIDA
 app.put('/api/partida/actualizar/:idPartida', (req, res) => {
     const id_partida = parseInt(req.params.idPartida);
     const { progreso = {}, npcs = [], inventario = [], clases = [] } = req.body;
@@ -175,31 +245,39 @@ app.put('/api/partida/actualizar/:idPartida', (req, res) => {
         return res.status(400).json({ error: "ID de partida inválido" });
     }
 
-    // Actualizar solo la tabla Progreso
+    // Actualizar la tabla Progreso
     db.run(
         `UPDATE Progreso SET
             game_state = ?,
+            dialogo_activo = ?,
+            dialogo_cerrado = ?,
             class_state = ?,
             mision_terminada = ?,
             fuentes_cont = ?,
             dialogo_id = ?,
             textbox_visto = ?,
             is_class = ?,
+            pared_vista = ?,
             is_contra = ?,
             mission_clear_aux = ?,
+            pared_dialogo_mostrado = ?,
             textbox_cerrado_manualmente = ?,
             fecha_guardado = CURRENT_TIMESTAMP
          WHERE id_partida = ?`,
         [
             progreso.game_state || 0,
+            progreso.dialogo_activo || 0,        // ✅ AGREGAR
+            progreso.dialogo_cerrado || 0,       // ✅ AGREGAR  
             progreso.class_state || 0,
             progreso.mision_terminada || 0,
             progreso.fuentes_cont || 0,
             progreso.dialogo_id || 0,
             progreso.textbox_visto || 0,
             progreso.is_class || 0,
+            progreso.pared_vista || 0,           // ✅ AGREGAR
             progreso.is_contra || 0,
             progreso.mission_clear_aux || 0,
+            progreso.pared_dialogo_mostrado || 0,
             progreso.textbox_cerrado_manualmente || 0,
             id_partida
         ],
@@ -209,12 +287,11 @@ app.put('/api/partida/actualizar/:idPartida', (req, res) => {
                 return res.status(500).json({ error: err.message });
             }
 
-            // Guardar NPCs, inventario y clases
-            guardarDatosPartida(id_partida, npcs, inventario, clases, res, true);
+            // ✅ CORREGIDO: Guardar también NPCs, inventario y clases
+            actualizarDatosPartida(id_partida, npcs, inventario, clases, res, true);
         }
     );
 });
-
 
 // 🔥 GET CARGAR - VERSIÓN SIMPLIFICADA
 // 🔥 GET CARGAR - VERSIÓN CORREGIDA (agrega id_partida)
@@ -247,14 +324,18 @@ app.get('/api/partida/cargar/:idPartida', (req, res) => {
                 slot: id_partida,        // 🔥 NUEVO
                 progreso: {
                     game_state: progreso.game_state,
+                    dialogo_activo: progreso.dialogo_activo,
+                    dialogo_cerrado: progreso.dialogo_cerrado,
                     class_state: progreso.class_state,
                     mision_terminada: progreso.mision_terminada,
                     fuentes_cont: progreso.fuentes_cont,
                     dialogo_id: progreso.dialogo_id,
                     textbox_visto: progreso.textbox_visto,
                     is_class: progreso.is_class,
+                    pared_vista: progreso.pared_vista,
                     is_contra: progreso.is_contra,
                     mission_clear_aux: progreso.mission_clear_aux,
+                    pared_dialogo_mostrado: progreso.pared_dialogo_mostrado,
                     textbox_cerrado_manualmente: progreso.textbox_cerrado_manualmente
                 },
                 npcs: npcs,
@@ -290,6 +371,34 @@ app.get('/api/partidas', (req, res) => {
         };
         
         res.json(respuesta);
+    });
+});
+
+// 🔥 DELETE PARTIDA
+app.delete('/api/partida/:idPartida', (req, res) => {
+    const id_partida = parseInt(req.params.idPartida);
+
+    if (!id_partida || id_partida < 1 || id_partida > 3) {
+        return res.status(400).json({ error: "ID de partida inválido" });
+    }
+
+    db.serialize(() => {
+        // 🔹 Borrar todo de las 4 tablas
+        db.run('DELETE FROM Progreso WHERE id_partida = ?', [id_partida]);
+        db.run('DELETE FROM NPCs WHERE id_partida = ?', [id_partida]);
+        db.run('DELETE FROM Inventario WHERE id_partida = ?', [id_partida]);
+        db.run('DELETE FROM Clases WHERE id_partida = ?', [id_partida], function(err) {
+            if (err) {
+                console.error("❌ Error eliminando partida:", err);
+                return res.status(500).json({ error: err.message });
+            }
+            
+            console.log(`🗑️ Partida ${id_partida} eliminada de todas las tablas`);
+            res.json({
+                success: true,
+                message: `Partida ${id_partida} eliminada correctamente`
+            });
+        });
     });
 });
 // 🔥 INICIAR SERVIDOR EN TODAS LAS INTERFACES

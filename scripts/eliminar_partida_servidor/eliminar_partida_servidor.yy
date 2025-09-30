@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"eliminar_partida_servidor",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"eliminar_partida_servidor",
+  "parent":{
+    "name":"Guardado",
+    "path":"folders/Scripts/Guardado.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,18 +1,11 @@
 // Solo activa el temporizador si la condición se cumple
 if (global.game_state != 3) {
-    if (destruir_timer == -1) {
-        destruir_timer = 5 * 60; // 5 segundos
-    } else {
-        destruir_timer -= 1;
-        if (destruir_timer <= 0) {
-            instance_destroy();
-            exit;
-        }
-    }
+    instance_destroy();
+    exit;
 }
 
 // Solo se activa si está la misión 3
-if (!active && global.clase3_vista) {
+if (!active && global.clase4_vista) {
     visible = true;
     active = true;
 }
@@ -36,7 +29,6 @@ if (distance_to_object(Obj_Player_M) < 40 && keyboard_check_pressed(ord("E")) &&
 	
     if (getItem(ITEM_FUNKO) != noone) {
         global.dialogo_id = 12; 
-		global.game_state = 4;
         removeItem(ITEM_FUNKO);
     }
     else if (!global.npc_4) {

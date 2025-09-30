@@ -28,6 +28,7 @@ if (keyboard_check_pressed(ord("X")) && !item_call_used) {
 }
 
 if(keyboard_check_pressed(ord("E")) && state == "end" && battle_result == "victoria"){
+	actualizar_partida_servidor();
 	room_goto(Sala_graduado);
 }else{
 	if(keyboard_check_pressed(ord("E")) && state == "end" && battle_result == "derrota"){

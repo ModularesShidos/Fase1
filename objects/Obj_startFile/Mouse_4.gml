@@ -1,1 +1,1 @@
-room_goto(Sala_aceptado)
+verificar_partida_existente();

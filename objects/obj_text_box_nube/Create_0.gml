@@ -34,7 +34,7 @@ switch (global.class_state) {
 	break;
 	
 	case 4: 
-		text = "Hoy vimos recursividad que es cuando una función se llama a sí misma para resolver un problema, pilas que son estructuras tipo último en entrar primero en salir, colas que son primero en entrar primero en salir, y métodos de ordenamiento quHoy vimos recursividad, que es cuando una función se llama a sí misma para resolver un problema paso a paso, pilas, que son estructuras tipo 'último en entrar, primero en salir', y colas, que funcionan 'primero en entrar, primero en salir'. También aprendimos métodos de ordenamiento, que son formas de organizar datos dentro de un programa; algunos ejemplos son el método burbuja o quicksort, cada uno con su propia estrategia y eficiencia según la cantidad de ddatos.";
+		text = "Hoy vimos recursividad que es cuando una función se llama a sí misma para resolver un problema, pilas que son estructuras tipo, último en entrar primero en salir, colas que son primero en entrar primero en salir, y métodos de ordenamiento quHoy vimos recursividad, que es cuando una función se llama a sí misma para resolver un problema paso a paso, pilas, que son estructuras tipo 'último en entrar, primero en salir', y colas, que funcionan 'primero en entrar, primero en salir'. También aprendimos métodos de ordenamiento, que son formas de organizar datos dentro de un programa; algunos ejemplos son el método burbuja o quicksort, cada uno con su propia estrategia y eficiencia según la cantidad de ddatos.";
 		global.class_state = 5;
 	break;
 	

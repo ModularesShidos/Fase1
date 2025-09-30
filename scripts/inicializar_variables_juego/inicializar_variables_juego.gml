@@ -22,7 +22,7 @@ function inicializar_variables_juego() {
     global.pared_vista = false;
     global.fuentes_cont = 0;
     global.pared_dialogo_mostrado = false;
-    global.textbox_cerrado_manualmente = false;
+    global.textbox_cerrado_manualmente = true;
 
     // CONTROL DE MISIONES Y ESTADOS
     global.game_state = 0;
@@ -35,7 +35,7 @@ function inicializar_variables_juego() {
     global.contacto_profe_usado = false;
     
     // ID de partida se manejará por separado
-    global.id_partida = 0; 
+    global.id_partida = global.id_partida; 
     
     show_debug_message("✔️ Variables de juego reseteadas para una nueva partida.");
 	show_debug_message("✔️ Variables reseteadas. ID partida: " + string(global.id_partida));

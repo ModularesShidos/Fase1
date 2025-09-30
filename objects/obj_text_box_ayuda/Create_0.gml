@@ -16,7 +16,7 @@ switch (global.game_state) {
         text = "Hoy tienes clase del edificio X, salón número 8. Apresúrate para no llegar tarde y aprovechar cada minuto. Sabías que en CUCEI, desde los primeros años de la carrera de Ingeniería Informática, el estudio de estructuras de datos ha sido fundamental para formar estudiantes capaces de organizar información de manera eficiente y resolver problemas complejos en programación. ¡Suerte y sigue aavanzando!";
         break;
     case 5: 
-        text = "¡Rápido! Tu profesor te espera para tu examen final, y tendrás que demostrar que prestaste atención a todas tus clases. Busca dirigirte cuanto antes al edificio X para no llegar tarde.";
+        text = "¡Rápido! Tu profesor te espera para tu examen final, y tendrás que demostrar que prestaste atención a todas tus clases. Busca dirigirte cuanto antes al edificio X aula  17 para no llegar tarde.";
         break;
     default:
         text = "Sin diálogo definido.";
@@ -28,7 +28,7 @@ text = string_replace_all(text, chr(9), " ");
 while (string_pos("  ", text) != 0) text = string_replace_all(text, "  ", " ");
 
 // Dividir en páginas (por si acaso algún texto es muy largo)
-pages = scr_split_text_into_pages(text, global.textbox_font, 20, 394, 200);
+pages = scr_split_text_into_pages(text, global.textbox_font, 20, 394, 190);
 page = 0;
 text_on_display = pages[page]; // ← ¡TEXTO COMPLETO INMEDIATAMENTE!
 text_finished = true; // ← ¡YA ESTÁ TERMINADO!
