@@ -1,6 +1,12 @@
+if(process.platform === "win32"){
+    console.log = function(){};
+    console.error = function(){};
+}
+
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const cors = require('cors');
+const {exec} = require('child_process');
 
 const app = express();
 
@@ -16,6 +22,20 @@ app.use((req, res, next) => {
     });
     next();
 });
+
+const startGame = () => {
+
+    exec('start "" "CUCEIs.exe"', function(err, stdout, stder) {
+        if (err){
+
+            console.error(err) 
+            return;
+
+        }
+        console.loge(stdout);
+    })
+
+}
 
 const db = new sqlite3.Database('./saves.db', (err) => {
     if (err) console.error("Error abriendo BD:", err);
@@ -403,5 +423,7 @@ app.delete('/api/partida/:idPartida', (req, res) => {
 });
 // 🔥 INICIAR SERVIDOR EN TODAS LAS INTERFACES
 app.listen(3000, '0.0.0.0', () => {
-    console.log('🚀 Servidor listo para GameMaker');
+    startGame();
+    console.log('Servidor listo para GameMaker');
+
 });
