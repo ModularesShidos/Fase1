@@ -9,8 +9,8 @@
   "name":"objDoor",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Interactuables",
+    "path":"folders/Objetos/Interactuables.yy",
   },
   "parentObjectId":{
     "name":"ObjInteractive",

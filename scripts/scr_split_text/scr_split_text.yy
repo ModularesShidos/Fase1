@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_split_text",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Textos",
+    "path":"folders/Scripts/Textos.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -28,7 +28,7 @@ text = string_replace_all(text, chr(9), " ");
 while (string_pos("  ", text) != 0) text = string_replace_all(text, "  ", " ");
 
 // Dividir en páginas (por si acaso algún texto es muy largo)
-pages = scr_split_text_into_pages(text, global.textbox_font, 20, 394, 190);
+pages = scr_split_text_into_pages(text, Font3, 22, 394, 190);
 page = 0;
 text_on_display = pages[page]; // ← ¡TEXTO COMPLETO INMEDIATAMENTE!
 text_finished = true; // ← ¡YA ESTÁ TERMINADO!

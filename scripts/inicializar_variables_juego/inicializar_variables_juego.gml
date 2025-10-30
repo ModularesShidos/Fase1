@@ -23,6 +23,11 @@ function inicializar_variables_juego() {
     global.fuentes_cont = 0;
     global.pared_dialogo_mostrado = false;
     global.textbox_cerrado_manualmente = true;
+	global.clase1_gusta = false;
+	global.clase2_gusta = false;
+	global.clase3_gusta = false;
+	global.clase4_gusta = false;
+	global.clase5_gusta = false;
 
     // CONTROL DE MISIONES Y ESTADOS
     global.game_state = 0;

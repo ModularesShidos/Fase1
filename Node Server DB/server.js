@@ -24,23 +24,28 @@ const db = new sqlite3.Database('./saves.db', (err) => {
 // Crear tablas si no existen (tu código igual)
 db.serialize(() => {
     db.run(`CREATE TABLE IF NOT EXISTS Progreso (
-        id_partida INTEGER PRIMARY KEY,
-        fecha_guardado DATETIME DEFAULT CURRENT_TIMESTAMP,
-        game_state INTEGER DEFAULT 0,
-        dialogo_activo INTEGER DEFAULT 0,
-        dialogo_cerrado INTEGER DEFAULT 0,
-        class_state INTEGER DEFAULT 0,
-        mision_terminada INTEGER DEFAULT 0,
-        fuentes_cont INTEGER DEFAULT 0,
-        dialogo_id INTEGER DEFAULT 0,
-        textbox_visto INTEGER DEFAULT 0,
-        is_class INTEGER DEFAULT 0,
-        is_contra INTEGER DEFAULT 0,
-        pared_vista INTERGER DEFAULT 0,
-        mission_clear_aux INTEGER DEFAULT 0,
-        pared_dialogo_mostrado INTEGER DEFAULT 0,
-        textbox_cerrado_manualmente INTEGER DEFAULT 0 
-    )`);
+    id_partida INTEGER PRIMARY KEY,
+    fecha_guardado DATETIME DEFAULT CURRENT_TIMESTAMP,
+    game_state INTEGER DEFAULT 0,
+    dialogo_activo INTEGER DEFAULT 0,
+    dialogo_cerrado INTEGER DEFAULT 0,
+    class_state INTEGER DEFAULT 0,
+    mision_terminada INTEGER DEFAULT 0,
+    fuentes_cont INTEGER DEFAULT 0,
+    dialogo_id INTEGER DEFAULT 0,
+    textbox_visto INTEGER DEFAULT 0,
+    is_class INTEGER DEFAULT 0,
+    is_contra INTEGER DEFAULT 0,
+    pared_vista INTEGER DEFAULT 0,
+    mission_clear_aux INTEGER DEFAULT 0,
+    pared_dialogo_mostrado INTEGER DEFAULT 0,
+    textbox_cerrado_manualmente INTEGER DEFAULT 0,
+    clase1_gusta INTEGER DEFAULT 0,
+    clase2_gusta INTEGER DEFAULT 0,
+    clase3_gusta INTEGER DEFAULT 0,
+    clase4_gusta INTEGER DEFAULT 0,
+    clase5_gusta INTEGER DEFAULT 0
+)`);
 
     db.run(`CREATE TABLE IF NOT EXISTS NPCs (
         id_partida INTEGER,
@@ -190,14 +195,16 @@ app.post('/api/partida/guardar', (req, res) => {
             // 🔥 ACTUALIZAR PARTIDA EXISTENTE
             console.log("🔄 Actualizando partida existente en slot:", slotId);
             db.run(
-                `UPDATE Progreso SET game_state=?, dialogo_activo=?, dialogo_cerrado=?, class_state=?, mision_terminada=?, fuentes_cont=?, dialogo_id=?, textbox_visto=?, is_class=?, pared_vista = ?, is_contra=?, mission_clear_aux=?, pared_dialogo_mostrado=?, textbox_cerrado_manualmente = ?, fecha_guardado=CURRENT_TIMESTAMP WHERE id_partida = ?`,
+                `UPDATE Progreso SET game_state=?, dialogo_activo=?, dialogo_cerrado=?, class_state=?, mision_terminada=?, fuentes_cont=?, dialogo_id=?, textbox_visto=?, is_class=?, pared_vista = ?, is_contra=?, mission_clear_aux=?, pared_dialogo_mostrado=?, textbox_cerrado_manualmente = ?, clase1_gusta = ?, clase2_gusta = ?, clase3_gusta = ?, clase4_gusta = ?, clase5_gusta = ?, fecha_guardado=CURRENT_TIMESTAMP WHERE id_partida = ?`,
                 [
                     progreso.game_state || 0, progreso.dialogo_activo || 0, progreso.dialogo_cerrado || 0,
                     progreso.class_state || 0, progreso.mision_terminada || 0,
                     progreso.fuentes_cont || 0, progreso.dialogo_id || 0, progreso.textbox_visto || 0,
                     progreso.is_class || 0,  progreso.pared_vista || 0, progreso.is_contra || 0,
                     progreso.mission_clear_aux || 0, progreso.pared_dialogo_mostrado || 0,
-                    progreso.textbox_cerrado_manualmente || 0, slotId
+                    progreso.textbox_cerrado_manualmente || 0, progreso.clase1_gusta || 0,
+                    progreso.clase2_gusta || 0, progreso.clase3_gusta || 0,
+                    progreso.clase4_gusta || 0, progreso.clase5_gusta || 0, slotId
                 ],
                 function(err) {
                     if (err) {
@@ -212,8 +219,8 @@ app.post('/api/partida/guardar', (req, res) => {
             // 🔥 CREAR NUEVA PARTIDA CON ID FIJO
             console.log("🆕 Creando nueva partida en slot:", slotId);
             db.run(
-                `INSERT INTO Progreso (id_partida, game_state, dialogo_activo, dialogo_cerrado, class_state, mision_terminada, fuentes_cont, dialogo_id, textbox_visto, is_class, pared_vista, is_contra, mission_clear_aux, pared_dialogo_mostrado, textbox_cerrado_manualmente)
-                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+                `INSERT INTO Progreso (id_partida, game_state, dialogo_activo, dialogo_cerrado, class_state, mision_terminada, fuentes_cont, dialogo_id, textbox_visto, is_class, pared_vista, is_contra, mission_clear_aux, pared_dialogo_mostrado, textbox_cerrado_manualmente, clase1_gusta, clase2_gusta, clase3_gusta, clase4_gusta, clase5_gusta)
+                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
                 [
                     slotId, // 🔥 ID FIJO (no autoincremental)
                     progreso.game_state || 0, progreso.dialogo_activo || 0, progreso.dialogo_cerrado || 0,
@@ -221,7 +228,9 @@ app.post('/api/partida/guardar', (req, res) => {
                     progreso.fuentes_cont || 0, progreso.dialogo_id || 0, progreso.textbox_visto || 0,
                     progreso.is_class || 0, progreso.pared_vista || 0, progreso.is_contra || 0, 
                     progreso.mission_clear_aux || 0, progreso.pared_dialogo_mostrado || 0,
-                    progreso.textbox_cerrado_manualmente || 0
+                    progreso.textbox_cerrado_manualmente || 0, progreso.clase1_gusta || 0,
+                    progreso.clase2_gusta || 0, progreso.clase3_gusta || 0,
+                    progreso.clase4_gusta || 0, progreso.clase5_gusta || 0
                 ],
                 function(err) {
                     if (err) {
@@ -262,23 +271,33 @@ app.put('/api/partida/actualizar/:idPartida', (req, res) => {
             mission_clear_aux = ?,
             pared_dialogo_mostrado = ?,
             textbox_cerrado_manualmente = ?,
+            clase1_gusta = ?,
+            clase2_gusta = ?,
+            clase3_gusta = ?,
+            clase4_gusta = ?,
+            clase5_gusta = ?,
             fecha_guardado = CURRENT_TIMESTAMP
          WHERE id_partida = ?`,
         [
             progreso.game_state || 0,
-            progreso.dialogo_activo || 0,        // ✅ AGREGAR
-            progreso.dialogo_cerrado || 0,       // ✅ AGREGAR  
+            progreso.dialogo_activo || 0,        
+            progreso.dialogo_cerrado || 0,        
             progreso.class_state || 0,
             progreso.mision_terminada || 0,
             progreso.fuentes_cont || 0,
             progreso.dialogo_id || 0,
             progreso.textbox_visto || 0,
             progreso.is_class || 0,
-            progreso.pared_vista || 0,           // ✅ AGREGAR
+            progreso.pared_vista || 0,        
             progreso.is_contra || 0,
             progreso.mission_clear_aux || 0,
             progreso.pared_dialogo_mostrado || 0,
             progreso.textbox_cerrado_manualmente || 0,
+            progreso.clase1_gusta || 0,
+            progreso.clase2_gusta || 0,
+            progreso.clase3_gusta || 0,
+            progreso.clase4_gusta || 0,
+            progreso.clase5_gusta || 0,
             id_partida
         ],
         function(err) {
@@ -336,7 +355,12 @@ app.get('/api/partida/cargar/:idPartida', (req, res) => {
                     is_contra: progreso.is_contra,
                     mission_clear_aux: progreso.mission_clear_aux,
                     pared_dialogo_mostrado: progreso.pared_dialogo_mostrado,
-                    textbox_cerrado_manualmente: progreso.textbox_cerrado_manualmente
+                    textbox_cerrado_manualmente: progreso.textbox_cerrado_manualmente,
+                    clase1_gusta: progreso.clase1_gusta,
+                    clase2_gusta: progreso.clase2_gusta,
+                    clase3_gusta: progreso.clase3_gusta,
+                    clase4_gusta: progreso.clase4_gusta,
+                    clase5_gusta: progreso.clase5_gusta
                 },
                 npcs: npcs,
                 inventario: inventario,

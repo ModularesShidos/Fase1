@@ -10,8 +10,8 @@
   "name":"obj_npc_4",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"NPCs_Interactuables",
+    "path":"folders/Objetos/NPCs_Interactuables.yy",
   },
   "parentObjectId":null,
   "persistent":false,

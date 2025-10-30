@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"lista_partidas_servidor",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"lista_partidas_servidor",
+  "parent":{
+    "name":"Guardado",
+    "path":"folders/Scripts/Guardado.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

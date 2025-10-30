@@ -74,6 +74,11 @@ if (ds_map_exists(_async_load, "id")) {
                 global.mission_clear_aux   = (p.mission_clear_aux == 1);
 				global.pared_dialogo_mostrado = (p.pared_dialogo_mostrado == 1);
 				global.textbox_cerrado_manualmente = (p.textbox_cerrado_manualmente == 1);
+				global.clase1_gusta = (p.clase1_gusta == 1);
+				global.clase2_gusta = (p.clase2_gusta == 1);
+				global.clase3_gusta = (p.clase3_gusta == 1);
+				global.clase4_gusta = (p.clase4_gusta == 1);
+				global.clase5_gusta = (p.clase5_gusta == 1);
 				
 
 

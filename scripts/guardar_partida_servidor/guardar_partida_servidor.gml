@@ -21,7 +21,12 @@ function guardar_partida_servidor() {
             is_contra: global.is_contra ? 1 : 0,
 			pared_dialogo_mostrado: global.pared_dialogo_mostrado ? 1 : 0,
             mission_clear_aux: global.mission_clear_aux ? 1 : 0,
-			textbox_cerrado_manualmente: global.textbox_cerrado_manualmente ? 1 : 0
+			textbox_cerrado_manualmente: global.textbox_cerrado_manualmente ? 1 : 0,
+			clase1_gusta: global.clase1_gusta ? 1 : 0,
+            clase2_gusta: global.clase2_gusta ? 1 : 0,
+            clase3_gusta: global.clase3_gusta ? 1 : 0,
+            clase4_gusta: global.clase4_gusta ? 1 : 0,
+            clase5_gusta: global.clase5_gusta ? 1 : 0
         },
         
         // NPCS

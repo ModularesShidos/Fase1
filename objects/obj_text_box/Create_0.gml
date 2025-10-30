@@ -35,7 +35,7 @@ while (string_pos("  ", text) != 0) { // colapsa espacios dobles
     text = string_replace_all(text, "  ", " ");
 }
 
-pages = scr_split_text_into_pages(text, global.textbox_font, 20, 394, 190);
+pages = scr_split_text_into_pages(text, Font3, 22, 394, 190);
 page = 0;
 text_on_display = "";
 

@@ -67,7 +67,7 @@ switch (global.class_state) {
 
 
 if (variable_instance_exists(id, "text")) {
-    pages = scr_split_text_into_pages(text, global.textbox_font, 20, 394, 100);
+    pages = scr_split_text_into_pages(text, Font3, 22, 394, 130);
     show_debug_message("Paginas generadas: " + string(array_length(pages)));
 } else {
     show_debug_message("⚠️ Ningún texto asignado en CREATE -> destruyendo objeto");

@@ -6,8 +6,8 @@
   "name":"Guitarrista",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"NPCs_Extras",
+    "path":"folders/Objetos/NPCs_Extras.yy",
   },
   "parentObjectId":null,
   "persistent":false,
