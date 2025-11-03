@@ -1,4 +1,4 @@
-//OBJ_TEXTBOX DIBUJAR GUI
+// OBJ_TEXTBOX DIBUJAR GUI
 draw_set_alpha(1);
 draw_set_color(c_black);
 draw_set_halign(fa_left);
@@ -18,5 +18,3 @@ draw_set_font(Font3);
    el texto, la separacion entre linea y el limite
 */
 draw_text_ext(_x +14, _y +15, text_on_display, 20, 394);
-
-

@@ -22,4 +22,4 @@ switch (global.mision_terminada) {
 }
 
 // Tamaño de la fuente (puedes cambiarlo desde aquí)
-draw_set_font(global.textbox_font);
+draw_set_font(Font3);

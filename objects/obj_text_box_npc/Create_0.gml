@@ -1,83 +1,56 @@
 global.dialogo_activo = true;
 
-// Array de comentarios posibles basados en clases que gustaron
 var comentarios_posibles = [];
 
-// COMENTARIOS GENERALES (siempre disponibles)
-var comentarios_generales = [
-    "¡Qué bonito día en CUCEI!",
-    "Este campus es enorme, ¿verdad?",
-    "No te pierdas en los pasillos",
-    "¿Ya visitaste la biblioteca?",
-    "La comida del globo está buena"
-];
-
-// COMENTARIOS POR CLASE GUSTADA
+// MÉTODO ALTERNATIVO - push cada elemento
 if (global.clase1_gusta) {
-    var comentarios_clase1 = [
-        "¿Viste esos diagramas de flujo? Son como mapas del tesoro para programar",
-        "Los IDEs hacen la programación mucho más fácil, ¿no crees?",
-        "Todo programador empieza con un 'Hola Mundo'",
-        "Me encanta cómo los diagramas muestran todo el flujo del programa"
-    ];
-    comentarios_posibles = comentarios_posibles.concat(comentarios_clase1);
+    array_push(comentarios_posibles, "¿Viste esos diagramas de flujo? Son como mapas del tesoro para programar");
+    array_push(comentarios_posibles, "Los IDEs hacen la programación mucho más fácil, ¿no crees?");
+    array_push(comentarios_posibles, "Todo programador empieza con un 'Hola Mundo'");
+    array_push(comentarios_posibles, "Me encanta cómo los diagramas muestran todo el flujo del programa");
 }
 
 if (global.clase2_gusta) {
-    var comentarios_clase2 = [
-        "Los inputs y outputs son la base de cualquier programa",
-        "Las variables son como cajitas mágicas que guardan datos",
-        "Sin tipos de datos, no podríamos programar nada útil",
-        "¿Ya dominaste lo de nombrar variables correctamente?"
-    ];
-    comentarios_posibles = comentarios_posibles.concat(comentarios_clase2);
+    array_push(comentarios_posibles, "Los inputs y outputs son la base de cualquier programa");
+    array_push(comentarios_posibles, "Las variables son como cajitas mágicas que guardan datos");
+    array_push(comentarios_posibles, "Sin tipos de datos, no podríamos programar nada útil");
+    array_push(comentarios_posibles, "¿Ya dominaste lo de nombrar variables correctamente?");
 }
 
 if (global.clase3_gusta) {
-    var comentarios_clase3 = [
-        "Las tablas de verdad son fascinantes, ¿no?",
-        "AND, OR, NOT... con eso se construye toda la lógica",
-        "Los diagramas de Venn me ayudan a entender conjuntos",
-        "La lógica booleana está en todo lo digital"
-    ];
-    comentarios_posibles = comentarios_posibles.concat(comentarios_clase3);
+    array_push(comentarios_posibles, "Las tablas de verdad son fascinantes, ¿no?");
+    array_push(comentarios_posibles, "AND, OR, NOT... con eso se construye toda la lógica");
+    array_push(comentarios_posibles, "Los diagramas de Venn me ayudan a entender conjuntos");
+    array_push(comentarios_posibles, "La lógica booleana está en todo lo digital");
 }
 
 if (global.clase4_gusta) {
-    var comentarios_clase4 = [
-        "Los condicionales if son super útiles",
-        "¿Ya probaste hacer un switch complex?",
-        "Los ciclos while y for ahorran mucho trabajo",
-        "Las funciones hacen el código más limpio"
-    ];
-    comentarios_posibles = comentarios_posibles.concat(comentarios_clase4);
+    array_push(comentarios_posibles, "Los condicionales if son super útiles");
+    array_push(comentarios_posibles, "¿Ya probaste hacer un switch complex?");
+    array_push(comentarios_posibles, "Los ciclos while y for ahorran mucho trabajo");
+    array_push(comentarios_posibles, "Las funciones hacen el código más limpio");
 }
 
 if (global.clase5_gusta) {
-    var comentarios_clase5 = [
-        "La recursividad es como un loop elegante",
-        "Pilas y colas son estructuras fundamentales",
-        "El ordenamiento burbuja es lento pero educativo",
-        "Quicksort es mágico cuando lo entiendes"
-    ];
-    comentarios_posibles = comentarios_posibles.concat(comentarios_clase5);
+    array_push(comentarios_posibles, "La recursividad es como un loop elegante");
+    array_push(comentarios_posibles, "Pilas y colas son estructuras fundamentales");
+    array_push(comentarios_posibles, "El ordenamiento burbuja es lento pero educativo");
+    array_push(comentarios_posibles, "Quicksort es mágico cuando lo entiendes");
 }
 
-// Si no hay comentarios de clases gustadas, usar solo generales
-if (array_length(comentarios_posibles) == 0) {
-    comentarios_posibles = comentarios_generales;
-} else {
-    // Mezclar algunos comentarios generales también
-    comentarios_posibles = comentarios_posibles.concat(comentarios_generales);
-}
+// COMENTARIOS GENERALES (siempre disponibles)
+array_push(comentarios_posibles, "¡Qué bonito día en CUCEI!");
+array_push(comentarios_posibles, "Este campus es enorme, ¿verdad?");
+array_push(comentarios_posibles, "No te pierdas en los pasillos");
+array_push(comentarios_posibles, "¿Ya visitaste la biblioteca?");
+array_push(comentarios_posibles, "La comida del globo está buena");
 
 // Elegir comentario aleatorio
-var comentario_elegido = comentarios_posibles[irandom(array_length(comentarios_posibles) - 1)];
-text = comentario_elegido;
-
-// Lógica de paginado (igual que tus otros textboxes)
-pages = scr_split_text_into_pages(text, Font3, 24, 394, 190);
-page = 0;
-text_on_display = "";
-text_finished = false;
-alarm[0] = 3;
+if (array_length(comentarios_posibles) > 0) {
+    var comentario_elegido = comentarios_posibles[irandom(array_length(comentarios_posibles) - 1)];
+    text = comentario_elegido;
+    text_on_display = text;
+} else {
+    text = "¡Hola!";
+    text_on_display = text;
+}

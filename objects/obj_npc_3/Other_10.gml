@@ -1,4 +1,4 @@
-adif (!instance_exists(Obj_Player_M)) exit;
+if (!instance_exists(Obj_Player_M)) exit;
 
 if (ya_hablo || global.dialogo_activo) {
     exit; // Ya habló o hay otro diálogo activo
