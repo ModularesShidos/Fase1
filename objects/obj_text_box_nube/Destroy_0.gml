@@ -26,7 +26,7 @@ if (global.fuentes_cont == 3){
 }
 
 // DESPUÉS de mostrar lo que aprendiste, preguntar si le gustó
-if (global.class_state >= 0 && global.class_state <= 4) {
+if (global.class_state >= 0 && global.class_state <= 5) {
 	
 	instance_create_layer(0, 0, "UI", obj_val_clase);
 	return;
