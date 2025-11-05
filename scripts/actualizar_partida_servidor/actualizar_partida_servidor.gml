@@ -21,7 +21,8 @@ function actualizar_partida_servidor() {
             clase2_gusta: global.clase2_gusta ? 1 : 0,
             clase3_gusta: global.clase3_gusta ? 1 : 0,
             clase4_gusta: global.clase4_gusta ? 1 : 0,
-            clase5_gusta: global.clase5_gusta ? 1 : 0
+            clase5_gusta: global.clase5_gusta ? 1 : 0,
+			clases_que_gustaron: global.clases_que_gustaron
         },
         npcs: [
             {id: 1, ya_hablo: global.npc_1 ? 1 : 0},

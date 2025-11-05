@@ -46,7 +46,7 @@ questions = [
         ["Para compilar codigo", "Para ver todas las combinaciones de verdadero y falso", "Para crear diagramas de flujo", "Para dibujar interfaces"], 1],
 
     ["Escribe dos operadores logicos basicos.", 
-        ["SUMA y RESTA", "IGUAL y DIFERENTE", "IF y ELSE", "AND (∧) y OR (∨)"], 3],
+        ["SUMA y RESTA", "IGUAL y DIFERENTE", "IF y ELSE", "AND y OR"], 3],
 
     ["¿Que representan los diagramas de Venn?", 
         ["Flujos de datos", "Arboles binarios", "Clases de programacion", "Conjuntos y sus relaciones (uniones, intersecciones)"], 3],

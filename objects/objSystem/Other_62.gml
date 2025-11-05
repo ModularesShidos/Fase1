@@ -59,7 +59,7 @@ if (ds_map_exists(_async_load, "id")) {
             try {
                 var datos = json_parse(response);
 
-                // 🔄 Restaurar progreso
+                // Restaurar progreso
                 var p = datos.progreso;
                 global.game_state          = p.game_state;
 				global.dialogo_activo      = p.dialogo_activo;
@@ -79,6 +79,7 @@ if (ds_map_exists(_async_load, "id")) {
 				global.clase3_gusta = (p.clase3_gusta == 1);
 				global.clase4_gusta = (p.clase4_gusta == 1);
 				global.clase5_gusta = (p.clase5_gusta == 1);
+				global.clases_que_gustaron = p.clases_que_gustaron;
 				
 
 

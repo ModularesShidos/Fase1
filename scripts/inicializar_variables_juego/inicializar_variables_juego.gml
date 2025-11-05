@@ -28,6 +28,7 @@ function inicializar_variables_juego() {
 	global.clase3_gusta = false;
 	global.clase4_gusta = false;
 	global.clase5_gusta = false;
+	global.clases_que_gustaron = 0;
 
     // CONTROL DE MISIONES Y ESTADOS
     global.game_state = 0;
