@@ -20,7 +20,7 @@
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"04680131-1317-43c3-98dd-0ec694fc7931","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"04680131-1317-43c3-98dd-0ec694fc7931","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-    {"$GMImageLayer":"","%Name":"3990c4a6-7e17-4db3-8e92-688e6516744b","blendMode":0,"displayName":"default","isLocked":false,"name":"3990c4a6-7e17-4db3-8e92-688e6516744b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"3990c4a6-7e17-4db3-8e92-688e6516744b","blendMode":0,"displayName":"default","isLocked":false,"name":"3990c4a6-7e17-4db3-8e92-688e6516744b","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
   ],
   "name":"Spr_interseccion_TO",
   "nineSlice":null,
