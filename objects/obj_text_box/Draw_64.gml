@@ -20,7 +20,7 @@ draw_set_font(Font3);
    el texto, la separacion entre linea y el limite
 */
 draw_set_color(c_black);
-draw_text_ext(30 +14, 280 +15, text_on_display, 20, 394);	
+draw_text_ext(30 +26, 280 +15, text_on_display, 20, 380);	
 
 show_debug_message("Draw GUI -> page=" + string(page) + " | text_on_display=\"" + text_on_display + "\"");
 
