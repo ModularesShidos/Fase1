@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"npc_9",
+  "%Name":"obj_instrucciones",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"npc_9",
+  "name":"obj_instrucciones",
   "overriddenProperties":[],
   "parent":{
-    "name":"NPCs_Extras",
-    "path":"folders/Objetos/NPCs_Extras.yy",
+    "name":"UI",
+    "path":"folders/Objetos/UI.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,11 +30,8 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
-  "spriteId":{
-    "name":"Student_9",
-    "path":"sprites/Student_9/Student_9.yy",
-  },
+  "solid":false,
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
