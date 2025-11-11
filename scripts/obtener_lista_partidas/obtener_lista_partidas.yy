@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"obtener_lista_partidas",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"obtener_lista_partidas",
+  "parent":{
+    "name":"Guardado",
+    "path":"folders/Scripts/Guardado.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

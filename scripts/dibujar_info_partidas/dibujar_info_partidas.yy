@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"dibujar_info_partidas",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"dibujar_info_partidas",
+  "parent":{
+    "name":"Guardado",
+    "path":"folders/Scripts/Guardado.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
