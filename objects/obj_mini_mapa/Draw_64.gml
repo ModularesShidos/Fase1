@@ -7,7 +7,7 @@ if (mostrar_minimapa)
     var orig_h = sprite_get_height(spr);
 
     // Queremos que el mapa ocupe de ancho el 80% de la pantalla
-    var target_w = display_get_gui_width() * 0.8;
+    var target_w = display_get_gui_width() * 1;
     var esc = target_w / orig_w; // escalado proporcional
 
     // Altura resultante escalada (no te tienes que preocupar por 1080)

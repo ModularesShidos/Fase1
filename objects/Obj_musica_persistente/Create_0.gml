@@ -1,1 +1,1 @@
-//audio_play_sound(Snd_Cucei, 1, true);
+audio_play_sound(Snd_Cucei, 1, true);
