@@ -43,8 +43,8 @@ function inicializar_variables_juego() {
     // ID de partida se manejará por separado
     global.id_partida = global.id_partida; 
     
-    show_debug_message("✔️ Variables de juego reseteadas para una nueva partida.");
-	show_debug_message("✔️ Variables reseteadas. ID partida: " + string(global.id_partida));
+	// Instrucciones
+	global.mostrar_controles = true;
 }
 
 //textbox_cerrado_manualmente

@@ -166,15 +166,46 @@ if (ds_map_exists(_async_load, "id")) {
     }
 
 
+	// =====================================================
+	// 4. RESPUESTA DE LISTA DE PARTIDAS
+	// =====================================================
+	else if (string_pos("/api/partidas", url) > 0 && (status == 200 || status == 0)) {
+	    if (string_length(response) > 10) {
+	        try {
+	            var datos = json_parse(response);
+	            global.datos_partidas = datos;
+            
+	            show_debug_message("✅ Lista de partidas obtenida: " + string(datos.total) + " partidas");
+            
+	            // Debug de slots usando structs
+	            if (struct_exists(datos, "slots")) {
+	                var slots = datos.slots;
+	                for (var i = 1; i <= 3; i++) {
+	                    var slot_key = string(i);
+	                    if (struct_exists(slots, slot_key)) {
+	                        var slot = slots[$ slot_key];
+	                        show_debug_message("Slot " + string(i) + ": existe=" + string(slot.existe) + ", game_state=" + string(slot.game_state));
+	                    } else {
+	                        show_debug_message("Slot " + string(i) + ": NO EXISTE EN STRUCT");
+	                    }
+	                }
+	            }
+            
+	        } catch (e) {
+	            show_debug_message("❌ Error parseando lista de partidas: " + string(e));
+	        }
+	    } else {
+	        show_debug_message("❌ Respuesta vacía de lista de partidas");
+	    }
 
 
-    // =====================================================
-    // 4. RESPUESTA NO RECONOCIDA
-    // =====================================================
-    else {
-        show_debug_message("❓ Respuesta no manejada: " + string(url));
-		show_debug_message("📡 Status recibido: " + string(status));
-    }
+	    // =====================================================
+	    // 5. RESPUESTA NO RECONOCIDA
+	    // =====================================================
+		} else {
+	        show_debug_message("❓ Respuesta no manejada: " + string(url));
+			show_debug_message("📡 Status recibido: " + string(status));
+	    }
 
 
-}
+	}
