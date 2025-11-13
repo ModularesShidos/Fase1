@@ -2,7 +2,7 @@ function eliminar_partida_servidor(){
 	
 	// eliminar_partida_servidor(id_partida)
 	var id_partida = argument0;
-	show_debug_message("🗑 Eliminando partida ID: " + string(id_partida));
+	show_debug_message("Eliminando partida ID: " + string(id_partida));
 
 	var url = "http://localhost:3000/api/partida/" + string(id_partida);
 

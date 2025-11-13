@@ -112,11 +112,13 @@
     {"name":"inst_688EE0F9","path":"rooms/Sala_interseccion_TO/Sala_interseccion_TO.yy",},
     {"name":"inst_1F883313","path":"rooms/Sala_interseccion_TO/Sala_interseccion_TO.yy",},
     {"name":"inst_74820814","path":"rooms/Sala_interseccion_TO/Sala_interseccion_TO.yy",},
+    {"name":"inst_191B8E03","path":"rooms/Sala_interseccion_TO/Sala_interseccion_TO.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"UI","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_74820814","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_74820814","objectId":{"name":"npc_11","path":"objects/npc_11/npc_11.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":288.0,"y":192.0,},
+        {"$GMRInstance":"v2","%Name":"inst_191B8E03","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_191B8E03","objectId":{"name":"npc_16","path":"objects/npc_16/npc_16.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":1.9,"x":256.0,"y":480.0,},
       ],"layers":[],"name":"UI","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Pasillo","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_28A1E6C1","animationSpeed":0.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_28A1E6C1","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.2,"scaleY":1.0,"spriteId":{"name":"Spr_torii","path":"sprites/Spr_torii/Spr_torii.yy",},"x":0.0,"y":560.0,},

@@ -4,7 +4,7 @@ mensaje =
 "   S  - Bajar\n" +
 "   D  - Derecha\n" +
 "   E  - Interactuar\n" +
-"   F  - Recoger objeto" +
+"   F  - Recoger objeto\n" +
 "   TAB - Abrir mini mapa";
 
 if (!variable_global_exists("mostrar_controles_visto")) {

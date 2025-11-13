@@ -21,7 +21,6 @@ if (!text_finished) {
     } else {
         // Fin del diálogo
         global.dialogo_activo = false;
-		show_debug_message("Fin del diálogo -> destruyendo objeto");
         instance_destroy();
     }
 }

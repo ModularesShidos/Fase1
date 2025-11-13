@@ -273,16 +273,16 @@
     {"name":"inst_5D805D8F","path":"rooms/Sala_inter_J/Sala_inter_J.yy",},
     {"name":"inst_11A421A9","path":"rooms/Sala_inter_J/Sala_inter_J.yy",},
     {"name":"inst_38A4F840","path":"rooms/Sala_inter_J/Sala_inter_J.yy",},
-    {"name":"inst_1E7BD3F9","path":"rooms/Sala_inter_J/Sala_inter_J.yy",},
     {"name":"inst_2583C5D4","path":"rooms/Sala_inter_J/Sala_inter_J.yy",},
+    {"name":"inst_5FE895F","path":"rooms/Sala_inter_J/Sala_inter_J.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"UI","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_11A421A9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_11A421A9","objectId":{"name":"npc_11","path":"objects/npc_11/npc_11.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.8888888,"scaleY":1.8888888,"x":1248.0,"y":704.0,},
         {"$GMRInstance":"v2","%Name":"inst_38A4F840","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_38A4F840","objectId":{"name":"npc_12","path":"objects/npc_12/npc_12.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.9142855,"scaleY":1.9142855,"x":448.0,"y":128.0,},
-        {"$GMRInstance":"v2","%Name":"inst_1E7BD3F9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1E7BD3F9","objectId":{"name":"npc_4","path":"objects/npc_4/npc_4.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.5238094,"scaleY":1.9142857,"x":800.0,"y":480.0,},
         {"$GMRInstance":"v2","%Name":"inst_2583C5D4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2583C5D4","objectId":{"name":"npc_3","path":"objects/npc_3/npc_3.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.5238094,"scaleY":1.9142857,"x":1856.0,"y":448.0,},
+        {"$GMRInstance":"v2","%Name":"inst_5FE895F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5FE895F","objectId":{"name":"npc_13","path":"objects/npc_13/npc_13.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.861539,"scaleY":2.47037,"x":480.0,"y":480.0,},
       ],"layers":[],"name":"UI","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"plantas","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_7544E680","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_7544E680","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":3.0,"spriteId":{"name":"Arbol_grande","path":"sprites/Arbol_grande/Arbol_grande.yy",},"x":1280.0,"y":448.0,},

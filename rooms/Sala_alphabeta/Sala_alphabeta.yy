@@ -301,11 +301,13 @@
     {"name":"inst_670602B7","path":"rooms/Sala_alphabeta/Sala_alphabeta.yy",},
     {"name":"inst_7405A74D","path":"rooms/Sala_alphabeta/Sala_alphabeta.yy",},
     {"name":"inst_478FDF34","path":"rooms/Sala_alphabeta/Sala_alphabeta.yy",},
+    {"name":"inst_795B5D98","path":"rooms/Sala_alphabeta/Sala_alphabeta.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"UI","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_478FDF34","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_478FDF34","objectId":{"name":"npc_3","path":"objects/npc_3/npc_3.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.5238094,"scaleY":1.9142857,"x":768.0,"y":416.0,},
+        {"$GMRInstance":"v2","%Name":"inst_795B5D98","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_795B5D98","objectId":{"name":"npc_16","path":"objects/npc_16/npc_16.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.2857144,"scaleY":2.0666666,"x":1088.0,"y":448.0,},
       ],"layers":[],"name":"UI","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Arboles","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_1EAC7B9F","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_1EAC7B9F","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"Arbol_grande","path":"sprites/Arbol_grande/Arbol_grande.yy",},"x":192.0,"y":320.0,},

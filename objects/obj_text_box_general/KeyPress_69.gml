@@ -12,6 +12,6 @@ if (!text_finished) {
         alarm[0] = 3;
     } else {
         // Ya terminó todo el texto, destruir textbox
-        instance_destroy(); // <--- Aquí desaparece el obj_text_box
+        instance_destroy(); 
     }
 }

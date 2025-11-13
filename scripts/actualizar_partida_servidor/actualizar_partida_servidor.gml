@@ -53,5 +53,5 @@ function actualizar_partida_servidor() {
 
     http_request(url, "PUT", header_map, json_datos);
 
-    show_debug_message("🔄 Actualizando partida ID: " + string(id_partida));
+    show_debug_message("Actualizando partida ID: " + string(id_partida));
 }

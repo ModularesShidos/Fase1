@@ -1,6 +1,5 @@
 // Script: obtener_lista_partidas
 function obtener_lista_partidas() {
-    show_debug_message("📋 Solicitando lista de partidas...");
     
     var url = "http://localhost:3000/api/partidas";
     var header_map = ds_map_create();

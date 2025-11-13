@@ -4,11 +4,11 @@ const cors = require('cors');
 
 const app = express();
 
-// 🔥 CONFIGURACIÓN SUPER SIMPLE PARA GAMEMAKER
-app.use(cors({ origin: '*' })); // Solo esto, nada más
+// CONFIGURACIÓN SIMPLE PARA GAMEMAKER
+app.use(cors({ origin: '*' })); 
 app.use(express.json());
 app.use((req, res, next) => {
-    console.log("🌐 Petición recibida:", {
+    console.log("Petición recibida:", {
         method: req.method,
         url: req.url,
         headers: req.headers,
@@ -21,7 +21,6 @@ const db = new sqlite3.Database('./saves.db', (err) => {
     if (err) console.error("Error abriendo BD:", err);
 });
 
-// Crear tablas si no existen (tu código igual)
 db.serialize(() => {
     db.run(`CREATE TABLE IF NOT EXISTS Progreso (
     id_partida INTEGER PRIMARY KEY,
@@ -67,7 +66,7 @@ db.serialize(() => {
     )`);
 });
 
-// Helper: guardar NPCs, inventario y clases - VERSIÓN MEJORADA
+// Helper: uardar NPCs, inventario y clases 
 function guardarDatosPartida(id_partida, npcs = [], inventario = [], clases = [], res, esActualizacion) {
     db.serialize(() => {
         db.run('DELETE FROM NPCs WHERE id_partida = ?', [id_partida]);
@@ -90,8 +89,7 @@ function guardarDatosPartida(id_partida, npcs = [], inventario = [], clases = []
                 return res.status(500).json({ error: err.message });
             }
             
-            // 🔥 RESPUESTA MEJORADA PARA GAMEMAKER
-            console.log("✅ Guardado completado para ID:", id_partida);
+            console.log("Guardado completado para ID:", id_partida);
             
             const respuesta = {
                 id_partida: id_partida,
@@ -159,7 +157,7 @@ app.get('/api/partida/existe/:idPartida', (req, res) => {
 
     db.get('SELECT 1 FROM Progreso WHERE id_partida = ?', [id_partida], (err, row) => {
         if (err) {
-            console.error("❌ Error verificando existencia:", err);
+            console.error("Error verificando existencia:", err);
             return res.status(500).json({ error: err.message });
         }
 
@@ -170,30 +168,29 @@ app.get('/api/partida/existe/:idPartida', (req, res) => {
     });
 });
 
-// 🔥 POST GUARDAR - VERSIÓN SIMPLIFICADA
+// POST GUARDAR
 app.post('/api/partida/guardar', (req, res) => {
-    console.log("📥 Recibiendo guardado. ID recibido:", req.body.id_partida);
+    console.log("Recibiendo guardado. ID recibido:", req.body.id_partida);
 
-    // 🔥 CONFIGURACIÓN ESPECÍFICA PARA GAMEMAKER
     res.header('Content-Type', 'application/json; charset=utf-8');
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'POST');
     
     const { progreso = {}, npcs = [], inventario = [], clases = [], id_partida } = req.body;
 
-    // 🔥 FORZAR ID VÁLIDO (1, 2 o 3)
+    // FORZAR ID VÁLIDO (1, 2 o 3)
     const slotId = Math.max(1, Math.min(3, parseInt(id_partida) || 1));
-    console.log("💾 Guardando en slot:", slotId);
+    console.log("Guardando en slot:", slotId);
 
     // Verificar si ya existe partida en ese slot
     db.get('SELECT * FROM Progreso WHERE id_partida = ?', [slotId], (err, row) => {
         if (err) {
-            console.error("❌ Error verificando slot:", err);
+            console.error("Error verificando slot:", err);
             return res.status(500).json({ error: err.message });
         }
         
         if (row) {
-            // 🔥 ACTUALIZAR PARTIDA EXISTENTE
+            // ACTUALIZAR PARTIDA EXISTENTE
             console.log("🔄 Actualizando partida existente en slot:", slotId);
             db.run(
                 `UPDATE Progreso SET game_state=?, dialogo_activo=?, dialogo_cerrado=?, class_state=?, mision_terminada=?, fuentes_cont=?, dialogo_id=?, textbox_visto=?, is_class=?, pared_vista = ?, is_contra=?, mission_clear_aux=?, pared_dialogo_mostrado=?, textbox_cerrado_manualmente = ?, clase1_gusta = ?, clase2_gusta = ?, clase3_gusta = ?, clase4_gusta = ?, clase5_gusta = ?, fecha_guardado=CURRENT_TIMESTAMP WHERE id_partida = ?`,
@@ -217,13 +214,13 @@ app.post('/api/partida/guardar', (req, res) => {
                 }
             );
         } else {
-            // 🔥 CREAR NUEVA PARTIDA CON ID FIJO
-            console.log("🆕 Creando nueva partida en slot:", slotId);
+            // CREAR NUEVA PARTIDA CON ID FIJO
+            console.log("Creando nueva partida en slot:", slotId);
             db.run(
                 `INSERT INTO Progreso (id_partida, game_state, dialogo_activo, dialogo_cerrado, class_state, mision_terminada, fuentes_cont, dialogo_id, textbox_visto, is_class, pared_vista, is_contra, mission_clear_aux, pared_dialogo_mostrado, textbox_cerrado_manualmente, clase1_gusta, clase2_gusta, clase3_gusta, clase4_gusta, clase5_gusta, clases_que_gustaron)
                  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
                 [
-                    slotId, // 🔥 ID FIJO (no autoincremental)
+                    slotId, 
                     progreso.game_state || 0, progreso.dialogo_activo || 0, progreso.dialogo_cerrado || 0,
                     progreso.class_state || 0, progreso.mision_terminada || 0,
                     progreso.fuentes_cont || 0, progreso.dialogo_id || 0, progreso.textbox_visto || 0,
@@ -239,7 +236,7 @@ app.post('/api/partida/guardar', (req, res) => {
                         console.error("❌ Error insertando:", err);
                         return res.status(500).json({ error: err.message });
                     }
-                    console.log("✅ Nueva partida creada en slot:", slotId);
+                    console.log("Nueva partida creada en slot:", slotId);
                     guardarDatosPartida(slotId, npcs, inventario, clases, res, false);
                 }
             );
@@ -247,7 +244,7 @@ app.post('/api/partida/guardar', (req, res) => {
     });
 });
 
-// 🔥 PUT ACTUALIZAR PARTIDA - VERSIÓN CORREGIDA
+// PUT ACTUALIZAR PARTIDA 
 app.put('/api/partida/actualizar/:idPartida', (req, res) => {
     const id_partida = parseInt(req.params.idPartida);
     const { progreso = {}, npcs = [], inventario = [], clases = [] } = req.body;
@@ -306,22 +303,20 @@ app.put('/api/partida/actualizar/:idPartida', (req, res) => {
         ],
         function(err) {
             if (err) {
-                console.error("❌ Error actualizando partida:", err);
+                console.error("Error actualizando partida:", err);
                 return res.status(500).json({ error: err.message });
             }
 
-            // ✅ CORREGIDO: Guardar también NPCs, inventario y clases
             actualizarDatosPartida(id_partida, npcs, inventario, clases, res, true);
         }
     );
 });
 
-// 🔥 GET CARGAR - VERSIÓN SIMPLIFICADA
-// 🔥 GET CARGAR - VERSIÓN CORREGIDA (agrega id_partida)
+// GET CARGAR 
 app.get('/api/partida/cargar/:idPartida', (req, res) => {
     const id_partida = parseInt(req.params.idPartida);
     
-    // 🔥 VALIDAR SLOT
+    // VALIDAR SLOT
     if (id_partida < 1 || id_partida > 3) {
         return res.status(400).json({ error: 'Slot inválido' });
     }
@@ -340,11 +335,10 @@ app.get('/api/partida/cargar/:idPartida', (req, res) => {
             new Promise(resolve => db.all('SELECT * FROM Inventario WHERE id_partida = ?', [id_partida], (err, rows) => resolve(rows))),
             new Promise(resolve => db.all('SELECT * FROM Clases WHERE id_partida = ?', [id_partida], (err, rows) => resolve(rows)))
         ]).then(([npcs, inventario, clases]) => {
-            // 🔥 RESPUESTA CORREGIDA - INCLUYE id_partida Y existe
             res.json({
-                id_partida: id_partida,  // 🔥 NUEVO
-                existe: true,            // 🔥 NUEVO
-                slot: id_partida,        // 🔥 NUEVO
+                id_partida: id_partida,  
+                existe: true,            
+                slot: id_partida,        
                 progreso: {
                     game_state: progreso.game_state,
                     dialogo_activo: progreso.dialogo_activo,
@@ -375,18 +369,18 @@ app.get('/api/partida/cargar/:idPartida', (req, res) => {
     });
 });
 
-// 🔥 LISTAR PARTIDAS
-// 🔥 GET PARA VER TODOS LOS SLOTS (NUEVO ENDPOINT)
+// LISTAR PARTIDAS
+// GET PARA VER TODOS LOS SLOTS 
 app.get('/api/partidas', (req, res) => {
-    console.log("📋 Solicitando lista de partidas...");
+    console.log("Solicitando lista de partidas");
     
     db.all('SELECT id_partida, fecha_guardado, game_state FROM Progreso ORDER BY id_partida', (err, partidas) => {
         if (err) {
-            console.error("❌ Error obteniendo partidas:", err);
+            console.error("Error obteniendo partidas:", err);
             return res.status(500).json({ error: err.message });
         }
         
-        console.log("✅ Partidas en BD:", partidas);
+        console.log("Partidas en BD:", partidas);
         
         // Crear respuesta con información de los 3 slots
         const respuesta = {
@@ -403,7 +397,7 @@ app.get('/api/partidas', (req, res) => {
     });
 });
 
-// 🔥 DELETE PARTIDA
+// DELETE PARTIDA
 app.delete('/api/partida/:idPartida', (req, res) => {
     const id_partida = parseInt(req.params.idPartida);
 
@@ -412,17 +406,17 @@ app.delete('/api/partida/:idPartida', (req, res) => {
     }
 
     db.serialize(() => {
-        // 🔹 Borrar todo de las 4 tablas
+        // Borrar todo de las 4 tablas
         db.run('DELETE FROM Progreso WHERE id_partida = ?', [id_partida]);
         db.run('DELETE FROM NPCs WHERE id_partida = ?', [id_partida]);
         db.run('DELETE FROM Inventario WHERE id_partida = ?', [id_partida]);
         db.run('DELETE FROM Clases WHERE id_partida = ?', [id_partida], function(err) {
             if (err) {
-                console.error("❌ Error eliminando partida:", err);
+                console.error("Error eliminando partida:", err);
                 return res.status(500).json({ error: err.message });
             }
             
-            console.log(`🗑️ Partida ${id_partida} eliminada de todas las tablas`);
+            console.log(`Partida ${id_partida} eliminada de todas las tablas`);
             res.json({
                 success: true,
                 message: `Partida ${id_partida} eliminada correctamente`
@@ -430,7 +424,6 @@ app.delete('/api/partida/:idPartida', (req, res) => {
         });
     });
 });
-// 🔥 INICIAR SERVIDOR EN TODAS LAS INTERFACES
 app.listen(3000, '0.0.0.0', () => {
-    console.log('🚀 Servidor listo para GameMaker');
+    console.log('Servidor listo');
 });

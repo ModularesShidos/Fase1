@@ -9,9 +9,6 @@ function cargar_partida_servidor() {
 
     // Hacer la solicitud HTTP GET
     http_request(url, "GET", header_map, "");
-
-    //ds_map_destroy(header_map);
-    show_debug_message("📥 Solicitando datos del servidor para la partida ID: " + string(id_partida));
 	
 	room_goto(Entrada_Revolucion);
 

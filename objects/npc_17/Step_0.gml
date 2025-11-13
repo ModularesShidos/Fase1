@@ -1,10 +1,11 @@
 // npc_1 - Step
 
 // Solo activa el temporizador si la condición se cumple
-if (global.game_state == 1 || global.game_state == 3 ||  global.game_state == 5) {
+if (global.game_state == 0 || global.game_state == 2 || global.game_state == 4) {
     instance_destroy();
     exit;
 }
+
 
 // Si no existe jugador, salir
 if (!instance_exists(Obj_Player_M)) exit;

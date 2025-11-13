@@ -13,7 +13,7 @@ switch (global.class_state) {
 		if (global.is_class){	
 			text = "Hoy vimos lo básico de programación: los inputs son lo que el usuario introduce al programa, y los outputs son lo que el programa muestra en respuesta. Las variables son como cajitas donde guardamos datos, y hay distintos tipos según lo que queramos almacenar: números enteros, decimales, texto, booleanos (verdadero/falso) Básicamente, esto nos permite controlar la información dentro del programa. También hablamos un poco de cómo nombrar variables correctamente y la importancia de la sintaxis para que el código funcione sin eerrores.";
 		} else {
-			text = "Mmm, no sé, está muy buena la comida pero como que olía medio rraro";
+			text = "Mmm, no sé, está muy buena la comida pero como que olía medio rraro.";
 			global.mission_clear_aux = true;
 			global.class_state = 2;
 		}
@@ -24,9 +24,9 @@ switch (global.class_state) {
 			text = "Hoy vimos tablas de verdad, que sirven para mostrar todas las combinaciones posibles de verdadero y falso, operadores lógicos como AND, OR y NOT que conectan proposiciones, y los diagramas de Venn, que son círculos que representan cómo se relacionan los conjuntos. Es fascinante ver cómo algo tan simple como verdadero/falso puede formar la base de toda la lógica de programación y matemáticas ccomputacionales.";
 			global.mission_clear_aux = false;
 		} else {
-			text = "Esto no tiene sentido… pero parece que al menos encontré la contraseña. ¡Quizá sea parte de un reto del profesor! Bueno de igual forma tengo que ir a bbuscarlo";
+			text = "Esto no tiene sentido, pero parece que al menos encontré la contraseña. ¡Quizá sea parte de un reto del profesor! Bueno de igual forma tengo que ir a bbuscarlo.";
 			global.class_state = 3;
-		}// Aqui poner la frase para cuando encuentre la contrasena
+		}
 	break;
 	
 	case 3: 
@@ -50,7 +50,7 @@ switch (global.class_state) {
 	        break;
 
 	        case 3:
-	            text = "¡Lo logré! La tercera fuente está frente a mí. Pensé que esta investigación sería más aburrida, pero esto ha resultado ser todo un reto. Ahora solo falta ver qué sucede con todo este conocimiento en mi próximo eexamen…";
+	            text = "¡Lo logré! La tercera fuente está frente a mí. Pensé que esta investigación sería más aburrida, pero esto ha resultado ser todo un reto. Ahora solo falta ver qué sucede con todo este conocimiento en mi próximo eexamen...";
 				global.game_state = 5;
 	        break;
 
@@ -68,9 +68,7 @@ switch (global.class_state) {
 
 if (variable_instance_exists(id, "text")) {
     pages = scr_split_text_into_pages(text, Font3, 22, 390, 110);
-    show_debug_message("Paginas generadas: " + string(array_length(pages)));
 } else {
-    show_debug_message("Ningún texto asignado en CREATE -> destruyendo objeto");
     instance_destroy();
     exit;
 }

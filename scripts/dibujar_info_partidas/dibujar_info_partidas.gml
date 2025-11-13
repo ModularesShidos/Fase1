@@ -1,4 +1,4 @@
-// Script: dibujar_info_partidas (VERSIÓN CORREGIDA)
+// Script: dibujar_info_partida
 function dibujar_info_partidas() {
     // Posiciones donde dibujar la info de cada slot
     var posiciones = [

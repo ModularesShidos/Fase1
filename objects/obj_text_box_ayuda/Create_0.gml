@@ -32,5 +32,3 @@ pages = scr_split_text_into_pages(text, Font3, 22, 370, 185);
 page = 0;
 text_on_display = pages[page]; 
 text_finished = true; 
-
-show_debug_message("Textbox ayuda creado - Texto: " + text);

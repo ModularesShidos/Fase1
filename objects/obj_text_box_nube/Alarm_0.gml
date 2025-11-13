@@ -11,9 +11,8 @@ if (array_length(pages) > 0) {
 	    // ✅ El texto ya terminó de escribirse
 	    text_finished = true;
 	    esperar_input = true;
-	    show_debug_message("✅ ALARM0: texto terminado, esperando input");
 	}
 	
 } else {
-    show_debug_message("⚠️ pages está vacío, no se puede escribir nada");
+    show_debug_message("Pages está vacío, no se puede escribir nada");
 }
