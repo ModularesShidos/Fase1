@@ -13,7 +13,7 @@ instance_create_layer(x, y - 32, "GUI", obj_textbox_general);
 
 
 /*
-// (Opcional) Personaliza el texto desde aquí, si usas variables
+// (Opcional)
 with (instance_nearest(x, y - 32, obj_textbox_nube)) {
     text = "¡Hola! Ya tomaste tu primera clase. Recuerda que el conocimiento es poder.";
 }

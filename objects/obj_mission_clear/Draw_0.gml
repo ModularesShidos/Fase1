@@ -4,7 +4,7 @@ draw_set_color(c_white);
 draw_rectangle(0, 0, display_get_width(), display_get_height(), false);
 
 // Texto centrado y más grande
-draw_set_alpha(1); // siempre texto opaasdasdasdco
+draw_set_alpha(1); 
 draw_set_color(c_black);
 
 draw_set_font(Font3);

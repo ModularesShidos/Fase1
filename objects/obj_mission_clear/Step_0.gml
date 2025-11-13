@@ -3,11 +3,10 @@ if (alpha < 1) {
 	alpha += 0.03; // más bajo = más lento el fade 
 }
 
-// 🔥 REALIZAR AUTOGUARDADO SOLO UNA VEZ (cuando alpha es suficiente)
 if (alpha >= 0.5 && !guardado_realizado) {
     guardado_realizado = true;
-    show_debug_message("💾 Realizando autoguardado...");
-    actualizar_partida_servidor(); // ← LLAMAR A TU FUNCIÓN DE GUARDADO
+    show_debug_message("Realizando autoguardado");
+    actualizar_partida_servidor();
 }
 
 // Reducir duración 

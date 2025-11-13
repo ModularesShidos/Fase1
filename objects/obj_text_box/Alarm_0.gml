@@ -1,12 +1,11 @@
 if (page >= array_length(pages)) {
-    show_debug_message("⚠️ Alarm0: page fuera de rango: " + string(page) + " / " + string(array_length(pages)));
     exit;
 }
 
 
 if (text_on_display != pages[page]) {
 	//Linea para debug
-	    var next_char = string_char_at(pages[page], string_length(text_on_display) + 1);
+	var next_char = string_char_at(pages[page], string_length(text_on_display) + 1);
     text_on_display += string_char_at(pages[page], string_length(text_on_display) + 1);
 	show_debug_message("Alarm0 -> Añadiendo char: '" + next_char + "' | ahora: \"" + text_on_display + "\"");
     alarm[0] = 3;

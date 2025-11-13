@@ -3,5 +3,5 @@ if (global.funko_recogido) {
     exit; // Sale del Create para no seguir ejecutando
 }
 
-active = false; // Inicialmente inactiva
+active = false; 
 

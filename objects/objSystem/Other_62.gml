@@ -5,55 +5,48 @@ if (ds_map_exists(_async_load, "id")) {
     var status  = ds_map_find_value(_async_load, "status");
     var response = ds_map_find_value(_async_load, "result");
     var url     = ds_map_find_value(_async_load, "url");
-
-    show_debug_message("🔔 Async Event - URL: " + string(url) + " | Status: " + string(status));
 	
 	// =====================================================
-	// 4. ELIMINAR
+	// ELIMINAR
 	// =====================================================
 	if (ds_map_exists(_async_load, "method") && string_pos("/api/partida/", url) > 0 && string_pos("DELETE", _async_load[? "method"]) > 0) {
 	    if (status == 200 || status == 0) {
-	        show_debug_message("✅ Partida eliminada correctamente: " + string(url));
-			 global.partida_eliminada = true; // bandera
+			 global.partida_eliminada = true; 
 	    } else {
-	        show_debug_message("❌ Error eliminando partida: " + string(status));
 			global.partida_eliminada = false;
 	    }
 	}
 	
 	else if (string_pos("/api/partida/actualizar/", url) > 0 && (status == 200 || status == 0)) {
 		
-		show_debug_message("🔄 Partida actualizada correctamente en el servidor");
+		show_debug_message("Partida actualizada correctamente en el servidor");
 	
 	}
 	
-	 // 🔹 Verificar existencia de partida
+	 // Verificar existencia de partida
     if ((status == 200 || status == 0) && string_pos("/api/partida/existe/", url) > 0) {
         if (string_length(response) > 0) {
             var datos = json_parse(response);
             global.partida_existe = datos.existe;
             global.esperando_verificacion = false;
 
-            show_debug_message("✅ Verificación completada - partida_existe: " + string(global.partida_existe));
-
-            // 🔹 Si no existe, ir a crear/guardar partida automáticamente
+            // Si no existe, ir a crear/guardar partida automáticamente
             if (!global.partida_existe) {
-                show_debug_message("⚠️ No existe partida, se creará nueva");
-                // Aquí llamas tu función de guardar partida
 				inicializar_variables_juego();
-                guardar_partida_servidor(); // <--- tu script de POST /api/partida/guardar
+                guardar_partida_servidor(); // POST /api/partida/guardar
             } else {
-                // Si existe, puedes cargarla
-                cargar_partida_servidor(); // <--- tu script de GET /api/partida/cargar/:id
+                // Si existe, cargarla
+                cargar_partida_servidor(); // GET /api/partida/cargar/:id
             }
         } else {
-            show_debug_message("❌ Respuesta vacía al verificar existencia de partida");
+            show_debug_message("Respuesta vacía al verificar si existe una partida");
         }
-    }
+    }	
 
     // =====================================================
-    // 1. RESPUESTA DE CARGA DE PARTIDA
+    // RESPUESTA DE CARGA DE PARTIDA
     // =====================================================
+	
     if (string_pos("/api/partida/cargar/", url) > 0 && (status == 200 || status == 0)) {
         if (string_length(response) > 10) {
             try {
@@ -83,7 +76,7 @@ if (ds_map_exists(_async_load, "id")) {
 				
 
 
-                // 🔄 Restaurar NPCs
+                //	Restaurar NPCs
                 for (var i = 0; i < array_length(datos.npcs); i++) {
                     var npc = datos.npcs[i];
                     var npc_id = npc.npc_id;
@@ -100,7 +93,7 @@ if (ds_map_exists(_async_load, "id")) {
                     }
                 }
 
-                // 🔄 Restaurar Inventario
+                // Restaurar Inventario
                 for (var i = 0; i < array_length(datos.inventario); i++) {
                     var item = datos.inventario[i];
                     var item_id = item.item_id;
@@ -114,7 +107,7 @@ if (ds_map_exists(_async_load, "id")) {
                     }
                 }
 
-                // 🔄 Restaurar Clases
+                // Restaurar Clases
                 for (var i = 0; i < array_length(datos.clases); i++) {
                     var clase = datos.clases[i];
                     var clase_id = clase.clase_id;
@@ -129,53 +122,50 @@ if (ds_map_exists(_async_load, "id")) {
                     }
                 }
 
-                show_debug_message("✅ Partida cargada exitosamente (slot 1)");
 				global.esperando_verificacion = false; 
-				show_debug_message("✅ Verificación completada - partida_existe: " + string(global.partida_existe));
 				room_goto(Entrada_Revolucion);
 
             } catch (e) {
-                show_debug_message("❌ Error cargando partida: " + string(e));
+                show_debug_message("Error cargando partida: " + string(e));
             }
         } else {
-            show_debug_message("❌ Respuesta vacía al cargar partida");
+            show_debug_message("Respuesta vacía al cargar partida");
         }
     }
 
     // =====================================================
-    // 2. RESPUESTA DE GUARDADO
+    // RESPUESTA DE GUARDADO
     // =====================================================
+	
     else if (string_pos("/api/partida/guardar", url) > 0 && (status == 200 || status == 0)) {
         if (string_length(response) > 10) {
             try {
                 var respuesta = json_parse(response);
                 global.id_partida = respuesta.id_partida;
-                global.partida_existe = true; // ✅ ahora sí existe
+                global.partida_existe = true; 
 
-                show_debug_message("✅ Partida guardada (ID " + string(global.id_partida) + ")");
+                show_debug_message("Partida guardada (ID " + string(global.id_partida) + ")");
                 room_goto(Sala_aceptado);
 
             } catch (e) {
-                show_debug_message("⚠️ Guardado completado, pero error parseando respuesta");
+                show_debug_message("Guardado completado, pero error parseando respuesta");
                 room_goto(Sala_aceptado);
             }
         } else {
-            show_debug_message("✅ Guardado completado (respuesta mínima)");
+            show_debug_message("Guardado completado");
             global.partida_existe = true;
         }
     }
 
 
 	// =====================================================
-	// 4. RESPUESTA DE LISTA DE PARTIDAS
+	// RESPUESTA DE LISTA DE PARTIDAS
 	// =====================================================
 	else if (string_pos("/api/partidas", url) > 0 && (status == 200 || status == 0)) {
 	    if (string_length(response) > 10) {
 	        try {
 	            var datos = json_parse(response);
 	            global.datos_partidas = datos;
-            
-	            show_debug_message("✅ Lista de partidas obtenida: " + string(datos.total) + " partidas");
             
 	            // Debug de slots usando structs
 	            if (struct_exists(datos, "slots")) {
@@ -192,19 +182,19 @@ if (ds_map_exists(_async_load, "id")) {
 	            }
             
 	        } catch (e) {
-	            show_debug_message("❌ Error parseando lista de partidas: " + string(e));
+	            show_debug_message("Error parseando lista de partidas: " + string(e));
 	        }
 	    } else {
-	        show_debug_message("❌ Respuesta vacía de lista de partidas");
+	        show_debug_message("Respuesta vacía de lista de partidas");
 	    }
 
 
 	    // =====================================================
-	    // 5. RESPUESTA NO RECONOCIDA
+	    // RESPUESTA NO RECONOCIDA
 	    // =====================================================
 		} else {
-	        show_debug_message("❓ Respuesta no manejada: " + string(url));
-			show_debug_message("📡 Status recibido: " + string(status));
+	        show_debug_message("Respuesta no manejada: " + string(url));
+			show_debug_message("Estatus recibido: " + string(status));
 	    }
 
 

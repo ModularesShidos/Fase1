@@ -7,7 +7,7 @@ if (!global.clase1_vista) {
     active = true;
 }
 
-// Recoger flor con tecla F
+// Recoger con tecla F
 if (distance_to_object(Obj_Player_M) < 40 && keyboard_check_pressed(ord("F"))) {
     addItem(ITEM_CARTA, 1); // Agregar al inventario
     show_message("Has encontrado la carta de tu compañero en apuros!!!.");

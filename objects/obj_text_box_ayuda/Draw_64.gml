@@ -10,4 +10,4 @@ var _y = 280;
 draw_sprite(spr_text_box_cel, 0, _x, _y);
 draw_set_font(Font3);
 draw_set_color(c_black);
-draw_text_ext(30 +26, 280 +15, text_on_display, 20, 380);    
+draw_text_ext(30 +26, 280 +15, text_on_display, 20, 370);    

@@ -1,4 +1,4 @@
-// Draw Event - SOLUCIÓN DIRECTA (con +1 en las misiones)
+
 if (variable_instance_exists(global, "datos_partidas")) {
     var datos = global.datos_partidas;
     
@@ -17,7 +17,7 @@ if (variable_instance_exists(global, "datos_partidas")) {
             var slot_index = partida.id_partida - 1; // Convertir id_partida a índice (1→0, 2→1, 3→2)
             
             if (slot_index >= 0 && slot_index < 3) {
-                // SUMAR 1 al game_state para mostrar Misión 1, 2, 3, etc.
+                // SUMAR 1 al game_state para mostrar Misión 1, 2, 3, etc
                 var mision_mostrar = partida.game_state + 1;
                 draw_text(500, pos_y[slot_index], "Misión: " + string(mision_mostrar));
             }

@@ -2,6 +2,5 @@
 if (!global.clase5_vista) {
 	global.clase5_vista = true;
 	global.dialogo_id = 13;
-	show_debug_message("CLASE VISTAAAAA = " + string(global.clase5_vista));
     instance_create_layer(0, 0, "UI", obj_fade_black);
 }

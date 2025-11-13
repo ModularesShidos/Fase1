@@ -12,7 +12,7 @@ var _y = 280;
 
 draw_sprite(spr_text_box_cel, 0, _x, _y);
 
-// Permite crear una fuente nueva (la que hicimos)
+// Permite crear una fuente nueva 
 draw_set_font(Font3);
 
 /* 
@@ -20,8 +20,7 @@ draw_set_font(Font3);
    el texto, la separacion entre linea y el limite
 */
 draw_set_color(c_black);
-draw_text_ext(30 +26, 280 +15, text_on_display, 20, 380);	
+draw_text_ext(30 +26, 280 +15, text_on_display, 20, 370);	
 
-show_debug_message("Draw GUI -> page=" + string(page) + " | text_on_display=\"" + text_on_display + "\"");
 
 

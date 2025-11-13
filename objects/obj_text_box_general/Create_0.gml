@@ -70,7 +70,7 @@ switch (global.dialogo_id) {
 }
 
 // Aquí parte tu lógica de paginado
-pages = scr_split_text_into_pages(text, Font3, 22, 350, 185);
+pages = scr_split_text_into_pages(text, Font3, 22, 340, 185);
 page = 0;
 text_on_display = "";
 text_finished = false;

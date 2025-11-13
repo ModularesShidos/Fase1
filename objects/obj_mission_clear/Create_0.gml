@@ -1,10 +1,9 @@
-// Duración en steps (ej. 180 = 3 seg si room_speed=60)
+// Duración en steps (180 = 3 seg si room_speed=60)
 duration = 180;
 
 // Opacidad inicial (para el fade-in)
 alpha = 0;
 
-// 🔥 AGREGAR ESTA VARIABLE PARA CONTROLAR EL GUARDADO
 guardado_realizado = false;
 
 switch (global.mision_terminada) {
@@ -21,5 +20,4 @@ switch (global.mision_terminada) {
         break;
 }
 
-// Tamaño de la fuente (puedes cambiarlo desde aquí)
 draw_set_font(Font3);

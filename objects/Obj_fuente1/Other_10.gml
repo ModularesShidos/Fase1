@@ -5,9 +5,7 @@ if (distance_to_object(Obj_Player_M) < 40 && keyboard_check_pressed(ord("E")) &&
 	instance_create_layer(0, 0, "UI", obj_text_box_nube);
      
     if (global.fuentes_cont == 3) {
-        global.class_state = 5; // poner la bandera adecuada
+        global.class_state = 5; 
         instance_create_layer(0, 0, "UI", obj_text_box_nube);
     }
 }
-
-// No sirven los objetos no se interactua, quitar el interactuado a ver que pasa

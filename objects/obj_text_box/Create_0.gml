@@ -30,16 +30,15 @@ switch (global.game_state) {
         break;
 }
 
-text = string_replace_all(text, chr(9), " "); // quita \t 
+text = string_replace_all(text, chr(9), " ");
 while (string_pos("  ", text) != 0) { // colapsa espacios dobles
     text = string_replace_all(text, "  ", " ");
 }
-
-pages = scr_split_text_into_pages(text, Font3, 22, 380, 185);
+// Posicion
+pages = scr_split_text_into_pages(text, Font3, 22, 370, 185);
 page = 0;
 text_on_display = "";
 
 text_finished = false;
 alarm[0] = 3;
 
-// Checar que sale mal el text, sale al inicio todo y en negro

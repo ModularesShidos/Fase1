@@ -33,7 +33,6 @@ if (distance_to_object(Obj_Player_M) < 40 && keyboard_check_pressed(ord("E")) &&
     // Muestra el textbox
     var caja = instance_create_layer(x, y - 32, "Instances", obj_text_box_general);
     
-    // Importante: cuando termine el diálogo, debe marcar que este NPC cerró
     with (caja) {
         npc_ref = other.id; // guarda referencia del npc que habló
     }

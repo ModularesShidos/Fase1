@@ -11,7 +11,7 @@ switch (global.class_state) {
 	
 	case 1: 
 		if (global.is_class){	
-			text = "Hoy vimos lo básico de programación: los inputs son lo que el usuario introduce al programa, y los outputs son lo que el programa muestra en respuesta. Las variables son como cajitas donde guardamos datos, y hay distintos tipos según lo que queramos almacenar: números enteros, decimales, texto, booleanos (verdadero/falso)… Básicamente, esto nos permite controlar la información dentro del programa. También hablamos un poco de cómo nombrar variables correctamente y la importancia de la sintaxis para que el código funcione sin eerrores.";
+			text = "Hoy vimos lo básico de programación: los inputs son lo que el usuario introduce al programa, y los outputs son lo que el programa muestra en respuesta. Las variables son como cajitas donde guardamos datos, y hay distintos tipos según lo que queramos almacenar: números enteros, decimales, texto, booleanos (verdadero/falso) Básicamente, esto nos permite controlar la información dentro del programa. También hablamos un poco de cómo nombrar variables correctamente y la importancia de la sintaxis para que el código funcione sin eerrores.";
 		} else {
 			text = "Mmm, no sé, está muy buena la comida pero como que olía medio rraro";
 			global.mission_clear_aux = true;
@@ -67,10 +67,10 @@ switch (global.class_state) {
 
 
 if (variable_instance_exists(id, "text")) {
-    pages = scr_split_text_into_pages(text, Font3, 22, 394, 130);
+    pages = scr_split_text_into_pages(text, Font3, 22, 390, 110);
     show_debug_message("Paginas generadas: " + string(array_length(pages)));
 } else {
-    show_debug_message("⚠️ Ningún texto asignado en CREATE -> destruyendo objeto");
+    show_debug_message("Ningún texto asignado en CREATE -> destruyendo objeto");
     instance_destroy();
     exit;
 }

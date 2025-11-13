@@ -46,5 +46,3 @@ function inicializar_variables_juego() {
 	// Instrucciones
 	global.mostrar_controles = true;
 }
-
-//textbox_cerrado_manualmente

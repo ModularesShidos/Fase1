@@ -17,6 +17,6 @@ draw_set_font(Font3);
    Dibujar el texto con el tamaño de separacion de los bordes
    el texto, la separacion entre linea y el limite
 */
-draw_text_ext(30 +45, 280 +15, text_on_display, 20, 350);
+draw_text_ext(30 +45, 280 +15, text_on_display, 20, 340);
 
 

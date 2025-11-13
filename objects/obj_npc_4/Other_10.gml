@@ -7,7 +7,6 @@ if (ya_hablo || global.dialogo_activo) {
 // Marcar como que ya habló
 ya_hablo = true;
 
-// Quitarglobal.dialogo_id = 6;
 // Activar caja de texto 
 instance_create_layer(x, y - 32, "GUI", obj_textbox_general);
 

@@ -4,7 +4,7 @@ if (global.game_state != 4) {
 }
 
 // Solo se activa si está la misión 3
-if (!active && global.clase5_vista) { // CHECAR SI SIGUE EXISITNEOD ESTE NPC DESPUES DE ACABAR SU MISION
+if (!active && global.clase5_vista) { 
     visible = true;
     active = true;
 }

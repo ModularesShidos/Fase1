@@ -28,9 +28,9 @@ text = string_replace_all(text, chr(9), " ");
 while (string_pos("  ", text) != 0) text = string_replace_all(text, "  ", " ");
 
 // Dividir en páginas (por si acaso algún texto es muy largo)
-pages = scr_split_text_into_pages(text, Font3, 22, 380, 185);
+pages = scr_split_text_into_pages(text, Font3, 22, 370, 185);
 page = 0;
-text_on_display = pages[page]; // ← ¡TEXTO COMPLETO INMEDIATAMENTE!
-text_finished = true; // ← ¡YA ESTÁ TERMINADO!
+text_on_display = pages[page]; 
+text_finished = true; 
 
 show_debug_message("Textbox ayuda creado - Texto: " + text);
